@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+ <title></title>
+ <style>
+ 	th, td { padding: 15px; }
+ 	 	table { width: 10% }
+ 	table, td, th { border: 1px solid black; }
+ </style>
+ <meta charset="UTF-8"/>
+ </head>
+ <body>
+	<!-- 1. -->
+	<p>ir al fichero <a href="fichero1.html">fichero1.html</a></p>
+	<!-- 2. -->
+	<img src="ejemplo.png" alt="imagen no disponible" title="Ir al ejemplo.png">
+	<!-- 3. -->
+		<ol>
+  			<li>Listas ordenadas</li>
+    			<ol type="i">
+   				<li>1</li>
+   				<li>A a</li>
+      			<li>I i</li>
+    			</ol>
+  			<li>Listas no ordenadas</li>
+    		<ul style="list-style-type:square">
+      			<li>1</li>
+      			<li>A a</li>
+      			<li>I i</li>
+			</ul>
+		</ol>
+  	<!-- 4. -->
+  	<table>
+  		<tr>
+            <th>A</th>
+            <th rowspan="2">B</th>
+    	</tr>
+    	<tr>
+    		<th>C</th>
+    	</tr>
+    </table>
+    <!-- 5. -->
+    <p>
+    <select name="pruebas">
+    	<option value="prueba1">Prueba1</option>
+    	<option value="prueba2">Prueba2</option>
+    </select>
+	</p>
+    <p>
+  		<input type="submit" value="Enviar">
+	</p>
+	<!-- 6. -->
+	<p>
+	<input type="radio" value="enviar">
+	enviar
+	</p>
+	<p>
+		<!-- sin check -->
+	<input type="checkbox" value="enviar">
+	enviar
+	</p>
+	<p>
+		<!-- con check -->
+	<input type="checkbox" value="enviar" checked>
+	enviar
+	</p>
+	<p>
+	<!-- texto de fondo, pero no esta escrito fisicamente -->
+	<input type="text" placeholder="patata">
+	</p>
+	<p>
+	<!-- texto escrito y tu puedes modificarlo o borrarlo -->
+	<input type="text" value="patata">
+	</p>
+ </body>
+</html>

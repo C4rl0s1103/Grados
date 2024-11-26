@@ -1,0 +1,383 @@
+<!--========================  Práctica4_Tema1_XML_Introducción  ======================-->
+<!--
+1. Dado el siguiente documento XML almacenado en un fichero llamado
+“ejercicio1_practica4_tema1.xml”, escribe el DTD interno.
+
+- Cada empresa tiene un único cif y no pueden coincidir los cif de ninguna empresa, es decir, 
+    el cif es el identificador de la empresa y es obligatorio incluir dicha información.
+- Las empresas sólo pueden ser de 2 tipos: privada y pública. Por defecto es privada.
+- Las vias sólo pueden ser de 3 tipos: Calle, Avenida y Plaza. Por defecto es Calle.
+-->
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--SI EL DTD FUERA EXTERNO DEBERÍAMOS AÑADIR LA SIGUIENTE LINEA: -->
+
+<!--DOCTYPE empresas SYSTEM "empresas.DTD"-->
+
+<!--DE ESTA MANERA LINKEAMOS EL DTD EXTERNO AL XML Y EN EL DOCUMENTO EXTERNO
+SOLO SE PONE EL CUERPO DEL DTD, SIN EL DOCTYPE, ES DECIR, LOS ELEMENT CON SUS ATTLIST
+VER PAGINA 10 DEL PDF INTRODUCCIÓN XML-->
+<!DOCTYPE empresas [
+<!ELEMENT empresas (empresa+)>
+<!ELEMENT empresa (nombre, direccion, telefono+, fax?, web?, email*)>
+    <!ATTLIST empresa cif ID #REQUIRED>
+    <!ATTLIST empresa tipo (privada | publica) "privada">
+    <!ATTLIST empresa anno CDATA #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (via, nombrevia, numero+, poblacion, ciudad)>
+<!ELEMENT via EMPTY>
+    <!ATTLIST via tipo (Calle | Avenida | Plaza) "Calle">
+<!ELEMENT nombrevia  (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+    <!ATTLIST poblacion codigo CDATA #REQUIRED>
+<!ELEMENT ciudad (#PCDATA)>
+
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT fax (#PCDATA)>
+<!ELEMENT web (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+]>
+
+<empresas>
+    <empresa cif="A1111" anno="2012">
+        <nombre>Reparaciones Informáticas, S.A.</nombre>
+        <direccion>
+            <via tipo="Calle" />
+            <nombrevia>Juncal</nombrevia>
+            <numero>21</numero>
+            <numero>22</numero>
+            <poblacion codigo="28850">Torrejón de Ardoz</poblacion>
+            <ciudad>Madrid</ciudad>
+        </direccion>
+        <telefono>911111111</telefono>
+        <telefono>611111111</telefono>
+        <fax>911111111</fax>
+        <web>www.web1.es</web>
+        <email>email1_1@gmail.com</email>
+        <email>email1_2@gmail.com</email> 
+    </empresa>
+
+    <empresa cif="A2222" tipo="publica">
+        <nombre>Soluciones Informáticas, S.A.</nombre>
+        <direccion>
+            <via tipo="Avenida"/>
+            <nombrevia>Constitución</nombrevia>
+            <numero>12</numero>
+            <poblacion codigo="28850">Torrejón de Ardoz</poblacion>
+            <ciudad>Madrid</ciudad>
+        </direccion>
+        <telefono>912222222</telefono>
+        <email>email2_1@gamil.com</email>
+    </empresa>
+
+    <empresa cif="A3333" tipo="privada">
+        <nombre>Alquiler de coches, S.L.</nombre>
+        <direccion>
+            <via/>
+            <nombrevia>Los Rosales</nombrevia>
+            <numero>3</numero>
+            <numero>4</numero>
+            <poblacion codigo="28830">San Fernando de Henares</poblacion>
+            <ciudad>Madrid</ciudad>
+        </direccion>
+        <telefono>913333333</telefono>
+    </empresa>
+</empresas>
+
+
+<!-- 
+empresas
+empresa     (CIF /ANNO  /TIPO )             3
+     nombre                               1 1 1
+     direccion                            1 1 1
+         via         (TIPO)               1 1 1
+         nombrevia                        1 1 1
+         numero                           2 1 2
+         poblacion  ( CODIGO)             2 1 2
+         ciudad                           1 1 1
+     telefono                             1 1 1
+     fax                                  1 0 0
+     web                                  1 0 0  
+     email                                2 1 0
+
+
+    #REQUIRED> obligatorio 
+    #IMPLIED > opcional
+    EMPTY vacia
+    CDATA > datos atributo
+    (#PCDATA) > datos etiquetas
+
+    TEORÍA
+Caracteres de repetición o frecuencia
++ 1 a n
+? 0 o 1
+* 0 a n
+
+-->
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+<!--
+                        PRACTICA1_TEMA2
+
+Dado el siguiente documento XML almacenado en un fichero llamado “Enunciado_Practica1_Tema2(xsd).xml”
+, escribe el XSD que se almacena en un fichero llamado “Solucion_Practica1_Tema2(xsd).xsd”. Obligatorio escribir en la línea que
+conecta ambos ficheros la información que falta.
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="Solucion_Practica1_Tema2.xsd">
+ 
+    <persona nacionalidad="española" id_persona="A1111">
+        <nombre>Rosa</nombre>
+        <nombre>Clara</nombre>
+        <apellido1>Casas</apellido1>
+        <apellido2>Rueda</apellido2>
+        <edad>23</edad>
+        <lugar_nacimiento>Torrejón de Ardoz</lugar_nacimiento>
+        <codigo_postal>28850</codigo_postal>
+    </persona>
+    <persona id_persona="B2222">
+        <nombre>Sergio</nombre>
+        <apellido1>Fuentes</apellido1>
+        <apellido2>Rio</apellido2>
+        <telefono>911111111</telefono>
+        <lugar_nacimiento>Cuenca</lugar_nacimiento>
+        <codigo_postal>16071</codigo_postal>
+    </persona>
+    <persona nacionalidad="francesa" id_persona="C3333">
+        <nombre>Lorena</nombre>
+        <apellido1>Madrid</apellido1>
+        <telefono>912222222</telefono>
+        <telefono>601222222</telefono>
+        <edad>27</edad>
+        <lugar_nacimiento>Toledo</lugar_nacimiento>
+        <codigo_postal>45005</codigo_postal>
+    </persona>
+    <persona id_persona="D4444">
+        <nombre>Carlos</nombre>
+        <apellido1>Flores</apellido1>
+        <lugar_nacimiento>Madrid</lugar_nacimiento>
+        <codigo_postal>28024</codigo_postal>
+    </persona>
+</personas>
+-->
+
+
+<!-- 
+- <nombre>, <apellido1>, <apellido2> y <lugar_nacimiento> contienen información de tipo cadena
+- <telefono>, <edad> y <codigo_postal> contienen información de tipo numérico entero
+- Una persona como máximo puede tener 2 teléfonos.
+- La edad de una persona es un número entero comprendido entre 0 y 110 años.
+- El lugar de nacimiento de una persona es una cadena o string entre 4 y 45 caracteres.
+- El código postal del lugar de nacimiento de una persona es un número entero de 5 dígitos.    
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="personas">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="persona" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="nombre" type="xsd:string" maxOccurs="unbounded" />
+                        <xsd:element name="apellido1" type="xsd:string" />
+                        <xsd:element name="apellido2" type="xsd:string" minOccurs = "0" />
+                        <xsd:element name="telefono" type="xsd:integer" minOccurs = "0" maxOccurs = "2" />
+                        <xsd:element name="edad" minOccurs = "0">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:integer">
+                                    <xsd:minInclusive value="0"/>
+                                    <xsd:maxInclusive value="110"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="lugar_nacimiento" >
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:minLength value="4"/>
+                                    <xsd:maxLength value="45"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element name="codigo_postal" >
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:integer">
+                                    <xsd:pattern value="[0-9]{5}"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:sequence>
+                    <xsd:attribute name="nacionalidad" type="xsd:string" use="optional"/>
+                    <xsd:attribute name="id_persona" type="xsd:string" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+
+<!-- 
+====================TEORÍA=====================
+
+TIPOS DE DATOS
+    DTD                     XSD
+    #PCDATA                 xsd:string
+                            xsd:decimal
+                            xsd:integer
+                            xsd:date
+
+INDICADORES DE FRECUENCIA
+    Forma simplificada:
+        DTD                 XSD
+        + 1 a n             maxOccurs = “unbounded” 
+        * 0 a n             minOccurs = “0” maxOccurs = “unbounded”
+        ? 0 || 1            minOccurs = “0”
+    Forma larga:
+        DTD                 XSD
+        + 1 a n             minOccurs = “1” maxOccurs = “unbounded” 
+        * 0 a n             minOccurs = “0” maxOccurs = “unbounded”
+        ? 0 || 1            minOccurs = “0” maxOccurs = “1”
+    Forma simplificada:
+        DTD (no se puede)   XSD
+        1 a 20              maxOccurs = “20” 
+        0 a 20              minOccurs = “0” maxOccurs = “20”
+    Forma larga:
+        DTD (no se puede)   XSD
+        1 a 20              minOccurs = “1” maxOccurs = “20” 
+        0 a 20              minOccurs = “0” maxOccurs = “20”
+
+ATRIBUTOS
+        DTD                 XSD
+        #REQUIRED           use="required"
+        #IMPLIED            use="optional"    
+-->
+
+
+
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+<!--
+Dado el siguiente documento XML almacenado en un fichero llamado “practica2_tema2.xml”, escribe el
+XSD que se almacena en un fichero llamado “practica2_tema2.xsd”. Obligatorio escribir en la línea que
+conecta ambos ficheros la información que falta.
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="_____Solucion_Practica2_Tema2.xsd_____">
+
+    <persona nacionalidad="española" id_persona="A1111">
+        <nombre>Rosa</nombre>
+        <nombre>Clara</nombre>
+        <apellido1>Casas</apellido1>
+        <apellido2>Rueda</apellido2>
+        <edad>23</edad>
+        <ocupacion>Estudiante</ocupacion>
+        <codigo_ocupacion>EstCGS01</codigo_ocupacion>
+    </persona>
+    <persona id_persona="B2222">
+        <nombre>Sergio</nombre>
+        <apellido1>Fuentes</apellido1>
+        <apellido2>Rio</apellido2>
+        <telefono>911111111</telefono>
+        <ocupacion>Parado</ocupacion>
+        <codigo_ocupacion>Parado02</codigo_ocupacion>
+    </persona>
+    <persona nacionalidad="francesa" id_persona="C3333">
+        <nombre>Lorena</nombre>
+        <apellido1>Madrid</apellido1>
+        <telefono>912222222</telefono>
+        <telefono>601222222</telefono>
+        <edad>27</edad>
+        <ocupacion>Activo</ocupacion>
+        <codigo_ocupacion>Profes03</codigo_ocupacion>
+    </persona>
+    <persona id_persona="D4444">
+        <nombre>Carlos</nombre>
+        <apellido1>Flores</apellido1>
+    </persona>
+</personas>
+
+==============================  CONSIDERACIONES  ================================
+
+- <nombre>, <apellido1>, <apellido2>, <ocupacion> y <codigo_ocupacion> contienen 
+    información de tipocadena
+- <telefono> y <edad> contienen información de tipo numérico entero
+- Una persona como máximo puede tener 2 teléfonos.
+- La edad de una persona es un número entero comprendido entre 0 y 110 años.
+- La ocupación de una persona debe ser una de estas 3 cadenas o string 
+    [Estudiante || Activo || Parado]
+- El código de la ocupación de una persona siempre tiene 8 caracteres, que pueden 
+    ser letras mayúsculas, letras minúsculas o dígitos
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="personas">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="persona" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nombre" type="xsd:string" maxOccurs="unbounded" />
+                            <xsd:element name="apellido1" type="xsd:string" />
+                            <xsd:element name="apellido2" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="telefono" type="xsd:string" minOccurs="0" maxOccurs="2" />
+                            <xsd:element name="edad" minOccurs="0" maxOccurs="1">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:integer">
+                                        <xsd:minInclusive value="0" />
+                                        <xsd:maxInclusive value="110" />
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="ocupacion" minOccurs="0">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:enumeration value="Estudiante"/>
+                                        <xsd:enumeration value="Activo" />
+                                        <xsd:enumeration value="Parado" />
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="codigo_ocupacion" minOccurs="0">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:pattern value="[0-9 a-z A-Z]{8}"/>
+                                        <xsd:length value="8"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="nacionalidad" type="xsd:string" use="optional" />
+                        <xsd:attribute name="id_persona" type="xsd:string" use="required" />
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
