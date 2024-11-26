@@ -1,0 +1,3 @@
+cat > /home/user/archivo.txt << EOF
+"aqui guardamos la informacion del archivo (sin comillas)"
+EOF

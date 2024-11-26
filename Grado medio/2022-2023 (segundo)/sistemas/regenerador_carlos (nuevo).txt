@@ -1,0 +1,76 @@
+REM REGENERADOR DE GRUPOS Y USUARIOS
+REM AUTOR: CARLOS GONZÁLEZ MARTÍN
+REM 02/03/2023
+@ECHO OFF
+CLS
+:INICIO
+ECHO *****************************************************************
+ECHO *								*
+ECHO *		0 - Definir Infraestructura			*
+ECHO *								*
+ECHO *		1 - Creacion de infraestructura			*
+ECHO *								*	
+ECHO *		2 - Creacion de usuarios			*
+ECHO *								*
+ECHO *		3 - Eliminacion de infraestructura		*
+ECHO *								*
+ECHO *		4 - SALIR					*
+ECHO *								*
+ECHO *****************************************************************
+ECHO.
+
+SET /p opcion=Indica la opcion:
+IF %opcion%==0 GOTO DEFINIR_INFRAESTRUCTURA
+IF %opcion%==1 GOTO CREAR_INFRAESTRUCTURA
+IF %opcion%==2 GOTO CREAR_USUARIOS
+IF %opcion%==3 GOTO ELIMINAR_INFRAESTRUCTURA
+IF %opcion%==4 GOTO SALIR
+
+:DEFINIR_INFRAESTRUCTURA
+SET /p nombre_principal=Indica el nombre del dominio primario (carlos):
+SET /p nombre_secundario=Indica el nombre del dominio secundario (local):
+SET /p controlador_dominio=Indica el nombre del controlador de dominio (comandos):
+SET /p unidad_organizativa=Indica el nmobre de la unidad organizativa principal (contenedora):
+SET /p particion_datos=Indica el nombre de la particion donde se encuentran los datos a importar (C:):
+SET /p directorio_importar=Indica el nombre del directorio donde se encuentran los datos a importar (archivos):
+SET /p particion_recursos=Indica la particion donde se crearán los recursos a compartir (E:):
+SET /p directorio_recursos=Indica el nomre del directorio donde se crearan los recursos a compartir (compartidos):
+CLS
+GOTO INICIO
+
+:CREAR_INFRAESTRUCTURA
+DSADD OU "ou=%unidad_organizativa%,dc=%nombre_principal%,dc=%nombre_secundario%" -q
+FOR /F "tokens=1-5 delims=;" %%a IN (%particion_datos%\%directorio_importar%\grupos_prueba_b.txt) DO DSADD OU "ou=%%b,ou=%unidad_organizativa%,dc=%nombre_principal%,dc=%nombre_secundario%" -q
+FOR /F "tokens=1-5 delims=;" %%a IN (%particion_datos%\%directorio_importar%\grupos_prueba_b.txt) DO DSADD GROUP "cn=%%a,ou=%%b,ou=%unidad_organizativa%,dc=%nombre_principal%,dc=%nombre_secundario%" -q
+MKDIR %particion_recursos%\%directorio_recursos%
+FOR /F "tokens=1-5 delims=;" %%a IN (%particion_datos%\%directorio_importar%\grupos_prueba_b.txt) DO MKDIR %particion_recursos%\%directorio_recursos%\%%e
+FOR /F "tokens=1-5 delims=;" %%a IN (%particion_datos%\%directorio_importar%\grupos_prueba_b.txt) DO NET SHARE %%c=%particion_recursos%\%directorio_recursos%\%%e /GRANT:%%a,%%d
+CLS
+GOTO INICIO
+
+
+:CREAR_USUARIOS
+FOR /F "tokens=1-9 delims=;" %%a IN (%particion_datos%\%directorio_importar%\usuarios_prueba_b.txt) DO DSADD USER "cn=%%g,ou=%%b,ou=%unidad_organizativa%,dc=%nombre_principal%,dc=%nombre_secundario%" -pwd User@123 -fn %%a -ln %%c -display "%%g" -upn %%e@%nombre_principal%.%nombre_secundario% -canchpwd no -mustchpwd no -pwdneverexpires yes -profile \\%controlador_dominio%\perfiles$\%%f  -loscr %%h -hmdrv %%d -hmdir \\%controlador_dominio%\personales\%%e -memberof "cn=%%i,ou=%%b,ou=%unidad_organizativa%,dc=%nombre_principal%,dc=%nombre_secundario%" -q
+CLS
+GOTO INICIO
+
+:ELIMINAR_INFRAESTRUCTURA
+FOR /F "tokens=1-5 delims=;" %%a IN (%particion_datos%\%directorio_importar%\grupos_prueba_b.txt) DO NET SHARE %%c /delete
+RMDIR /S /Q %particion_recursos%\%directorio_recursos%
+
+SET /p eliminar=Desea conservar la unidad organizativa contenedora de los objetos de AD DS (S/N):
+IF %eliminar%==S GOTO dejarla_viva
+IF %eliminar%==N GOTO eliminar_todo
+
+:dejarla_viva
+DSRM "ou=%unidad_organizativa%,dc=%nombre_principal%,dc=%nombre_secundario%" -subtree -exclude -noprompt -q 
+CLS
+GOTO INICIO
+
+:eliminar_todo
+DSRM "ou=%unidad_organizativa%,dc=%nombre_principal%,dc=%nombre_secundario%" -subtree -noprompt -q 
+CLS
+GOTO INICIO
+
+:SALIR
+CLS
