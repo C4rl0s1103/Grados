@@ -1,0 +1,43 @@
+@ECHO OFF
+// estamos en el dominio vallexxx.local
+ECHO Creamos la carpeta tutorial y dentro de ella crearemos un archivo
+cd C:\
+mkdir TUTORIAL 
+cd TUTORIAL
+touch fichero.txt
+
+// dentro del dominio asir creamos los usuarios 
+ECHO Creamos unidad organizativa
+dsadd ou "ou=practica,dc=asir,dc=vallexxx,dc=local"
+
+// CREACION DEL GRUPO RAMDOM PARA PROBAR SI FUNCA
+ECHO Creamos el grupo lgrupos
+dsadd group "cn=lgrupos,ou=practica,dc=asir,dc=vallexxx,dc=local" -secgrp yes -scope l
+
+// CREACION DEL USUARIO
+ECHO Creamos los usuarios 
+ECHO Creamos el grupo Manuel y lo añadimos al grupo local
+dsadd user "cn=manuel,ou=practica,dc=asir,dc=vallexxx,dc=local" -pwd P@ssw0rd -mustchpwd no -pwdneverexpires yes 
+		-MEMBEROF "cn=lgrupos,ou=practica,dc=vallexxx,dc=local"
+
+dsadd user "cn=david,ou=practica,dc=asir,dc=vallexxx,dc=local" -pwd P@ssw0rd -canchpwd no 
+dsadd user "cn=carmen,ou=practica,dc=asir,dc=vallexxx,dc=local" -pwd P@ssw0rd -mustchpwd no -pwdneverexpires no 
+dsadd user "cn=ana,ou=practica,dc=asir,dc=vallexxx,dc=local" -pwd P@ssw0rd -disabled yes
+
+// MODIFICAR EL USUARIO ANA PARA QUE SE AÑADA AL GRUPO LGRUPOS (NO ENTRA EN EXAMEN PERO ES A MODO DE CURIOSIDAD)
+ECHO añadimos a ana al grupo lgrupos 
+dsadd member "cn=lgrupos,ou=practica,dc=vallexxx,dc=local" "cn=ana,ou=practica,dc=asir,dc=vallexxx,dc=local"
+
+// creamos el grupo 
+ECHO Creamos el grupo global
+dsadd group "cn=nivel_acceso1,ou=practica,dc=asir,dc=vallexxx,dc=local" -secgrp yes -scope g 
+
+ECHO Añadimos los usuarios en el grupo 
+dsmod group "cn=Ggrupos,ou=practica,dc=asir,dc=vallexxx,dc=local" -addmbr "cn=carmen,ou=practica,dc=asir,dc=vallexxx,dc=local"
+dsmod group "cn=Ggrupos,ou=practica,dc=asir,dc=vallexxx,dc=local" -addmbr "cn=ana,ou=practica,dc=asir,dc=vallexxx,dc=local"
+
+
+// AÑADIR TODOS LOS USUARIOS QUE EMPIECEN POR PP AL GRUPO GRUPO grupopp
+dsquery user -name pp* | dsmod group "cn=grupopp,ou=prueba,dc=vallexxx,dc=local" -addmbr
+// AÑADIR TODOS LOS USUARIOS DE LA OU PRUEBA, AL GRUPO GRUPOPP
+dsquery user "ou=prueba,dc=vallexxx,dc=local" | dsmod group "cn=grupopp,ou=prueba,dc=vallexxx,dc=local" -addmbr
