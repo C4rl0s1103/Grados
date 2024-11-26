@@ -1,0 +1,11 @@
+Mariano;Rajoy;Mariano Rajoy;mariano.rajoy;mariano.rajoy@dominio.com;Pepes;pepes.bat;pepes.man
+Pedro;Sanchez;Pedro Sanchez;pedro.sanchez;pedro.sanchez@dominio.com;Socialistas;socialistas.bat;socialistas.man
+Pablo;Iglesias;Pablo Iglesias;pablo.iglesias;pablo.iglesias@dominio.com;Podemos;podemos.bat;podemos.man
+Albert;Rivera;Albert Rivera;albert.rivera;albert.rivera@dominio.com;Ciudadanos;ciudadanos.bat;ciudadanos.man
+Ines;Arrimadas;Ines Arrimadas;ines.arrimadas;ines.arrimadas@dominio.com;Ciudadanos;ciudadanos.bat;ciudadanos.man
+Anna;Gabriel;Anna Gabriel;anna.gabriel;anna.gabriel@dominio.com;Secesionistas;independencia.bat;independencia.man
+Carles;Puigdemont;Carles Puigdemont;carles.puigdemont;carles.puigdemont@dominio.com;Secesionistas;independencia.bat;independencia.man
+Irene;Montero;Irene Montero;irene.montero;irene.montero@dominio.com;Secesionistas;podemos.bat;podemos.man
+Pablo;Echenique;Pablo Echenique;pablo.echenique;pablo.echenique@dominio.com;Podemos;podemos.bat;podemos.man
+Soraya;Saez;Soraya Saez;soraya.saez;soraya.saez@dominio.com;Pepes;pepes.bat;pepes.man
+Isabel;Rodriguez;Isabel Rodriguez;isabel.rodriguez;isabel.rodriguez@dominio.com;Socialistas;socialistas.bat;socialistas.man

@@ -1,0 +1,6 @@
+Fernando;Alonso;Ferrari;fernando.alonso
+Lewis;Hamilton;Mercedes;lewis.hamilton
+Max;Verstappen;RedBull;max.verstappen
+Carlos;Sainz;Ferrari;carlos.sainz
+Pierre;gasly;Mercedes;pierre.gasly
+Checo;Perez;RedBull;checo.perez

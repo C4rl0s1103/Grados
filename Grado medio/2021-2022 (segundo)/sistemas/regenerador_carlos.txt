@@ -1,0 +1,78 @@
+REM Regenerador de grupos y usuarios
+REM Carlos González Martín 
+REM 23/02/2022
+@ECHO OFF 
+CLS
+:inicio
+ECHO **********************************************
+ECHO ** 1- Definicion de infraestructura         **
+ECHO ** 2- Creacion de infraestructura           **
+ECHO ** 3- Creacion de usuarios                  **
+ECHO ** 4- Eliminacion de infraestructura        **
+ECHO ** 5- Salir                                 **
+ECHO **********************************************
+
+SET /P menu=Indica una opcion: 
+IF %menu%==1 GOTO Definir_Infraestructura
+IF %menu%==2 GOTO Crear_infraestructura
+IF %menu%==3 GOTO Crear_usuario
+IF %menu%==4 GOTO Eliminar
+IF %menu%==5 GOTO SALIR
+
+:Definir_Infraestructura
+SET /P nombre_dominio=Indique el nombre del dominio primario (Carlos):
+SET /p nombre_dominio2=Indique el nombre del dominio secundario (org):
+SET /P nombre_controlador_dominio=Indique el nombre del controlador de dominio (Dc01):
+SET /P nombre_ou=Indique el nombre de la unidad organizativa principal (contenedora):
+SET /P particion=Indique el nombre de la particion en donde se encuentran los datos(C):
+SET /P nombre_direc=Indique el nombre del directorio donde se encuentran los datos a importar (prueba):
+SET /P particion_comp=Indique el nombre de la particion donde se crearan los recursos a compartir (E):
+SET /p nombre_direc_comp=Indique el nombre del directorio donde se crearan los recursos a compartir (compartidos):
+CLS 
+GOTO INICIO
+
+:Crear_infraestructura
+DSADD OU "ou=%nombre_ou%,dc=%nombre_dominio%,dc=%nombre_dominio2%" -q 
+FOR /F "tokens=1-4 delims=;" %%a IN (%particion%\%nombre_direc%\grupos_prueba.txt) DO DSADD OU "ou=%%a,ou=%nombre_ou%,dc=%nombre_dominio%,dc=%nombre_dominio2%" -q
+MKDIR %particion_comp%:\%nombre_direc_comp% 
+FOR /F "tokens=1-4 delims=;" %%a IN (%particion%\%nombre_direc%\grupos_prueba.txt) DO MKDIR %particion_comp%\%nombre_direc_comp%\%%b
+FOR /F "tokens=1-4 delims=;" %%a IN (%particion%\%nombre_direc%\grupos_prueba.txt) DO DSADD GROUP "cn=%%c,ou=%%a,ou=%nombre_ou%,dc=%nombre_dominio%,dc=%nombre_dominio2%" -q
+FOR /F "tokens=1-4 delims=;" %%a IN (%particion%\%nombre_direc%\grupos_prueba.txt) DO NET SHARE %%d=%particion_comp%\%nombre_direct_comp%\%%b\%%d /GRANT:%%c,READ
+CLS
+GOTO INICIO
+
+:Crear_usuario
+FOR /F "tokens=1-8 delims=;" %%a IN (%particion%\%nombre_direc%\usuarios_prueba_a.txt) DO DSADD USER "cn=%%a,ou=%%f,ou=%nombre_ou%,dc=%nombre_dominio%,dc=%nombre_dominio2%" -pwd User@123 -fn %%c -ln %%d -display "%%b" -upn %%e@%nombre_dominio%.%nombre_dominio2% -canchpwd no -mustchpwd no -pwdneverexpires yes -profile \\%nombre_controlador_dominio%\Perfiles$\%%g -loscr %%h -memberof "cn=%%f,ou=%%f,ou=%nombre_ou%,dc=%nombre_dominio%,dc=%nombre_dominio2%" -q
+CLS 
+GOTO INICIO
+
+:Eliminar
+SET /P eliminar_infra=Desea conservar el directorio que alberga los recursos compartidos (S/N)
+IF %eliminar_infra%==S GOTO eliminar_dir
+IF %eliminar_infra%==N GOTO pregunta_ou
+
+:eliminar_dir
+FOR /F "tokens=1-4 delims=;" %%a IN (%particion%\%nombre_direc%\grupos_prueba.txt) DO NET SHARE %%d /DELETE
+RMDIR /S /Q %particion_comp%\%nombre_direct_comp%
+CLS 
+GOTO INICIO
+
+:pregunta_ou
+SET /P conservar_ou=Desea conservar la unidad organizativa contenedora de los objetos de AD DS (S/N)
+IF %conservar_ou%==S GOTO eliminar_ou
+IF %conservar_ou%==N GOTO conservo
+
+:eliminar_ou
+DSRM "ou=%nombre_ou%,dc=%nombre_dominio%,dc=%nombre_dominio2%" -subtree -noprompt -q
+CLS
+GOTO INICIO
+
+:conservo
+CLS 
+GOTO INICIO
+
+:SALIR
+CLS
+
+
+

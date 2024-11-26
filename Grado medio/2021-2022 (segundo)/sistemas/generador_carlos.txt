@@ -1,0 +1,55 @@
+REM Generador de grupos y usuarios
+REM Carlos González Martín 
+REM 15/02/2022
+@ECHO OFF 
+CLS
+:inicio
+ECHO **********************************************
+ECHO ** 1 - Creacion de infraestructura          **
+ECHO ** 2 - Creacion y comparticion de recursos  **
+ECHO ** 3 - Creacion de usuarios                 **
+ECHO ** 4 - Eliminacion de recursos              **
+ECHO ** 5 - Eliminacion de infraestructura       **
+ECHO ** 6 - Salir                                **
+ECHO **********************************************
+
+SET /P menu=Indica una opcion: 
+IF %menu%==1 GOTO infraestructura
+IF %menu%==2 GOTO crear_recursos
+IF %menu%==3 GOTO crear_usuarios
+IF %menu%==4 GOTO eliminar_recursos
+IF %menu%==5 GOTO eliminar_infraestructura
+IF %menu%==6 GOTO salir
+
+:infraestructura
+DSADD OU "ou=congreso,dc=carlos,dc=org" -q
+FOR /F "tokens=1-2 delims=;" %%a IN (grupos.txt) DO DSADD OU "ou=%%a,ou=congreso,dc=carlos,dc=org" -q
+FOR /F "tokens=1-2 delims=;" %%a IN (grupos.txt) DO DSADD GROUP "cn=%%a,ou=%%a,ou=congreso,dc=carlos,dc=org" -q
+CLS
+GOTO INICIO
+
+:crear_recursos
+MKDIR c:\recursos
+FOR /F "tokens=1-2 delims=;" %%a IN (grupos.txt) DO MKDIR C:\recursos\%%b
+FOR /F "tokens=1-2 delims=;" %%a IN (grupos.txt) DO NET SHARE %%b=c:\recursos\%%b /GRANT:%%a,FULL
+CLS
+GOTO INICIO 
+
+:crear_usuarios
+FOR /F "tokens=1-8 delims=;" %%a IN (usuarios.txt) DO DSADD USER "cn=%%c,ou=%%f,ou=congreso,dc=carlos,dc=org" -pwd User@123 -fn %%a -ln %%b -display "%%c" -upn %%d@carlos.org -canchpwd no -mustchpwd no -pwdneverexpires yes -profile \\Dc01\perfiles$\%%h -loscr %%g -memberof "cn=%%f,ou=%%f,ou=congreso,dc=carlos,dc=org" -q
+CLS
+GOTO INICIO
+
+:eliminar_recursos
+FOR /F "tokens=1-2 delims=;" %%a IN (grupos.txt) DO NET SHARE %%b /DELETE
+RMDIR /S /Q C:\recursos 
+CLS
+GOTO INICIO
+
+:eliminar_infraestructura
+DSRM "ou=congreso,dc=carlos,dc=org" -subtree -noprompt -q
+CLS
+GOTO INICIO
+
+:salir
+CLS
