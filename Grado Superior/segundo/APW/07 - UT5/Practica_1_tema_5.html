@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+ <title></title>
+ <meta charset="UTF-8"/>
+ </head>
+ <body>
+<?php 
+
+$notas=array(6,7,4,9,2,1,5,1);
+$numElementos=count($notas);
+
+/* 1. */
+$contador = 0;
+$sumatorio = 0; 
+for($i=0;$i<$numElementos;$i++){
+    if($notas[$i] >= 5 ){
+        $contador++;
+    }
+    $sumatorio=$sumatorio+$notas[$i];
+}
+echo "El número total de alumnos con GBD aprobado es de  $contador &nbsp;&nbsp;";
+
+
+/* 2. */
+$contador=0;
+$sumatorio=0;
+for($i=0;$i<$numElementos;$i++){
+    if($notas[$i] > 5 && $notas[$i] < 9 ){
+        $contador++;
+    }
+}
+echo "El número de alumnos entre 5 y 9 es de $contador";
+
+
+/* 7. */
+$contador=0;
+$sumatorio=0;
+for($i=0;&i<$numElementos;$i++){
+    if($notas[$i] < 3 ){
+        $contador++
+    }
+}
+$porcentaje=$contador*100/$numElementos;
+
+?>
+ </body>
+</html>

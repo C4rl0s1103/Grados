@@ -1,0 +1,33 @@
+REM TENEMOS LA SIGUIENTE ESTRUCTURA DE USUARIOS 
+
+REM EL ARCHIVO LLAMADO USUARIOS.TXT (los espacios son ;)
+REM		pedro	García		P@ssw0rd	ADE
+REM		alexia	González	P@ssw0rd	ASIR
+REM 	elara	Rodríguez	P@ssw0rd	DAM
+REM		lyra	López		P@ssw0rd	DAW	
+
+@ECHO OFF 
+
+REM CREACION DE LA INFRAESTRUCTURA 
+ECHO CREAMOS LA INFRAESTRUCTURA
+DSADD OU "ou=practica,dc=vallexxx,dc=local"
+
+FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO 
+		DSADD OU "ou=%%d,ou=practica,dc=vallexxx,dc=local"
+FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO 
+		DSADD GROUP "cn=%%d,ou=%%d,ou=practica,dc=vallexxx,dc=local"
+		
+REM CREACION DE USUARIOS 
+ECHO CREAMOS LOS USUARIOS
+
+FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO 
+		DSADD USER "cn=%%a,ou=%%d,ou=practica,dc=vallexxx,dc=local" -pwd %%c -fn %%a -ln %%b -canchpwd no -mustchpwd no -pwdneverexpires yes 
+		
+
+REM UNIMOS LOS USUARIOS A LOS GRUPOS CORRESPONDIENTES 
+
+ECHO UNIR LOS USUARIOS A LOS GRUPOS 
+FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO 
+		DSMOD GROUP "cn=%%d,ou=%%d,ou=practica,dc=vallexxx,dc=local" -addmbr "cn=%%a,ou=%%d,dc=vallexxx,dc=local"
+		
+REM CON EL COMANDO -MEMBEROF EN EL COMANDO DSADD USER PODEMOS HACER LO MISMO QUE CON EL COMANDO DSMOD GROUP 

@@ -1,0 +1,374 @@
+2)
+1. 
+morning
+218
+
+
+2. 
+red
+
+
+3. 
+education
+exhibition
+
+
+4)
+a. 3
+b. 2 
+c. 3
+d. 1
+e. 3
+
+
+6)
+1. 
+2. 
+3. 
+4. 
+
+
+
+bird
+disagree
+pencil
+
+
+oil
+parrot
+
+
+5. 
+1) keyboard
+2) monitor
+3) mouse
+4) laptop
+5) system unit
+6) server
+
+
+6.
+1) data
+2) apps
+3) hardware
+4) software
+
+
+7.
+a) education 
+b) business and retail 
+c) banking
+d) health
+e) manufacturing
+f) transport
+g) hospitality and leisure
+
+
+YOUR TURN
+a) 240
+b) 94
+c) 176
+d) 167
+
+
+1) page 6 
+1. Francesca
+2. Charlene
+3. Brian
+4. Brian
+5. Brian
+6. Charlene
+
+
+2) page 6
+a. 3
+b. 1
+c. 4
+d. 2
+e. 5
+
+
+3) page 6
+1. b
+2. c
+3. a
+
+
+5) page 7
+1. troubleshoot
+2. reair
+3. download
+4. assemble
+5. startup
+
+
+6) page 7
+1. b.
+2. f.
+3. a.
+4. d.
+5. e.
+6. c.
+
+
+7) page 7
+1. design a webpage 
+2. give support 
+3. solved problems 
+4. check the connections
+5. input data 
+6. operate a machine
+
+
+8) page 7
+1. programmer
+2. helpdesk technician
+3. network adminsitrator
+4. support technician
+5. software tester
+6. web designer
+7. data entry operator
+
+
+9) page 7
+1. helpdesk technician
+2. giving support
+3. troubleshoot
+4. repairing
+5. installing
+6. assemble
+
+1) page 8
+1. PC1
+2. PC1
+3. PC2
+4. PC1
+
+
+2) page 8
+1. Can I help you,sir?
+2. What do you need to use it for?
+3. Do you want to use it for downloading music or films?
+4. It´s on special offer this week 
+
+
+2) page 8
+/* Invent a dialogue */
+A: Can I help you, sir?
+B: Yes I want to buy a Mobile Phone
+A: What sort of mobile phone do you need? 
+B: I need a mobile phone that has a good camera 
+A: What is your budget? 
+B: 600€
+A: ok, I have this device that fits your needs
+B: Ok, i like it, what colors are available? 
+A: Blue, black, white and yellow
+B: I´d like a yellow one, please.
+
+4) page 9
+1. Customer
+2. Customer
+3. Salesman
+4. Customer
+5. Both
+6. Salesman
+
+
+5) page 9
+1. motherboard
+2. hard drive
+3. USB port
+4. sound card
+5. DVD drive
+6. processor (CPU)
+7. RAM chip
+8. heat sink and fan
+
+
+6) Page 9
+1. processor (CPU)
+2. hard drive
+3. sound card
+4. RAM chip 
+5. heat sink and fan 
+6. motherboard
+7. DVD drive
+
+7) page 9
+1. d.
+2. g.
+3. h.
+4. a.
+5. b.
+6. f.
+7. c.
+8. e.
+
+your turn) page 9
+1. fast processor
+2. 2TB
+3. 4GB
+4. 490
+5. mouse
+
+1) page 10
+1. two pannels
+2. into CPU socket on the motherboard
+3. with clips 
+4. to the motherboard
+5. insert in the computer case 
+
+
+2) page 10
+1. hardware
+2. computer
+3. panel
+4. screw
+5. music
+
+5) page 11
+1st first 
+2nd second
+3rd third
+4th fourth
+5th fifth
+6th sixth
+7th seventh
+8th eighth
+9th ninth
+10th tenth
+
+6) page 11
+1. side panel
+2. socket
+3. switch
+4. front panel 
+5. cable
+6. case 
+7. power supply
+8. slot
+9. clip
+
+
+7) page 11 (exam)
+1. connect c. Disconnect
+2. turn on a. turn off
+3. plug in e. unplug 
+4. screw b. unscrew 
+5. insert d. remove 
+6. attach f. detach 
+
+
+8) page 11
+1. a. make sure you disconnect the cable.
+2. a. detach the card.
+3. b. so I´m going to turn it off.
+4. you have to unscrew it.
+5. a. you have to attach the old sound card.
+6. if it´s plugged in!
+
+1) page 12
+1. false 
+2. false
+3. false
+4. true
+5. true
+
+
+2) page 12 
+1. third
+2. standard 
+3. header
+4. end 
+5. cleaning 
+
+
+5) page 13
+1. e.
+2. a.
+3. f.
+4. g.
+5. b.
+6. d.
+7. c.
+
+you turn) page 13 
+1. grant
+2. function keys 
+3. arrow keys
+4. software
+5. keyboard
+
+6) page 13
+1. false
+2. true
+3. false
+4. true
+5. true
+6. true
+7. true
+
+
+7) page 13
+1. full stop
+2. comma
+3. exclamation mark
+4. question mark
+5. colon
+6. semicolon
+7. quotation marks
+8. apostrophe
+9. brackets
+10. at symbol
+11. asterisk
+12. slash
+13. hyphen
+14. and symbol
+15. underscore
+
+
+5) page 15 
+1. microphone 
+2. printer
+3. speakers 
+4. projector
+5. headset
+6. scanner 
+7. gaming controller 
+8. webcam
+9. stylus pen 
+
+
+6) page 15 
+1. touch screen 
+2. remote control 
+3. USB charger 
+4. barcode scanner
+5. flash drive
+
+
+7) page 15
+1. c. They don´t make or use it any more.
+2. a. Mine is full
+3. e. It´s not receiving information again.
+4. b. There are 97 in this box!
+5. g. We last ordered with them three months ago
+6. d. We didn´t bring enough to the trade exhibition.
+7. f. I can´t see the words properly 
+
+
+
+1) page 56
+1. weren´t	were
+2. wasn´t	was
+3. weren´t	were
+4. wasn´t	was
+
+6) page 57
+met
+started 
+planned
+openned
+left 
+took 
+

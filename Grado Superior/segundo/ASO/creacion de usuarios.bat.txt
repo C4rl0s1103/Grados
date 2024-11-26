@@ -1,0 +1,93 @@
+@echo off
+
+echo "creacion de ou profesores y usuarios profesores"
+dsadd ou "ou=profesores,dc=vallecgm,dc=local" 
+dsadd user "cn=anaherrero,ou=profesores,dc=vallecgm,dc=local" -pwd P@ssw0rd
+dsadd user "cn=nico,ou=profesores,dc=vallecgm,dc=local" -pwd P@ssw0rd
+dsadd user "cn=carmennavarro,ou=profesores,dc=vallecgm,dc=local" -pwd P@ssw0rd
+
+echo "creacion de ou equipos_aulas"
+dsadd ou "ou=equipos_aulas,dc=vallecgm,dc=local"
+
+
+echo "creacion de equipos de primero"
+dsadd ou "ou=primero,ou=equipos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=ASIR,ou=primero,ou=equipos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=DAM,ou=primero,ou=equipos_aulas,dc=vallecgm,dc=local"
+
+for /l %%a IN (1,1,15) DO (
+    dsadd computer "cn=asir1eq%%a,ou=ASIR,ou=primero,ou=equipos_aulas,dc=vallecgm,dc=local"
+)
+
+for /l %%a IN (1,1,15) DO (
+    dsadd computer "cn=dam1eq%%a,ou=DAM,ou=primero,ou=equipos_aulas,dc=vallecgm,dc=local"
+)
+
+echo "creacion de equipos de segundo"
+dsadd ou "ou=segundo,ou=equipos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=ASIR,ou=segundo,ou=equipos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=DAM,ou=segundo,ou=equipos_aulas,dc=vallecgm,dc=local"
+
+for /l %%a IN (1,1,15) DO (
+    dsadd computer "cn=asir2eq%%a,ou=ASIR,ou=segundo,ou=equipos_aulas,dc=vallecgm,dc=local"
+)
+
+for /l %%a IN (1,1,15) DO (
+    dsadd computer "cn=dam2eq%%a,ou=DAM,ou=segundo,ou=equipos_aulas,dc=vallecgm,dc=local"
+)
+
+
+echo "creacion de usuarios 2"
+dsadd ou "ou=alumnos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=primero,ou=alumnos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=ASIR,ou=primero,ou=alumnos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=DAM,ou=primero,ou=alumnos_aulas,dc=vallecgm,dc=local"
+
+dsadd ou "ou=segundo,ou=alumnos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=ASIR,ou=segundo,ou=alumnos_aulas,dc=vallecgm,dc=local"
+dsadd ou "ou=DAM,ou=segundo,ou=alumnos_aulas,dc=vallecgm,dc=local"
+
+for /f "tokens=1-7 delims=;" %%a IN ('type usuarios.txt') DO (
+    if "%%a" == "C1ASIR" (
+       dsadd user "cn=%%e %%c,ou=ASIR,ou=primero,ou=alumnos_aulas,dc=vallecgm,dc=local" -pwd P@ssw0rd 
+    )
+
+    if "%%a" == "C2ASIR" (
+       dsadd user "cn=%%e %%c,ou=ASIR,ou=segundo,ou=alumnos_aulas,dc=vallecgm,dc=local" -pwd P@ssw0rd 
+    )
+
+    if "%%a" == "C1DAM" (
+       dsadd user "cn=%%e %%c,ou=DAM,ou=primero,ou=alumnos_aulas,dc=vallecgm,dc=local" -pwd P@ssw0rd 
+    )
+
+    if "%%a" == "C2DAM" (
+       dsadd user "cn=%%e %%c,ou=DAM,ou=segundo,ou=alumnos_aulas,dc=vallecgm,dc=local" -pwd P@ssw0rd 
+    )
+)
+
+
+ echo "modificacion de oficina"
+ for /f "tokens=1-7 delims=;" %%a IN ('type usuarios.txt') DO (
+    if "%%a" == "C1DAM" (
+        dsmod user "cn=%%e %%c,ou=DAM,ou=primero,ou=alumnos_aulas,dc=vallecgm,dc=local" -office "torrejon de ardoz" 
+    )
+)
+
+
+echo "modificacion de password"
+for /f "tokens=1-7 delims=;" %%a IN ('type usuarios.txt') DO (
+    if "%%a" == "C2ASIR" (
+       dsmod user "cn=%%e %%c,ou=ASIR,ou=segundo,ou=alumnos_aulas,dc=vallecgm,dc=local" -pwd Sistemas 
+    )
+)
+
+echo "modificacion de password"
+for /f "tokens=1-7 delims=;" %%a IN ('type usuarios.txt') DO (
+    if "%%e" == "%%e*n" (
+       dsmod user "cn=%%e %%c,ou=ASIR,ou=segundo,ou=alumnos_aulas,dc=vallecgm,dc=local" -pwdneverexpires true
+    )
+)
+
+
+echo "modificacion de usuario que empieza por ana"
+dsmod user "cn=ana*,ou=profesores,dc=vallecgm,dc=local" -disabled yes
