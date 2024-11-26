@@ -1,0 +1,191 @@
+{
+  "main": {
+    "id": "7756f104caa2af84",
+    "type": "split",
+    "children": [
+      {
+        "id": "08e3004aa60ec25c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f837bc4e9348eb4b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "173703b5d8429739",
+    "type": "split",
+    "children": [
+      {
+        "id": "3d37da66eff1959e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b50d75743606b2fa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "acc1c6ec97440949",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "32feea7fd2be2f00",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fea7d941e56966cc",
+    "type": "split",
+    "children": [
+      {
+        "id": "bccf2515454b5697",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9f96c6188727ac21",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b9b7e9c851180d99",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5457d2b7c2c2e5e3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "870032b8ed83db5e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "f837bc4e9348eb4b",
+  "lastOpenFiles": [
+    "bash/GestionLinux/Organizar informacion.md",
+    "bash/GestionLinux/Gestion de Permisos Linux con Numeros.md",
+    "bash/GestionLinux/Gestion de Grupos.md",
+    "bash/GestionLinux/Curl.md",
+    "bash/GestionLinux/Crear usuarios.md",
+    "CTFsPropias/NewMachine.md",
+    "Reconocimiento/nmap/Nmap comands.md",
+    "Windows/Powershell.md",
+    "Windows/Comandos.md",
+    "Linux/Terminal.md",
+    "Linux/Puertos Principales.md",
+    "Linux/Curl.md",
+    "Linux/Comandos.md",
+    "bash/Scripting/Variables.md",
+    "bash/Scripting",
+    "bash/Sin título.md",
+    "Reconocimiento/nmap/Nmap Time.md",
+    "Bases de Datos/SQL.md",
+    "imgs/Pasted image 20240505154037.png",
+    "imgs/Pasted image 20240505152732.png",
+    "bash/GestionLinux",
+    "Hacking/Pivoting/Reenvío dinámico de puertos con túnel SSH y SOCKS.md",
+    "Hacking/Pivoting/Pivoting Introduccion.md",
+    "Hacking/Command Injection/Omitir Otros caracteres.md",
+    "Hacking/Command Injection/Omitir filtros de espacio.md",
+    "Hacking/Command Injection/Injeccion basica.md",
+    "Hacking/Command Injection/Identificacion de Filtros.md",
+    "Hacking/privilege scalation/Python hijacking.md",
+    "Hacking/Shells/Basic Shells.md",
+    "Sin título.md",
+    "imgs/Pasted image 20240501161024.png",
+    "imgs/Pasted image 20240501005153.png",
+    "imgs/Pasted image 20240426224851.png",
+    "imgs/Pasted image 20240426222704.png",
+    "Activie Directory/Ataques",
+    "imgs/Pasted image 20240424204431.png",
+    "imgs/Pasted image 20240424182601.png",
+    "imgs/Pasted image 20240424161659.png",
+    "imgs/Pasted image 20240424160135.png",
+    "Activie Directory/Impacket",
+    "Activie Directory/Tools",
+    "Redes",
+    "bash/overthewire/Sin título",
+    "bash/overthewire",
+    "bash",
+    "Pivoting",
+    "Sin título.canvas"
+  ]
+}
