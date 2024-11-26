@@ -1,0 +1,25 @@
+CMD: CREACIÓN DE USUARIOS.
+
+--PESTAÑA GENERAL--
+
+-PWD (contraseña).
+-fn (nombrea).
+-ln (apellido).
+-display (nombre a mostrar. Normalmente, "Nombre Apellido".
+
+--PESTAÑA CUENTA--
+
+-upn (nombre de inicio de sesión. Normalmente, "nombre.apellido" o "nombre.apellido@dominio.com" [CON DUDAS]).
+-mustchpwd ("yes"/"no". En caso de "yes", debe cambiar la contraseña al iniciar sesión).
+-canchpwd ("yes"/"no". En el caso de "yes", es capaz de cambiar la contraseña).
+-pwdneverexpires ("yes"/"no". En el caso de "yes", la contraseña nunca expirará).
+
+--PESTAÑA PERFILES--
+
+-profile //dc01/Perfiles$/("nombre.man"/"%username%") (Si es .man, es perfil obligatorio. Si no, es uno móvil).
+-loscr (Script de inicio de sesión. Normalmente, un archivo con el nombre de usuario + .bat).
+-hmdrv (Punto de anclaje. Por ejemplo, M:).
+-hmdir //dc01//Personales/pepe_mediocre (Carpeta de conexión).
+
+--PESTAÑA MIEMBROS--
+-memberof (Ubicación del grupo. El formato es igual que con dsadd: "cn=grupo,ou=grupo,ou=Trabajo,ou=Las Naves,dc=dominio,dc=com".

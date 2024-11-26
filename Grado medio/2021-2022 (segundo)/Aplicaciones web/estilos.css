@@ -1,0 +1,60 @@
+/* Ayuda para los estilos de nuestras páginas web
+
+font-size: valor; // tamaño de letra
+
+text-align: valor; // alineamiento del texto
+text-decoration: valor; // decoración del texto
+
+color: valor; // aplica color a texto
+background-color: valor; // aplica color de fondo
+
+border-radius: valor; // redondea esquinas
+
+border: valor1, valor2, valor3; // propiedades atajo de los bordes
+
+border-style: valor; // propiedades atajo de los bordes
+border-style: valor1 valor2; // propiedades atajo de los bordes
+border-style: valor1 valor2 valor3; // propiedades atajo de los bordes
+border-style: valor1 valor2 valor3 valor4; // propiedades atajo de los bordes
+
+border-width: valor; // propiedades atajo de los bordes
+border-width: valor1 valor2; // propiedades atajo de los bordes
+border-width: valor1 valor2 valor3; // propiedades atajo de los bordes
+border-width: valor1 valor2 valor3 valor4; // propiedades atajo de los bordes
+
+border-color: valor; // propiedades atajo de los bordes
+border-color: valor1 valor2; // propiedades atajo de los bordes
+border-color: valor1 valor2 valor3; // propiedades atajo de los bordes
+border-color: valor1 valor2 valor3 valor4; // propiedades atajo de los bordes
+
+margin: valor; // propiedad atajo del margen
+margin: valor1 valor2; // propiedades atajo del margen
+margin: valor1 valor2 valor3; // propiedades atajo del margen
+margin: valor1 valor2 valor3 valor4; // propiedades atajo del margen
+
+padding: valor; // propiedad atajo del padding
+padding: valor1 valor2; // propiedades atajo del padding
+padding: valor1 valor2 valor3; // propiedades atajo del padding
+padding: valor1 valor2 valor3 valor4; // propiedades atajo del padding
+
+float: valor; // flotación de elementos
+
+display: valor; // muestra elementos
+visibility: valor; // oculta elementos
+
+z-index: valor; // prioridad a la hora de mostrar elementos
+
+opacity: valor; // ilumina elementos
+
+position: valor; // posicionamiento de elementos
+
+transform: scale(valor); // escalado del elemento
+transform: rotate(valor); // rotación de un elemento
+transition: valor1 valor2 valor3; //transición del efecto
+
+overflow: valor; // desbordamiento
+
+td:hover {} // comportamiento de hover
+
+*/
+

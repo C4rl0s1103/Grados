@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="windowsPE">
+        <component name="Microsoft-Windows-Setup" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <DiskConfiguration>
+                <Disk wcm:action="add">
+                    <CreatePartitions>
+                        <CreatePartition wcm:action="add">
+                            <Extend>true</Extend>
+                            <Order>1</Order>
+                            <Type>Primary</Type>
+                        </CreatePartition>
+                    </CreatePartitions>
+                    <ModifyPartitions>
+                        <ModifyPartition wcm:action="add">
+                            <Active>true</Active>
+                            <Format>NTFS</Format>
+                            <Label>system</Label>
+                            <Letter>C</Letter>
+                            <Order>1</Order>
+                            <PartitionID>1</PartitionID>
+                        </ModifyPartition>
+                    </ModifyPartitions>
+                    <DiskID>0</DiskID>
+                    <WillWipeDisk>true</WillWipeDisk>
+                </Disk>
+                <WillShowUI>OnError</WillShowUI>
+            </DiskConfiguration>
+            <WindowsDeploymentServices>
+                <Login>
+                    <Credentials>
+                        <Domain>eduardo.org</Domain>
+                        <Password>Admin@123</Password>
+                        <Username>Administrador</Username>
+                    </Credentials>
+                </Login>
+                <ImageSelection>
+                    <InstallImage>
+                        <Filename>INSTALL.WIM</Filename>
+                        <ImageName>Windows 7 Professional x64</ImageName>
+                        <ImageGroup>W7</ImageGroup>
+                    </InstallImage>
+                    <InstallTo>
+                        <DiskID>0</DiskID>
+                        <PartitionID>1</PartitionID>
+                    </InstallTo>
+                </ImageSelection>
+            </WindowsDeploymentServices>
+        </component>
+        <component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SetupUILanguage>
+                <UILanguage>es-ES</UILanguage>
+            </SetupUILanguage>
+            <InputLocale>040a:0000040a</InputLocale>
+            <SystemLocale>es-ES</SystemLocale>
+            <UILanguage>es-ES</UILanguage>
+            <UILanguageFallback>es-ES</UILanguageFallback>
+            <UserLocale>es-ES</UserLocale>
+        </component>
+    </settings>
+    <cpi:offlineImage cpi:source="wim:e:/desatendida/install.wim#Windows 7 Professional x64" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+</unattend>

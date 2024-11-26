@@ -1,0 +1,30 @@
+div {
+	width: 250px;
+	height: 300px;
+	border: 2px solid black;
+	padding:10px;
+	margin: 10px;
+	float: left;
+	background-color: hotpink;
+}
+div h2 {
+	font-size: 1.1em;
+	background-color: gray; 
+	color: white;
+	padding: 2px;
+	text-align: center;
+	border-radius: 10px;
+}
+div p {
+	text-align: justify;
+}
+.oculto {
+	overflow: hidden;
+	background-color: black;
+	color:white;
+}
+.scroll {
+	overflow: scroll;
+	overflow-x: hidden;
+	background-color:yellow;
+}

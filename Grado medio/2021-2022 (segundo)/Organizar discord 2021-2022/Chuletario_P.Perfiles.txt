@@ -1,0 +1,34 @@
+1. Unidades Organizativas
+	
+	-Crear UO, Grupos, y usuarios
+	-Unir cada usuario con su grupo, y los grupos de cada UO.(Mienbros, Miembros De)
+	-Horas de Inicio de Sesión y Equipos permitidos.
+
+2. Perfiles Móviles
+
+	- Crear la crpeta PERFILES (ya deberia estar hecha), compartirla con Grupo (TODOS CT).
+	- Escribir la ruta de acceso al perfil, (\\servidor\perfiles$\%username%).
+	- Iniciar sesion en cada uno de los equipos de eso PM. (Necesario para la creación de las carpetas .man .v2)
+	- COMPROBACIÓN: Crear una carpeta en un equipo, al iniciar en otro equipo con ese usuario, debes acceder a la carpeta.
+
+3. Pefiles Obligatorios
+	
+	- Iniciamos sesión con cada usuario, lo configuramos (fondo y iconos) 				xxxxxxxxxx
+	- Iniciamos sesion en ese equipo con ADMINISTRADOR con la extensión (.man o .man.v2)		xxxxxxxxxx
+	- RECORDTORIO: Es más rápido iniciar con todos los Usuarios y luego copiarlos juntos.
+	- Cambiar (.dat por .man) y eliminar grupo todos de SEGURIDAD, anadir su GRUPO CORRESPONDIENTE.
+	-Finalmente RUTA DE ACCESO AL -PERFIL- \\servidor\perfiles$\********.man---> siempre.man
+
+4. Recursos Compartidos
+	
+	- Crear en una carpeta llamada PERSONALES, compartir con (TODOS CT) --> Ya debería estra hecho.
+	- Crear Carpeta de cada usuario que se vaya a usar esta carpeta (gm_inf_m)
+	- Ir al perfil (COMPARTIR CON: p a: \\servidor\personales\%username%) 
+	- Crer los *******.bat y poner (net use *: \\sercidor\gm_inf) , PONER EN EL PERFIL ******.bat en la ruta de SCRIPT
+	
+	-Administracion de directivas de grupo, Crear GPO "REDIRECCION DE MIS DOCUMENTOS" (normalmente en la Unidad Or. principal ya que es de grupo),
+	le damos a editar (Basico...., Crear carpeta...., \\SERVIDOR\DOCUMENTOS) -----> MARCAR LA ULTIMA CAJA
+
+5. Politicas de grupo
+	
+	Suerte, no voy a explicar nada, muy EASY

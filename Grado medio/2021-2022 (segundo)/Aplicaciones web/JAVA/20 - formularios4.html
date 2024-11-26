@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function pagar() {
+			var lugar = document.getElementById("safari").value;
+			var valor = parseInt(document.getElementById("cantidad").value);
+			var bicho = document.getElementById("animal").value;
+			var tipo = document.zoo.modalidad.value;
+			var viaje = document.getElementById("medio").value;
+			var costes= document.zoo.tasas.value; 
+			var bichos_pago=0;
+			var total_pago=0;
+			var precio_bicho=0;
+			if (bicho == "delfin") {
+				precio_bicho=200;
+			} else if (bicho == "jirafa") {
+				precio_bicho=400;
+			} else if (bicho == "gorila") {
+				precio_bicho=560;
+			} else if (bicho == "tigres") {
+				precio_bicho=20;
+			}
+			bichos_pago=precio_bicho*valor;
+			if (tipo == "diurna") {
+				bichos_pago *= 1.20;
+			} else {
+				bichos_pago *= 0.95;
+			document.getElementById("mercancia").value=bichos_pago;
+			var portes_pago=0;
+			if (viaje == "tierra") {
+				portes_pago=1000;
+			} else if (viaje == "aire") {
+				portes_pago=2500;
+			} else {
+				portes_pago=5000;
+			}
+			if (costes == "impuestos") {
+				portes_pago *= 1.35;
+			} else {
+				portes_pago *= 1.10;
+			}
+			if (bichos_pago+portes_pago >= 10000) {
+				portes_pago *= 0.80;
+			}else {
+				portes_pago *= 1.20;
+			}
+			document.getElementById("portes").value=portes_pago;
+			var lugar_pago=0;
+			if (lugar == "kenia") {
+				lugar_pago=2500;
+			} else if (lugar == "uganda") {
+				lugar_pago=3000;
+			} else if (lugar == "india") {
+				lugar_pago=1500;
+			} else {
+				lugar_pago=800;
+			}
+			document.getElementById("total").value=bichos_pago+portes_pago+lugar_pago;
+		}
+	</script>
+	<form action="#" name="zoo">
+		<fieldset>
+			<legend>Zoo de Alcalá</legend>
+			<label for="usuario">Usuario:</label>
+			<input type="text" id="usuario">
+			<label for="safari">Pais a visitar:</label>
+			<select id="safari">
+				<option value="kenia">Kenia (2500€)</option>
+				<option value="uganda">Uganda (3000€)</option>
+				<option value="india">India (1500€)</option>
+				<option value="zimbabwe">Zimbabwe (800€)</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Especies exóticas</legend>
+			<label for="cantidad">Cantidad:</label>
+			<input type="text" id="cantidad" size="4">
+			<label for="animal">Elige tu animal</label>
+			<select id="animal">
+				<option value="delfin">Delfines (200€)</option>
+				<option value="jirafa">Jirafas (400€)</option>
+				<option value="gorila">Gorilas (560€)</option>
+				<option value="tigre">Tigres (20€)</option>
+			</select>
+			<label>Modalidad:</label>
+			<label for="diurna">Diurna (+20%)</label>
+			<input type="radio" name="modalidad" id="diurna" value="diurna">
+			<label for="nocturna">Nocturna (-5%)</label>
+			<input type="radio" name="modalidad" id="nocturna" value="nocturna" checked>
+		</fieldset>
+		<fieldset>
+			<legend>Varios</legend>
+			<label for="medio">Medio de transporte</label>
+			<select id="medio">
+				<option value="tierra">Terrestre (1000 €)</option>
+				<option value="aire">Aéreo (2500 €)</option>
+				<option value="mar">Marítimo (5000 €)</option>
+			</select>
+			<label>Tasas:</label>
+			<label for="inpuestos">Impuestos (35%)</label>
+			<input type="radio" name="tasas" id="impuestos" value="impuestos" checked>
+			<label for="traficantes">Traficantes(10%)</label>
+			<input type="radio" name="tasas" id="traficantes" value="traficantes">
+		</fieldset>
+		<fieldset>
+			<legend>A pagar</legend>
+			<input type="button" value="Pulsa aqui para pagar" onclick="pagar()">
+			<label for="mercancia">Mercancía:</label>
+			<input type="text" id="mercancia" size="6" disabled> €
+			<label for="portes">Portes:</label>
+			<input type="text" id="portes" size="6" disabled> €
+			<label for="total">Total:</label>
+			<input type="text" id="total" size="6" disabled> €
+		</fieldset>
+	</form>
+</body>
+</html>

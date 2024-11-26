@@ -1,0 +1,20 @@
+FORMULARIO:
+
+Contexto: Estamos deforestando un bosque, y nuestro objetivo es que crees un formulario con diversas opciones:
+
+-Una SECCIÓN (fieldset) llamada USUARIO en el que se deba introducir el nombre, y una lista desplegable que diga "Preferencia personal". Esta lista desplegable debe tener los campos siguientes:
+	--"Explosivos (1500€)"
+	--"Lanzallamas (750€)"
+	--"Mano de obra con hachas (1250€)"
+Estos costes se tendrán en cuenta.
+
+-Otra sección, llamada "Equipamiento externo". En él, se debe introducir un campo en el que especificar la cantidad seleccionada, y otra lista desplegable cuyas opciones digan: 
+	--"Tanqueta (3200€)"
+	--"Cabeza nuclear pequeña (15600€)"
+	--"Excavadoras (1340€)"
+-EN LA MISMA SECCIÓN, pon DOS radiobotones, uno que diga "Replantar (+45%)", y otro que diga "Ignorar totalmente (-1%)". 
+
+Una sección llamada "Randomizador", con un BOTÓN que, al pulsarse, de un número aleatorio entre 1 y 4000 hectáreas. 
+	--Crea una variable que multiplique cada hectárea por 300(€).
+
+-Un total, que cuente TODOS los costes.

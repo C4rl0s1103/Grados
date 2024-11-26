@@ -1,0 +1,72 @@
+body.curso {
+	background-color: gray; 
+}
+body.profesores {
+	background-color: black;
+}
+body.profesores h1{
+	color: white;
+}
+body.curso h1{
+	color: red;
+}	
+body.curso table {
+	margin: 0 auto;
+	background-color: pink;
+}
+body.profesores table{
+	margin: 0 auto;
+	background-color: yellow;
+	color:green;
+}
+td{
+ width: 120px;
+ text-align: center;
+ font-weight: bold;
+}
+a {
+	color: black;
+	text-decoration: none; 
+}
+.Sistemas {
+	background-color: aqua;
+}
+.Seguridad {
+	background-color: yellow;
+}
+.FOL {
+	background-color: pink;
+}
+.Empresas {
+	background-color: chocolate;
+}
+.Redes {
+	background-color: blue;
+}
+.Ofimatica {
+	background-color: orange;
+} 
+.Tutoria {
+	background-color: green;
+}
+.Ética {
+	background-color: gray;
+}
+.aplicacionesweb {
+	background-color: red;
+}
+.Horario {
+	background-color: darkgoldenrod;
+}
+.profeibai:hover {
+	background-color: yellow;
+}
+.profejuan:hover {
+	background-color: red
+}
+.color:hover {
+	background-color: blue;
+}
+
+# juan Sistemas Ofimatica FOL Ética empresas
+# IBAI Seguridad Redes aplicaciones_WEB Tutoria

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function calcular(){
+		var procedencia=document.formulario.localidad.value;
+		var tipocombustible=document.getElementById("combustible").value;
+		var cancombustible=document.getElementById("cantidad").value;
+		var tipofact=document.getElementById("facturacion").value;
+		resprocedencia=0;
+		if (procedencia == "madrid") {
+			resprocedencia=5;
+		} else if (procedencia == "resto") {
+			resprocedencia=10;
+		} else if (procedencia == "islas") {
+			resprocedencia=20;
+		} else {
+			resprocedencia=30;
+		}
+
+		var preciocombustible=0
+		if (tipocombustible == "gasoil") {
+			preciocombustible= cancombustible* 1.45;
+		} else {
+			preciocombustible= cancombustible* 1.60;
+		}
+		if (cancombustible >= 100) {
+			preciocombustible *= 0.98
+		} else if (cancombustible <= 5) {
+			preciocombustible *= 1.05
+		}
+		if (tipofact == "socio") {
+			preciocombustible *= 0.95
+		} else if (tipofact == "promocion") {
+			preciocombustible *= 0.98
+		}
+		
+		var ivaaplicado = 0;
+		ressubtotal= resprocedencia+preciocombustible
+		ivaaplicado = ressubtotal * .21
+		restotal= ivaaplicado+ressubtotal;
+		ivaaplicado=ivaaplicado.toFixed(2);
+		document.getElementById("iva").value=ivaaplicado;
+		ressubtotal=ressubtotal.toFixed(2);
+		document.getElementById("subtotal").value=ressubtotal;
+		restotal=restotal.toFixed(2);
+		document.getElementById("total").value=restotal;
+
+	}
+	</script>
+	<form action="#" name="formulario">
+		<fieldset>
+			<legend>Procedencia:</legend>
+			<label>¿Cuál es tu procedencia?</label>
+			<br/>
+			<label for="madrid">Madrid 5€</label>
+			<input type="radio" name="localidad" id="madrid" value="madrid" checked>
+			<label for="resto">Resto de la Peninsula 10€</label>
+			<input type="radio" name="localidad" id="resto" value="resto">
+			<label for="islas">Islas 20€</label>
+			<input type="radio" name="localidad" id="islas" value="islas">
+			<label for="ue">Union Europea 30€</label>
+			<input type="radio" name="localidad" id="ue" value="ue">
+		</fieldset>
+		<fieldset>
+			<legend>Tipo de Combustible:</legend>
+			<select id="combustible">
+				<option value="gasoil">Gasoil 1,45/Litro</option>
+				<option value="gasolina">Gasolina 1,60/Litro</option>
+			</select>
+			<label for="cantidad">Cantidad de Litros:</label>
+			<input type="text" id="cantidad" size="4">
+		</fieldset>
+		<fieldset>
+			<legend>Modo de Facturación:</legend>
+			<select id="facturacion">
+				<option value="socio">Socio -5%</option>
+				<option value="promocion">Promocion -2%</option>
+				<option value="nada">Nada</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Totales a pagar:</legend>
+			<input type="button" value="Pago Total" onclick="calcular()">
+			<label>Subtotal:</label>
+			<input type="text" id="subtotal" size="4" disabled>
+			<label>IVA:</label>
+			<input type="text" id="iva" size="4" disabled>
+			<label>Total:</label>
+			<input type="text" id="total" size="4" disabled>
+		</fieldset>
+	</form>
+</body>
+</html>

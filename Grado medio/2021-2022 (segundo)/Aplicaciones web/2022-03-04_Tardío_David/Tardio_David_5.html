@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 5</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function calcular() {
+			var tipo_peaje = document.formulario.procedencia.value;
+			var gas = document.getElementById("tipo_gasolina").value;
+			var cantidad_gas = document.getElementById("litros").value;
+			var tipo_factura = document.getElementById("facturacion").value;
+			var coste_peaje = 0;
+			var coste_gas = 0;
+			var coste_total = 0;
+			var impuesto = 0;
+			if (tipo_peaje == "madrid") {
+				coste_peaje = 5;
+			} else if (tipo_peaje == "peninsula") {
+				coste_peaje = 10;
+			} else if (tipo_peaje == "isla") {
+				coste_peaje = 20;
+			} else if (tipo_peaje == "union") {
+				coste_peaje = 30;
+			} else {
+				window.alert("Nada");
+			}
+			if (gas == "gasoil") {
+				coste_gas = 1.45 * cantidad_gas;
+			} else if (gas == "gasolina") {
+				coste_gas = 1.60* cantidad_gas;;
+			} else {
+				window.alert("Nada");
+			}
+			coste_gas= parseFloat(coste_gas);
+			if (cantidad_gas >= 100) {
+				coste_gas *= 0.98;
+			} else if (cantidad_gas <= 5) {
+				coste_gas *= 1.05;
+			} 
+			coste_total = coste_gas + coste_peaje;
+			coste_total = parseFloat(coste_total);
+			if (tipo_factura == "socio") {
+				precio_factura = 0.95;
+			} else if (tipo_factura == "promocion") {
+				precio_factura = 0.98;
+			} else {
+				precio_factura = 1;
+			}
+
+			coste_total = parseFloat(coste_total.toFixed(2));
+			document.getElementById("subtotal").value=coste_total;
+			impuesto = (coste_total*21)/100;
+			impuesto = parseFloat(impuesto.toFixed(2));
+			document.getElementById("iva").value=impuesto;
+			var real_coste_total =  (coste_total + impuesto)*precio_factura;
+			real_coste_total = parseFloat(real_coste_total.toFixed(2));
+			document.getElementById("total").value=real_coste_total;
+		}
+	</script>
+	<form action="#" name="formulario">
+		<fieldset>
+			<legend>Procedencia del cliente</legend>
+			<label for="madrid">Comunidad de Madrid: 5€.</label>
+			<input type="radio" name="procedencia" id="madrid" value="madrid" checked>
+			<label for="peninsula">Resto de la península: 10€.</label>
+			<input type="radio" name="procedencia" id="peninsula" value="peninsula" checked>
+			<label for="isla">Islas: 20€.</label>
+			<input type="radio" name="procedencia" id="isla" value="isla" checked>
+			<label for="union">Unión Europea: 30€.</label>
+			<input type="radio" name="procedencia" id="union" value="union" checked>
+		</fieldset>
+		<fieldset>
+			<legend>Producto</legend>
+			<select id="tipo_gasolina">
+				<option value="gasoil">Gasoil (1.45€/litro)</option>
+				<option value="gasolina">Gasolina (1.60€/litro)</option>
+			</select>
+			<br/><br/>
+			<label for="litros">Litros a comprar:</label>
+			<input type="text" id="litros" size="4">
+			<label for="facturacion">Modo de facturacion:</label>
+			<select id="facturacion">
+				<option value="socio">Socio (descuento del 5%)</option>
+				<option value="promocion">Promoción existente (descuento del 2%)</option>
+				<option value="resto">Resto de casos (sin descuento)</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Factura a pagar:</legend>
+			<input type="button" value="Total" onclick="calcular()">
+			<label for="subtotal">Subtotal:</label>
+			<input type="text" id="subtotal" size="3" disabled>
+			<label for="iva">IVA (21%):</label>
+			<input type="text" id="iva" size="3" disabled>
+			<label for="total">Total:</label>
+			<input type="text" id="total" size="3" disabled>
+		</fieldset>
+	</form>
+</body>
+</html>

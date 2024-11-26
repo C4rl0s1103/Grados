@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Formularios (I)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function calcular_euros() {
+		// 	var valor = document.getElementById("dolar").value;
+		// 	var resultado = valor*0.88;
+		// 	document.getElementById("euro").value = resultado.toFixed(2);
+		// }
+
+		// Grados celsius a fahrenheit
+		// function calcular_temperatura(){
+		// 	 var celsius = document.getElementById("celsius").value;
+		// 	 var resultado = valor*9/5+32;
+	 // 		 document.getElementById("farenheit").value = resultado.toFixed(2);
+ 	// 	}
+
+ 		// adivina el numero dado el resultado de una operacion 
+ 		function adivinar() {
+ 			var y = parseInt(document.getElementById("resultado").value);
+ 			var x = (y+14)/10;
+ 			document.getElementById("solucion").value = x;
+ 		}
+	</script>
+	<!-- Cambio dolares a Euros -->
+	<!-- <form action="#">
+		<label for="dolar">Dólares:</label>
+		<input type="text" id="dolar" size="4">
+		<label for="euro">Euros:</label>
+		<input type="text" id="euro" size="4" disabled>
+		<input type="button" id="calcular" value="Calcular" onclick="calcular_euros()"> 
+		</form> -->
+
+	<!-- Cambio de celsius a farenheit -->
+	<!-- <form action="#">
+ 		 <label for="Celsius">Celsius:</label>
+ 		 <input type="text" id="Celsius" size="4"> 
+ 		 <label for="farenheit">Farenheit:</label>
+ 		 <input type="text" id="farenheit" size="4" disabled>
+		 <input type="button" id="calcular" value="calcular" onclick="calcular_temperatura()" /> -->
+
+	<!-- Adivina el numero dado el resultado de una operacion -->
+ 	<form action="#">
+ 		<p>
+ 			Piensa un numero (no me lo digas) y te lo adivinaré.
+ 			<br/>
+ 			multiplicalo por 5; restale 3 multiplicalo por 5; restale 8.
+ 			<br/>
+ 			Dime cuanto te sale y adivinare tu número.
+ 			<!-- <br/>
+ 			y=(x*5-3)*2-8 x=(y+14)/10 -->
+ 		</p>
+			<label for="resultado">resultado:</label>
+ 			<input type="text" id="resultado" size="4">
+ 			<input type="button" id="calcular" value="adivinar" onclick="adivinar()">
+ 			<br/>
+ 			<label for="solucion">el numero que pensantes es:</label>
+ 			<input type="text" id="solucion" size="4" disabled>
+ 	</form>
+</body>
+</html>

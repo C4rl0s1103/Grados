@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Aleatorios</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var aleatorio=Math.floor(Math.random()*(MAX-MIN+1))+MIN;
+
+		//numeros aleatorios entre 5 y 15
+		// var aleatorio=Math.floor(Math.random()*(11))+5;
+		// window.alert("Tu numero es "+aleatorio);
+
+		//numeros infinitos entre 5 y 15
+		// var infinitos = true;
+		// while (infinitos == true ) {
+		// var aleatorio=Math.floor(Math.random()*(11))+5;
+		// infinitos = confirm("Tu numero es "+aleatorio+". ¿Quieres seguir jugando?");
+		// }
+		// window.alert("Te cansas muy pronto...")
+
+		// numeros infinitos entre X e Y
+		// var minimo=prompt("¿Elige un numero entre los cuales va a estar?");
+		// minimo=parseInt(minimo);
+		// var maximo=prompt("¿Elige otro numero entre los cuales va a estar?");
+		// maximo=parseInt(maximo);
+		// var infinitos = true;
+		// while (infinitos == true ) {
+		// var aleatorio=Math.floor(Math.random()*(maximo-minimo+1))+minimo;
+		// infinitos = confirm("Tu numero entre "+minimo+" y "+maximo+" es "+aleatorio+". ¿Quieres seguir jugando?");
+		// }
+		// window.alert("Te cansas muy pronto...");
+
+		//Numeros infinitos entre X e Y con condicion
+	// 	var minimo=prompt("¿Elige un numero entre los cuales va a estar?");
+	// 	minimo=parseInt(minimo);
+	// 	var maximo=prompt("¿Elige otro numero entre los cuales va a estar?");
+	// 	maximo=parseInt(maximo);
+	// 	var infinitos = true;
+	// 	if(minimo<maximo){
+	// 	while (infinitos == true ) {
+	// 	var aleatorio=Math.floor(Math.random()*(maximo-minimo+1))+minimo;
+	// 	infinitos = confirm("Tu numero entre "+minimo+" y "+maximo+" es "+aleatorio+". ¿Quieres seguir jugando?");
+	// 	} 
+	// 	window.alert("Te cansas muy pronto...");
+	// } else {
+	// 	window.alert("No se puede");
+	// }
+
+	//adivina un numero entre 1 y 5
+	// var aleatorio=Math.floor(Math.random()*(5))+1;
+	// window.alert("El numero secreto es "+aleatorio);
+	// var respuesta=prompt("Adivina el numero entre 1 y 5:");
+	// respuesta=parseInt(respuesta);
+	// if(respuesta == aleatorio){
+	// 	window.alert("has acertado");
+	// } else {
+	// 	window.alert("Eres un pipa");
+	// }
+
+	//adivina un numero entre 1 y 5 con 3 vidas
+	// var aleatorio=Math.floor(Math.random()*(5))+1;
+	// window.alert("El numero secreto es "+aleatorio);
+	// for (i=1;i<=3;i++) {
+	// 	var respuesta=prompt("Adivina el numero entre 1 y 5:");
+	// 		respuesta=parseInt(respuesta);
+	// 		if (respuesta == aleatorio){
+	// 			window.alert("has acertado");
+	// 			break;
+	// 	} else {
+	// 		window.alert("Eres un pipa");
+	// 	}
+	// }
+	
+	//Adivina un numero entre 1 y 5 con vidas infinitas
+	var aleatorio=Math.floor(Math.random()*(5))+1;
+	window.alert("El numero secreto es "+aleatorio);
+	var jugando=true;
+	while (jugando == true) {
+		var respuesta=prompt("Adivina el numero entre 1 y 5:");
+			respuesta=parseInt(respuesta);
+			if (respuesta == aleatorio){
+				window.alert("has acertado");
+				jugando=false;
+		} else {
+			window.alert("Eres un pipa");
+		}
+	}
+	</script>
+</body>
+</html>

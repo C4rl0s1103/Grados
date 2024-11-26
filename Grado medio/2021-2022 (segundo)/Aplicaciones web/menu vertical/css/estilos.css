@@ -1,0 +1,44 @@
+div#menuvertical{
+	width: 200px;
+	text-align: center;
+	position: absolute;
+	top: 0%;
+	left:75%;
+}
+div#menuvertical a {
+	display: block;
+	text-decoration: none;
+	color: yellow;
+	font-weight: bold;
+	background-color: black;
+	padding: 5px 0px;
+	border: 2px solid yellow;
+	margin: 10px 0;
+	border-radius: 0 15px;
+	font-size: 1.2em;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+div#menuvertical a:first-letter {
+	font-size: 1.3em;
+	color: red;
+}
+div#menuvertical a:nth-child(2n+1){
+	color: lime;
+}
+div#menuvertical a:hover {
+	color: black;
+	border-color: black;
+	background-color: yellow;
+	border-radius: 15px 0;
+	transition: all ease-in-out 0.5s;
+	text-decoration: underline;
+}
+div#menuvertical a:nth-child(4n-3) {
+	color: aqua;
+}
+div#menuvertical a:nth-child(4n-2) {
+	color: red;
+}
+div#menuvertical a:nth-child(4n-1) {
+	color: orange;
+}

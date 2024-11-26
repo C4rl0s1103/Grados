@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>If</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Pregunta un numero y decide si es mayor, menor, igual que 5
+		// var numero1=prompt("Dime un numero: ");
+		// if (numero1>5) {
+		// 	document.write("Tu número es mayor que 5.");
+		// }
+		// else {
+		// 	document.write("Tu número es menor o igual que 5.");
+		// }
+
+
+		//Pregunta dos numeros, Los suma y compara con un tercer valor que tambien se pide muesta el mensaje correspondiente
+		// var numero1=prompt("Dime un numero");
+		// numero1=parseInt(numero1);
+		// var numero2=prompt("Dime otro numero");
+		// numero2=parseInt(numero2);
+		// var suma=numero1+numero2;
+		// var numero3=prompt("Dime un tercer numero");
+		// numero3=parseInt(numero3);
+		// if (suma>numero3) {
+		// document.write("Tu numero es: " +suma+ " y es mayor que "+numero3);
+		// }
+		// else {
+		// document.write("Tu numero es: " +suma+ "es menor o igual que "+numero3);
+		// }
+
+		//me pregunta un numero y un umbral y decide si es mayor menor o igual
+		// var numero1=prompt("Dime un numero");
+		// numero1=parseInt(numero1);
+		// var numero2=prompt ("Dime otro numero");
+		// numero2=parseInt(numero2);
+		// if (numero1>numero2) {
+		// 	document.write(numero1+" es mayor que "+numero2+".");
+		// }
+		// else if (numero1<numero2) {
+		// 	document.write(numero1+" es menor que "+numero2+".");
+		// }
+		// else {
+		// 	document.write(numero1+" es igual que "+numero2+".")
+		// }
+
+
+		var numero1=prompt("Escribe un numero");
+		numero1=parseInt(numero1);
+		var numero2=prompt("Escribe un numero");
+		numero2=parseInt(numero2);
+		var numero3=prompt("Escribe un numero");
+		numero3=parseInt(numero3);
+		var numero4=prompt("Escribe un numero");
+		numero4=parseInt(numero4);
+
+		if ((numero1>numero2)&&(numero3>numero4)) {
+			document.write("Iguales");
+		}
+		if ((numero1<numero2)&&(numero3<numero4)) {
+			document.write("Iguales");
+		}
+		if ((numero1>numero2)&&(numero3<numero4)) {
+			document.write("Distinto");
+		}
+		if ((numero1<numero2)&&(numero3>numero4)) {
+			document.write("Distinto");
+		}
+		if ((numero1==numero2)&&(numero3==numero4)) {
+			document.write("Igual");
+		}
+	</script>
+</body>
+</html>

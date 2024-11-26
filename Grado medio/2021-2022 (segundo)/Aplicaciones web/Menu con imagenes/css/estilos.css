@@ -1,0 +1,25 @@
+ul.menu{
+	width: 110px;
+	list-style: none;
+}
+ul.menu li {
+	border: 1px solid #808080;
+	margin-bottom: 10px;
+	position: relative;
+	border-radius: 5px;
+}
+ul.menu li a {
+	text-decoration: none;
+	color: chocolate;
+	display: block;
+	padding: .2em 0 .2em 1.5em;
+	transition: all ease-in-out .02s;
+	background: #F6CEF5 url(../img/flecha_inactiva.png) no-repeat 3px;
+	border-radius: 5px;
+}
+ul.menu li a:hover {
+	background: #58FA58 url(../img/flecha_activa.png) no-repeat 3px;
+}
+ul.menu li:hover {
+	left: 40px;
+}

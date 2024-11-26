@@ -1,0 +1,58 @@
+body {
+	background-color: black; 
+}
+body.Bueno {
+	background-color: yellow;
+}
+body.antonio {
+	background-color: green;
+}
+h1{
+	color: yellow;
+}	
+table {
+	margin: 0 auto;
+	background-color: white;
+}
+td{
+ width: 120px;
+ text-align: center;
+ font-weight: bold;
+}
+a {
+	color: black;
+	text-decoration: none; 
+}
+.Empresas {
+	background-color: red;
+}
+.Sistemas {
+	background-color: green;
+}
+.FOL {
+	background-color: fuchsia;
+}
+.Seguridad {
+	background-color: blue;
+}
+.Redes {
+	background-color: lime;
+}
+.Tutoria {
+	background-color: chocolate;
+}
+.Ética {
+	background-color: orange;
+}
+.Aplicaciones_web {
+	background-color: aqua;
+}
+.Ofimatica {
+	background-color: yellow;
+}
+.Vacio {
+	background-color: gray;
+}
+body.Bueno h1 {
+	color: blue;
+}

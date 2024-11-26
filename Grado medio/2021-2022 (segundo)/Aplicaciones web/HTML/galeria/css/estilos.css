@@ -1,0 +1,35 @@
+h1 {
+	color: white;
+	text-align: center;
+}
+img {
+	width: 280px;
+	height: 280px;
+	opacity: .5;
+	border-radius: 200px;
+	border: 5px solid lime;
+	transition: all ease-in-out 1s;
+	margin: 10px;
+	margin-bottom: 20px;
+}
+img:nth-child(3n-3):hover{
+	transform:rotate(-90deg);
+}
+img:nth-child(3n-2):hover{
+	transform:rotate(150deg);
+}
+img:nth-child(3n-1):hover{
+	transform:rotate(240deg);
+}
+.invisible {
+	display: none;
+}
+.hueca {
+	visibility: hidden;
+}
+img:hover{
+	opacity: 1;
+}
+body {
+	background-color: black;
+}

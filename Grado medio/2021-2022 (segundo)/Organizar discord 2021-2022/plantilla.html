@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Indica aquí tu ejercicio</title>
+</head>
+<body>
+	<!-- En la entrega del ejercicio recuerda eliminar -->
+	<!-- todo el código comentado e incluir el ejercio -->
+	<!-- (incluído este propio comentario) -->
+	<!-- y tu nombre en el título (pestaña) del navegador -->
+	<script type="text/javascript">
+		function aleatorio() {
+			var aleatorio=Math.floor(Math.random()*(4000-1+1))+1;
+			document.getElementById("aleatorio_total").value=aleatorio
+		}
+
+		function calcular() {
+			var cosa = document.getElementById("producto").value;
+			var arma = document.getElementById("equipamiento").value;
+			var bueno = document.getElementById("replantar").value;
+			var malo = document.getElementById("ignorar").value;
+			var opcion = document.formulario.boton.value;
+			var aleatorio2 = document.getElementById("aleatorio_total").value;
+			var arma_usada=0
+
+			var cantidad = document.getElementById("cantidad").value;
+
+			var total_pago=0;
+
+			if (cosa == "explosivos") {
+				total_pago=1500;
+			} else if (cosa == "lanzallamas") {
+				total_pago=750;
+			} else {
+				total_pago=1250;
+			}
+
+			if (arma == "tanqueta") {
+				arma_usada = 3200;
+			} else if (arma == "cabeza") {
+				arma_usada = 15600;
+			} else {
+				arma_usada = 1340
+			}
+
+			cantidad *= arma_usada;
+
+			total_pago += aleatorio2*300;
+			total_pago += cantidad;
+
+			
+
+			if (opcion == "replantar") {
+				total_pago*= 1.55;
+			} else {
+				total_pago*= 0.99;
+			}
+
+			document.getElementById("total_pagar").value=total_pago;
+		}
+	</script>
+	<form action="#" name="formulario">
+	<fieldset>
+	<label for="usuario">Usuario:</label>
+	<input type="text" id="usuario" size="4">
+	<label for="preferencia">Preferencia personal</label>
+	<select id="producto">
+		<option value="explosivos">Explosivos (1500€)</option>
+		<option value="lanzallamas">Lanzallamas (750€)</option>
+		<option value="mano">Mano de obra con hachas (1250€)</option>
+	</select>
+	</fieldset>
+	<br/><br/>
+	<fieldset>
+		<legend>Equipaminto externo</legend>
+		<label for="cantidad">Cantidad:</label>
+		<input type="text" id="cantidad">
+		<select id="equipamiento">
+			<option value="tanqueta">Tanqueta (3200€)</option>
+			<option value="cabeza">Cabeza nuclear pequeña (15600€)</option>
+			<option value="excavadoras">Excavadoras (1340€)</option>
+		</select>
+	<label for="replantar">Replantar (+45%)</label>
+	<input type="radio" name="boton" id="replantar" checked value="replantar">
+	<label for="ignorar">Ignorar totalmente (-1%)</label>
+	<input type="radio" name="boton" id="ignorar" value="ignorar">
+	</fieldset>
+	<fieldset>
+		<legend>Randomizador</legend>
+		<input type="button" id="randomizador" value="Numero aleatorio" onclick="aleatorio()">
+		<label for="">Numero aleatorio de hectareas entre 1 y 4000</label>
+		<input type="text" id="aleatorio_total" disabled>
+	</fieldset>
+	<fieldset>
+		<input type="button" id="total" onclick="calcular()" value="Total a pagar">
+		<input type="text" id="total_pagar" disabled>
+	</fieldset>
+</body>
+</html>

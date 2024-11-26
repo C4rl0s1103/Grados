@@ -1,0 +1,22 @@
+img {
+	width: 100px;
+	height: 150px;
+}
+img {
+	width: 400px;
+	height: 400px;
+	opacity: .5;
+	border-radius: 50px 400px;
+	transition: all ease-in-out 1s;
+}
+img:nth-child(2n){
+	border-radius: 200px;
+}
+img:nth-child(2n+1){
+	border-radius: 0px;
+}
+
+img:hover {
+	opacity: 1;
+	border-radius: 400px 50px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Formularios (III)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function pagar() {
+			var producto_compra = document.getElementById("producto").value;
+			var unidades_compra = document.getElementById("cantidad").value;
+			var poblacion_compra = document.getElementById("lugar").value;
+			var naves_compra = document.planificadora.naves.value;
+			unidades_compra=parseInt(unidades_compra);
+			var total_compra=0;
+			if (producto_compra == "pan") {
+				total_compra=0.50*unidades_compra;
+			} else if (producto_compra == "magdalena") {
+				total_compra=0.20*unidades_compra;
+			} else if (producto_compra == "bollo") {
+				total_compra=0.70*unidades_compra;
+			} else {
+				total_compra=1.30*unidades_compra;
+			}
+			
+			var factor=0;
+			if (poblacion_compra == "Alcalá") {
+				factor=0.95;
+			} else if (poblacion_compra == "Torrejón") {
+				factor=1.05;
+			} else {
+				factor=1.10;
+			}
+
+			total_compra *= 1.21;
+			total_compra *= factor;
+			if (naves_compra == "S") {
+				total_compra *= 0.80;
+			}
+			document.getElementById("total").value=sitio.toFixed(2);
+		}
+	</script>
+	<form action="#" name="panificadora">
+		<fieldset>
+			<legend>Datos del usuario</legend>
+			<label for="nombre">Cliente</label>
+			<input type="text" id="nombre">
+			<label for="lugar">Población:</label>
+			<select id="lugar">
+				<option value="Alcalá">Alcalá de Henares (-5%)</option>
+				<option value="Torrejón">Torrejón de Ardoz (+5%)</option>
+				<option value="Daganzo">Daganzo de Arriba (+10%)</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Producto</legend>
+			<label for="producto"></label>
+			<select id="producto">
+				<option value="pan">Barra de pan (0,50€)</option>
+				<option value="magdalena">Magdalena (0,20€/u)</option>
+				<option value="bollo">Bollo de vino (0,70€)</option>
+				<option value="pastel">Pasteles (1,30€/u)</option>
+			</select>
+			<label for="cantidad">Unidades:</label>
+			<input type="text" id="cantidad" size="6">
+			<label for="">¿AA Las Naves?</label>
+			<label for="S">S</label>
+			<input type="radio" name="naves" id="S" value="S">
+			<label for="N">N</label>
+			<input type="radio" name="naves" id="N" value="N" checked>
+		</fieldset>
+		<fieldset>
+			<legend>Compra</legend>
+			<label for="total">Total:</label>
+			<input type="text" id="total" size="6" disabled>&nbsp;€
+			<input type="button" value="pagar" onclick="pagar()">
+		</fieldset>
+	</form>
+</body>
+</html>

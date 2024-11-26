@@ -1,0 +1,34 @@
+
+	Unidades organizativa						Grupos				Usuario
+
+		Salesianos Alcala					Salesianos alcala
+			Alumnos						Alumnos
+				Grado Medio				Grado Medio
+					GM estetica			GM estetica			gm_est_m
+					GM informatica			GM informatica			gm_inf_m
+			Trabajadores					Trabajadores	
+				Profesores				Profesores			profesor_m
+				PAS					PAS				pas_m
+
+	Perfiles moviles profesores, PAS y Visitas 
+	Perfiles obligatorios todos los alumnos
+
+	gm_est color de fondo verde lima
+	gm_inf color de fondo rojo
+	
+	gm_inf.bat 		net use G: \\DC-Jorge\GM_inf
+	gm_est.bat 		net use G: \\DC-Jorge\GM_est
+	
+	Los profesores, así como el personal de PAS, dispondrán de un directorio personal, que se guardará en el directorio Personales y lo tendran mapeado en la unidad P.
+
+	Los documentos de trabajo los usuarios guardan en “Mis documentos” se guardarán en el
+	directorio Documentos del controlador de dominio y estarán disponibles únicamente para los alumnos,
+	independientemente del sistema operativo en el que estos usuarios inicien sesión gracias a una política de
+	grupo (GPO).
+	
+	Se aplican a todos
+
+	2. Se impide el acceso al panel de control.
+	3. No aparecen los iconos de Apagar, Reiniciar y Suspender.
+	6. Se oculta y se impide el acceso a la unidad C:
+	

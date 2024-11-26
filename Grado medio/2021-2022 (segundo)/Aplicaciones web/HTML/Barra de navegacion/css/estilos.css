@@ -1,0 +1,27 @@
+div#contenedor {
+	border: 1px solid black;
+	background-color: grey;
+	padding: 1em;
+	width: 50%;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+a, a:visited {
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	transition: all ease-in-out 1s;
+}
+a:hover {
+	color: orange;
+	text-decoration: underline;
+}
+.izquierda {
+	float: left;
+}
+.derecha {
+	float: right;
+}
+.aclarado {
+	clear: both;
+}

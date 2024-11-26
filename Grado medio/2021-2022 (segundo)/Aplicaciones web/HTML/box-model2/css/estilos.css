@@ -1,0 +1,42 @@
+body {
+	background-color: aqua;
+	text-align: center;
+}
+h1 {
+	color: red;
+}
+p {
+	text-align: justify;
+	color: silver;
+	font-size: bold;
+}
+div {
+	width: 570px;
+	height: 350px;
+	background-color: orange;
+	border: 50px solid gray;
+	/*border-style: dotted;
+	border-style: dashed;
+	border-style: double;
+	border-style: ridge;
+	border-style: groove;
+	border-style: inset;*/
+	border-color: red;
+	border-color: red blue;
+	border-color: red blue lime;
+	border-width: 10px;
+	border-width: 10px 50px;
+	border-style: dotted dashed;
+	margin: 0px 40px;
+	/*padding: 40px;*/
+	border-bottom: 50px dotted red;
+}
+div {
+	width: 570px;
+	height: 350px;
+	background-color: orange;
+	border: 50px solid gray;
+	padding: 20px
+	margin: 0 auto;
+	margin: 100px 200px 300px 400px;
+}

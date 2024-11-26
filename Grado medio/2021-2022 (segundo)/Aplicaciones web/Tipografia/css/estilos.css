@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'matrix_zone';
+    src: url('../fonts/matrix_zone-webfont.woff2') format('woff2'),
+         url('../fonts/matrix_zone-webfont.woff') format('woff'),
+         url('../fonts/Matrix_Zone.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Game_Of_Squids';
+    src: url('../fonts/game_of_squids.woff2') format('woff2'),
+         url('../fonts/game_of_squids.woff') format('woff'),
+         url('../fonts/Game_Of_Squids.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+div{
+	margin: 0 auto;
+	border: 5px solid red;
+	border-radius: 10px;
+	width: 80%;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+div#primera {
+	background-color: black;
+	color: white;
+	font-family: 'matrix_zone';
+	text-align: justify;
+}
+div#segunda{
+	background-color: hotpink;
+	color: white;
+	font-family: 'Road Rage', cursive;
+	text-align: justify;
+}
+div#tercera {
+	background-color: green;
+	color: blue;
+	font-family: 'Game_Of_Squids';
+	text-align: justify;
+}
+div#cuarta{
+	background-color: white;
+	color: red;
+	font-family: 'Puppies Play', cursive;
+	text-align: justify;
+}

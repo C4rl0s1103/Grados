@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function random() {
+		// var aleatorio=Math.floor(Math.random()*(200)-1)+1;
+		// document.getElementById("cantidad").value=aleatorio;
+		// } 
+		function sumatotal() {
+			var preferencias=document.getElementById("preferencia").value;
+			// preferencias=parseInt(preferencias);
+			var numero=document.getElementById("cantidad").value;
+			// numero=parseInt(numero);
+			var armamento=document.getElementById("armas").value;
+			// armamento=parseInt(armamento);
+			var replantar=document.david.plantar.value;
+			// replantar=parseInt(replantar);
+			var prefersuma= 0;
+			if (preferencias == "explosivos") {
+				prefersuma = 1500;
+			} else if (preferencias == "lanzallamas") {
+				prefersuma = 750;
+			} else if (preferencias == "mano") {
+				prefersuma = 1250;
+			} 
+
+			resultadocan=0; 
+			if (armamento == "tanqueta") {
+				resultadocan = numero*3200;
+			} else if (armamento == "cabeza") {
+				resultadocan = numero*15600;
+			} else if (armamento == "excavadoras") {
+				resultadocan = numero*1340;
+			} 
+			var sinplantar = resultadocan+prefersuma
+			// sinplantar=parseInt(sinplantar)
+			window.alert(sinplantar)
+			if (replantar == "si") {
+				sinplantar *= 1.45;
+			} else {
+				 sinplantar *= 0.99;
+			}
+			document.getElementById("total").value=sinplantar;
+		}
+	</script>
+	<form action="#" name="david">
+		<fieldset name="usuario">
+			<legend>Primera Seccion</legend>
+			<label for="nombre">Tu Nombre:</label>
+			<input type="text" id="nombre" size="4">
+			<label for="preferencia">Tus Preferencias:</label>
+	<select id="preferencia">
+		<option value="explosivos">Explosivos (1500€)</option>
+		<option value="lanzallamas">Lanzallamas (750€)</option>
+		<option value="mano">Mano de obra con hachas (1250€)</option>
+	</select>
+		</fieldset>
+		<fieldset name="equipamiento">
+			<legend>Equipamiento Externo</legend>
+			<label for="cantidad">Cantidad:</label>
+			<input type="text" id="cantidad" size="4">
+			<label for="armas">Tus Preferencias:</label>
+	<select id="armas">
+		<option value="tanqueta">Tanqueta (3200€)</option>
+		<option value="cabeza">Cabeza nuclear pequeña (15600€)</option>
+		<option value="excavadoras">Excavadoras (1340€)</option>
+	</select>
+	<label>Replantar:</label>
+	<label for="si">Sí (+45%)</label>
+	<input type="radio" name="plantar" id="si" value="si">
+	<label for="no">No (-1%)</label>
+	<input type="radio" name="plantar" id="no" value="no" checked>
+		</fieldset>
+		<fieldset name="random">
+		<legend>Randomizar:</legend>
+		<input type="button" value="random" onclick="random()">	
+		<input type="text" id="compra" size="4" disabled>
+		</fieldset>		
+		<input type="button" value="Total" onclick="sumatotal()">	
+		<input type="text" id="total" size="4" disabled>
+	</form>
+</body>
+</html>

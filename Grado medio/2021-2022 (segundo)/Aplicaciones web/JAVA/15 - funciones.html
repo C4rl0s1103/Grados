@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Funciones</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Calcula el area de un rectangulo 
+		// function area(b,h) {
+		// 	var resultado=b*h;
+		// 	window.alert("El area de tu rectangulo es "+resultado);
+		// }
+		// var base=prompt("Indica la base");
+		// base=parseInt(base);
+		// var altura=prompt("Indica el valor de la altura");
+		// altura=parseInt(altura);
+		// area(base,altura);
+
+		// area de un cuadrado
+		// function area(l) {
+		// 	var resultado=l*l;
+		// 	window.alert("El area de tu cuadrado es "+resultado);
+		// }
+		// var lado=prompt("indica el valor del lado");
+		// lado=parseInt(lado);
+		// area(lado);
+
+		//Factura mas el 21% de iva 
+		// function factura(primera,segunda) {
+		// 	window.alert("Estoy dentro")
+		// 	var resultado=primera+segunda;
+		// 	var conIva=resultado*1.21;
+		// 	window.alert("El resultado de tu factura es "+conIva)
+		// }
+		// var factura1=prompt("Indica el valor de la primera factura:");
+		// factura1=parseInt(factura1);
+		// var factura2=prompt("Indica el valor de la segunda factura:");
+		// factura2=parseInt(factura2);
+		// factura(factura1,factura2);
+
+		// La bolsa (el precio de una accion sube un 5%, baja 10% y sube un 20%)
+		// function bolsa(x){
+		// 	var resultado=x*1.05*0.90*1.20;
+		// 	window.alert("El valor final de tus acciones es:"+resultado)
+		// }
+		// var accion=prompt("Indica el valor inicial de tu accion:");
+		// accion=parseInt(accion);
+		// bolsa(accion);
+
+		//multiplicar sumando
+		// function multiplicar(n,x) {
+		// 	var suma=0;
+		// 	for (i=1;i<=x;i++) {
+		// 		suma += n;
+		// 		// suma = suma + n;
+		// 	}
+		// 	window.alert("El resultado de tu multiplicacion es: "+suma);
+		// }
+		// var multiplicando=prompt("Indica el multiplicando: ");
+		// multiplicando=parseInt(multiplicando);
+		// var multiplicador=prompt("Indica el multiplicador: ");
+		// multiplicador=parseInt(multiplicador);
+		// multiplicar(multiplicando,multiplicador);
+
+		// Kwh acumulados
+		// 1 20 kWh 3 €
+		// 2 20 kWh 6 €
+		// 3 20 kWh 9 €
+		// function endesa(x) {
+		// 	var suma=0;
+		// 	for (i=1;i<=x;i++) {
+		// 		suma += 3;
+		// 		document.write("el dia "+i+" has acumulado "+suma+" €.<br/>");
+		// 	}
+		// }
+		// var dias=prompt("¿Cuantos dias? ");
+		// dias=parseInt(dias);
+		// endesa(dias);
+
+		// Bolas de billar americano 
+		// function bolas(n) {
+		// 	var suma=0;
+		// 	for (i=1;i<=n;i++) {
+		// 		suma += i;
+		// 	}
+		// 	window.alert("En el nivel "+i+" Hay "+suma+" bolas.");
+		// }
+		// function bolas(n) {
+		// 	var suma=(n+1)*n/2;
+		// 	window.alert("En el nivel "+n+" Hay "+suma+" bolas.");
+		// }
+		// var total=prompt("¿Cuantas filas hay? ");
+		// total=parseInt(total);
+		// bolas(total);
+
+		// Tablas de multiplicar
+		// for (i=1;i<=10;i++) {
+		// 	for (j=1;j<=10;j++) {
+		// 		var resultado=i*j;
+		// 		document.write(i+" x"+j+" = "+resultado+"<br/>");
+		// 	}
+		// 	document.write("<br/>");
+		// }
+
+		// Tabla de multiplicar con funciones
+		// function tablas (a,b) {
+		// 	for (i=a;i<=b;i++) {
+		// 		for (j=1;j<=10;j++) {
+		// 		var resultado=i*j;
+		// 		document.write(i+" x"+j+" = "+resultado+"<br/>");
+		// 		}
+		// 	document.write("<br/>");
+		// 	}
+		// }
+		// var inicio=parseInt(prompt("Dime el valor inicial: "));
+		// var final=parseInt(prompt("Dime el valor final: "));
+		// tablas(inicio,final);
+
+		// Par o Impar de un numero
+		// function par(x) {
+		// 	if(x&2==0) {
+		// 		window.aler("Tu numero es par");
+		// 	} else {
+		// 		window.alert("Tu numero es impar");
+		// 	}
+		// }
+		// var numero=parseInt(prompt("Dime el numero y te digo si es par o impar "));
+		// par(numero);
+
+		// ¿Quien es el mayor de los tres?
+		// function mayor (a,b,c) {
+		// 	var resultado=0;
+		// 	if (a>=b && a>=c) {
+		// 		resultado=a;
+		// 	} else if (a<b && b>=c) {
+		// 		resultado=b;
+		// 	} else {
+		// 		resultado=c;
+		// 	}
+		// 	window.alert("El maximo es "+resultado);
+		// }
+		// var primero=parseInt(prompt("Indica el primer numero:"));
+		// var segundo=parseInt(prompt("Indica el segundo numero:"));
+		// var tercero=parseInt(prompt("Indica el tercer numero:"));
+		// mayor(primero,segundo,tercero);
+
+		// Gemelos con 3 personas
+		// function gemeliers (a,b,c){
+		// 		var resultado=0;
+		// 	if ((a==b && a!=c) || (a==c && a!=b) || (b==c && b!=a)) {
+		// 		window.alert("¡Has tenido gemelos!");
+		// 	} else {
+		// 		window.alert("¡Sigue jugando!");
+		// 	}
+		// }
+		// var primero=parseInt(prompt("Indica el primer gemelo:"));
+		// var segundo=parseInt(prompt("Indica el segundo gemelo:"));
+		// var tercero=parseInt(prompt("Indica el tercer gemelo:"));
+		// mayor(primero,segundo,tercero);
+
+		// Perimetro de un rectangulo 
+		function perimetro(b,h) {
+			var resultado=2*b+2*h;
+			return resultado;
+		}
+		var base=parseInt(prompt("Indica la base: "));
+		var altura=parseInt(prompt("Indica la altura: "));
+		var final=perimetro(base,altura);
+		window.alert("El perimetro es: "+final);
+	</script>
+</body>
+</html>

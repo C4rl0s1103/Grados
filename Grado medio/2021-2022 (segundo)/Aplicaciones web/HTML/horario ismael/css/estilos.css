@@ -1,0 +1,70 @@
+body {
+	background-color: black; 
+}
+h1{
+	color: yellow;
+}
+table {
+	margin: 0 auto;
+	background-color: white;
+}
+td{
+ width: 120px;
+ text-align: center;
+ font-weight: bold;
+}
+a {
+	color: black;
+	text-decoration: none; 
+}
+.GYM {
+	background-color: orange;
+}
+.Boxeo {
+	background-color: red;
+}
+.Estudiar {
+	background-color: aqua;
+}
+.Ingles {
+	background-color: yellow;
+}
+.Magia{
+	background-color: mediumorchid;
+}
+.Yoga {
+	background-color: mediumseagreen;
+}
+.Autoescuela {
+	background-color: mistyrose;
+}
+.Peluqueria {
+	background-color: blue;
+}
+.Cocina {
+	background-color: lightyellow;
+}
+.Ingenieria {
+	background-color: peru;
+}
+.Futbol {
+	background-color: lime;
+}
+.Natacion {
+	background-color: turquoise;
+}
+.Series {
+	background-color: blueviolet;
+}
+.Rankeds {
+	background-color: seashell;
+}
+.Leer {
+	background-color: brown;
+}
+.Beisbol {
+	background-color: silver;
+}
+.Vacio {
+	background-color: gray;
+}

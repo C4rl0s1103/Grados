@@ -1,0 +1,18 @@
+Cliente 172.26.0.1/16
+Bastion 172.26.0.15/16 : 10.0.2.10/8
+Server 10.0.2.20/8
+
+user@cliente:~$ ssh -L 8080:10.0.2.20:80 user@172.26.0.15
+(navegador) localhost:8080
+
+################SSH##################
+user@cliente:~$ ssh -L 2222:10.0.2.20:22 user@172.26.0.15 
+(nueva terminal) user@cliente:~$ ssh -p 2222 user@localhost 
+
+###############TELNET################
+user@cliente:~$ ssh -L 2323:10.0.2.20:23 user@172.26.0.15
+(nueva terminal) user@cliente:~$ telnet localhost 2323
+
+###############FTP###################
+user@cliente:~$ ssh -L 2121:10.0.2.20:21 user@172.26.0.15
+(

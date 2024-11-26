@@ -1,0 +1,129 @@
+body {
+	background-color: #241178;
+}
+h1 {
+	text-align: center;
+	color: lime;
+}
+div{
+	position: absolute;
+}
+div.rojo {
+	width:98%;
+	background-color: red;
+	border: 3px solid green;
+	height: 160px;
+}
+div.vertical {
+	width:400px;
+	height: 350px;
+	top:250px ;
+}
+div.vertical.azul {
+	background-color: blue;
+	border: 3px solid orange;
+}
+div.vertical.amarillo {
+	left: 475px;
+	background-color: yellow;
+	border: 3px solid red;
+}
+div.vertical.verde {
+	left: 945px;
+	background-color: green;
+	border: 3px solid blue;
+}
+img	{
+	position: absolute;
+	float: left;
+	opacity: .5;
+}
+img:hover {
+	opacity: 1;
+	transition-duration: 1s;
+}
+img.atlanta {
+	height: 130px;
+	width: 130px;
+	top: 100px;
+	left:150px;
+}
+img.boston {
+	height: 130px;
+	width: 130px;
+	top: 100px;
+	left:615px;
+}
+img.hornets {
+	height: 130px;
+	width: 130px;
+	top: 100px;
+	left:1080px;
+}
+img.nets {
+	height: 130px;
+	width: 130px;
+	top: 258px;
+	left:150px;
+}
+img.bulls {
+	height: 130px;
+	width: 130px;
+	top: 258px;
+	left:615px;
+}
+img.cavaliers {
+	height: 130px;
+	width: 190px;
+	top: 258px;
+	left:1040px;
+}
+img.dallas {
+	height: 130px;
+	width: 200px;
+	top: 420px;
+	left:120px;
+}
+img.denver {
+	height: 130px;
+	width: 130px;
+	top: 420px;
+	left:615px;
+}
+img.bulls2 {
+	height: 130px;
+	width: 130px;
+	top: 420px;
+	left:1080px;
+}
+img.jordan {
+	height: 250px;
+	width:250px;
+	top: 290px;
+	left:820px;
+}
+img.kobe {
+	height: 250px;
+	width:250px;
+	top: 290px;
+	left:300px;
+}
+.jordan:hover {
+/*	transform: scale(1.4);*/
+	transform: rotate(-180deg);
+}
+.kobe:hover {
+	transform: rotate(180deg);
+}
+img.uno:hover {
+	transform: rotate(-30deg);
+}
+img.dos:hover {
+	transform: rotate(70deg);
+}
+img.tres:hover {
+	opacity: 0;
+}
+img.bulls:hover {
+	transform: scale(1.6);
+}

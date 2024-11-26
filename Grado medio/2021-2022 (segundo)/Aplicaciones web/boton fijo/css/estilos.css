@@ -1,0 +1,25 @@
+p {
+	width: 90%;
+	text-align: justify;
+	font-size: 1.2em;
+}
+div {
+	position: fixed;
+	top: 9%;
+	left: 90%;
+}
+div img {
+	width: 128px;
+	height: 128px;
+	background-color: white;
+}
+div img:hover {
+	background-color: red;
+	transition: 1s;
+}
+div#abajo {
+	position: fixed;
+	transform: rotate(180deg);
+	top: 80%;
+	left: 90%;
+}
