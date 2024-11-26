@@ -1,0 +1,10 @@
+dsadd ou "ou=profes,dc=vallexxx,dc=local"
+dsadd ou "ou=alumnos,dc=vallexxx,dc=local"
+dsadd ou "ou=asir,ou=alumnos,dc=vallexxx,dc=local"
+dsadd ou "ou=dam,ou=alumnos,dc=vallexxx,dc=local"
+dsadd ou "ou=grupos,dc=vallexxx,dc=local"
+
+        
+for /l %%a IN (1,5,15) DO (
+	dsadd user "cn=asir%%a,ou=asir,dc=vallexxx,dc=local" -pwd P@ssw0rd
+)

@@ -12,16 +12,16 @@ REM CREACION DE LA INFRAESTRUCTURA
 ECHO CREAMOS LA INFRAESTRUCTURA
 DSADD OU "ou=practica,dc=vallexxx,dc=local"
 
-FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO 
-		DSADD OU "ou=%%d,ou=practica,dc=vallexxx,dc=local"
-FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO 
-		DSADD GROUP "cn=%%d,ou=%%d,ou=practica,dc=vallexxx,dc=local"
+FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO (
+		DSADD OU "ou=%%d,ou=practica,dc=vallexxx,dc=local" )
+FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO (
+		DSADD GROUP "cn=%%d,ou=%%d,ou=practica,dc=vallexxx,dc=local" )
 		
 REM CREACION DE USUARIOS 
 ECHO CREAMOS LOS USUARIOS
 
-FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO 
-		DSADD USER "cn=%%a,ou=%%d,ou=practica,dc=vallexxx,dc=local" -pwd %%c -fn %%a -ln %%b -canchpwd no -mustchpwd no -pwdneverexpires yes 
+FOR /F "tokens=1-4 delims=;" %%a IN (usuarios.txt) DO (
+		DSADD USER "cn=%%a,ou=%%d,ou=practica,dc=vallexxx,dc=local" -pwd %%c -fn %%a -ln %%b -canchpwd no -mustchpwd no -pwdneverexpires yes )
 		
 
 REM UNIMOS LOS USUARIOS A LOS GRUPOS CORRESPONDIENTES 
