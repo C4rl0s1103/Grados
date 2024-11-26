@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>   <!-- Prologo -->
+
+<!--   DTD interno  -->
+<!DOCTYPE note [
+   <!ELEMENT note (to, from, heading, body)>
+   <!ELEMENT to (#PCDATA)>
+   <!ELEMENT from (#PCDATA)>
+   <!ELEMENT heading (#PCDATA)>
+   <!ELEMENT body (#PCDATA)>
+]>
+
+<?xml-stylesheet type="text/xsl" href="note.xsl"?> 
+
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend</body>
+</note>

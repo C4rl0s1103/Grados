@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>FORMULARIO</h2>
+<form action="procesar9.php" method="post">
+<fieldset style="width: 20%;">
+  <legend>Datos Personales</legend>
+  <p>Nombre: <input type="text" name="nombre"> </p>
+  <p> apellido1: <input type="text" name="apellido1"> </p>
+</fieldset>
+<br>
+<fieldset style="width: 20%;">
+  <legend>Datos Academicos</legend>
+  <p>
+    Módulos suspensos EVA1: </br>
+    <input type="radio" name="suspensos" value="ninguno">ninguno</br>
+    <input type="radio" name="suspensos" value="uno">uno</br>
+    <input type="radio" name="suspensos" value="dos">dos</br>
+    <input type="radio" name="suspensos" value="tresomas">tres o m&aacute;s</br>
+  </p>
+  <p>
+    Módulos convalidados ASIR1: </br>
+    <input type="checkbox" name="modulo_fol" value="FOL">FOL</br>
+    <input type="checkbox" name="modulo_lm" value="LM">LM</br>
+    <input type="checkbox" name="modulo_gbd" value="GBD">GBD</br>
+  </p>
+</fieldset>
+  <p>
+    <input type="submit" value="enviar">
+  </p>
+</form>
+
+</body>
+</html>
+

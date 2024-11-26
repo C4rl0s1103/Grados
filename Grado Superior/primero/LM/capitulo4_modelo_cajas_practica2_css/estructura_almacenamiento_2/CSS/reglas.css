@@ -1,0 +1,17 @@
+table, th, td { border: 1px solid black; }
+
+th, td { padding: 1em; }
+
+#dolar {
+    background-image: url("../imagenes/dolar.png");
+    background-repeat: repeat-y ;
+}
+
+.imagen {
+    width: 100px;
+    height: 100px;
+}
+
+.verde  { background-color: #690;}
+.verde2 { background-color: #6F3; }
+.colortexto{ color: #306;}

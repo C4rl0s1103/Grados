@@ -1,0 +1,10 @@
+#Configuración en el router para reenviar al DHCP solicitudes que le lleguen desde las diferentes interfaces
+ 
+Router(config)#interface Fa0/0
+Router(config-if)#ip hel
+Router(config-if)#ip help
+Router(config-if)#ip helper-address 192.168.30.2 #ip del DHCP
+Router(config-if)#exit
+Router(config)#interface Fa1/0
+Router(config-if)#ip helper-address 192.168.30.2 #ip del DHCP
+Router(config-if)#exit

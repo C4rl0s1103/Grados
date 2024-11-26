@@ -1,0 +1,5 @@
+tenemos el procesador que es de los componentes mas importantes del ordenador, en este caso viene en 3 partes, la parte de silicio que es donde esta esculpido todo el circuito del procesador, que solo hace calculos aritmeticos y todas las instrucciones del procesador, y todo lo que hacemos en el ordenador o casi todo pasa por el procesador 
+ya sea ejecutar el sistema operativo, ejecutar la logica de los videojuegos, ejecutar la pagina web
+y por ultimo esta esta chapita por encima que sirve para que  no este tan a la vista el nucleo del procesaor y tambien para que sea mas facil la disipacion del calor
+el concepto es una especie de maquina de calculo que opera sobre unos datos, tenemos como una especie de calculadora y unos datos y es capaz de ejecutar una serie de instrucciones por encima de estos datos
+ahora necesitamos una memoria para poder trabajar que es donde va ha guardar los datos, pues para eso tenemos una unidad de almacenamiento, hoy en dia es mas usado es el SSD M.2 que aunque tambien tenemos los HDD o discos duros mecanicos, que son magneticos, pero se estan dejando de usar, ya que son muy grandes para lo finos 

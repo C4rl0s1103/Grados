@@ -1,0 +1,6 @@
+ul.a {list-style-type:square;}
+
+ul.a {list-style-type: square;
+    list-style-position: inside;}
+
+.negrita { font-weight: bold;}

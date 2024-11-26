@@ -1,0 +1,5 @@
+
++ 1 a n (Puede haber 1 o varias)
+? 0 || 1 (Puede haber 0 o 1)
+* 0 a n (Puede haber 0 o varias)
+Nada 1 , 1 (Solo puede haber 1 y solo 1)

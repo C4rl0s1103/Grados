@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE empresas [
+    <!ELEMENT empresas (empresa+)>
+    <!ELEMENT empresa (nombre,direccion,telefono+,fax?,web?,email*)>
+        <!ATTLIST empresa cif ID #REQUIRED>
+        <!ATTLIST empresa tipo (pública | privada ) "privada">
+        <!ATTLIST empresa anno CDATA #IMPLIED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT direccion (via,nombrevia,numero+,poblacion,ciudad)>
+        <!ELEMENT via EMPTY>
+            <!ATTLIST via tipo (Calle | Avenida | Plaza) "Calle">
+        <!ELEMENT nombrevia (#PCDATA)>
+        <!ELEMENT numero (#PCDATA)>
+        <!ELEMENT poblacion (#PCDATA)>
+            <!ATTLIST poblacion codigo CDATA #REQUIRED>
+        <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT fax (#PCDATA)>
+    <!ELEMENT web (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+]>
+<empresas>
+    <empresa cif="A1111" anno="2012">
+        <nombre>Reparaciones Informáticas, S.A.</nombre>
+        <direccion>
+            <via tipo="Calle" />
+            <nombrevia>Juncal</nombrevia>
+            <numero>21</numero>
+            <numero>22</numero>
+            <poblacion codigo="28850">Torrejón de Ardoz</poblacion>
+            <ciudad>Madrid</ciudad>
+        </direccion>
+        <telefono>911111111</telefono>
+        <telefono>611111111</telefono>
+        <fax>911111111</fax>
+        <web>www.web1.es</web>
+        <email>email1_1@gmail.com</email>
+        <email>email1_2@gmail.com</email>    
+    </empresa>
+
+    <empresa cif="A2222" tipo="pública">
+        <nombre>Soluciones Informáticas, S.A.</nombre>
+            <direccion>
+                <via tipo="Avenida"/>
+                <nombrevia>Constitución</nombrevia>
+                <numero>12</numero>
+                <poblacion codigo="28850">Torrejón de Ardoz</poblacion>
+                <ciudad>Madrid</ciudad>
+            </direccion>
+            <telefono>912222222</telefono>
+            <email>email2_1@gamil.com</email>
+    </empresa>
+
+    <empresa cif="A3333" tipo="privada">
+        <nombre>Alquiler de coches, S.L.</nombre>
+            <direccion>
+                <via/>
+                <nombrevia>Los Rosales</nombrevia>
+                <numero>3</numero>
+                <numero>4</numero>
+                <poblacion codigo="28830">San Fernando de Henares</poblacion>
+                <ciudad>Madrid</ciudad>
+            </direccion>
+            <telefono>913333333</telefono>
+    </empresa>
+</empresas>

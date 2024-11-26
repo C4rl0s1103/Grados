@@ -1,0 +1,25 @@
+para administrar una red de windows que este en grupo de trabajo
+todos los equipos tienen que estar en el mismo grupo de trabajo, por que si no, no pueden compartir archivos entre grupos
+si somos AD de una red windows y en todos los equipos tenemos creado el usuario administrador, 
+con la misma clave entonces no tendremos ningun problema, para adminsitrar el dispositivo mas facilmente 
+y podra ver todos los recursos compartidos, 
+
+para poder ver los recursos que se comparten desde un ordenador, tenemos que conocer el usuario y la contraseña que tiene esa maquina
+
+¿tenemos que tener creados esos usuarios en el equipo cliente?
+NO
+
+
+pero el AD se conoce todos los usuarios y puede cambiar la contraseña
+
+para autentificar windows tiene una base de datos local con esos usuarios y contraseña
+los unicos que no tienen esa base de datos local cuando ya tienen el AD/DS, tienen una base de datos grobal con todos los usuarios del dominio
+cuando nosotros compartimos una carpeta vemos que tenemos 2 tipos de permisos, permisos de comparticion y los permisos NTFS/ SEGURIDAD
+NTFS: nos afectan tanto cuando nos conectamos a traves de la red o cuando iniciamos sesion en ese equipo
+COMPARTICION: solo nos afectan cuando intentamos conectarnos a traves de la red
+
+cuando nos conectamos a traves de la red, los permisos de comparticion nos marcan los permisos topes al cual podemos llegar a alcanzar 
+luego despues nos afectan los permisos de seguridad o NTFS 
+por lo tanto, siempre nos van a afectar los permisos mas restrictivos
+cuando nos conectamos a traves de la red o local, los permisos de ese usuario se suman de todos los grupos en el que pertenezcan excepto si hay un permiso denegado
+

@@ -1,0 +1,15 @@
+titulo: definicion del disco duro
+
+definiciones disco duro:
+
+-tiempo medio de busqueda
+Es el tiempo medio que tarda la cabeza en colocarse sobre la pista seleccionada. Seria la mitad del tiemppo empleado en ir de la pista mas alejada al eje a la mas cercana al eje
+-latencia media 
+Es el tiempo medio que tarda la cabeza en situarse en el sector seleccionado dentro de una pista 
+-tiempo medio de acceso 
+Es la suma de los dos tiempo anteriores. El tiempo medio que tarda la cabeza en situarse una pista y sector seleccionado 
+-velocidad de rotacion 
+Son las vueltas por minuto o mejor dicho, revoluciones por minuto RPM que dan los platos. Es el numero de vueltas que da un plato en un minuto
+-tasa de transferencia
+Una vez que la cabeza esta en el sector y pista elegido, seria la velocidad a la que se transfiere la información.
+La tasa de trasnferencia depende de la velocidad de lectura y escritura del disco

@@ -1,0 +1,2 @@
+si nos da fallo al instalar flash player tenemos que darle a propiedades y luego compatibilidad
+darle a ejecutar este programa en modo compatibilidad para: windows 7

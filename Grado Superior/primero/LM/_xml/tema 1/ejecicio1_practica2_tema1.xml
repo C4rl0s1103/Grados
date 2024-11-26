@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE personas [<!ELEMENT personas (persona+)>
+<!ELEMENT persona (nombre+,apellido1,apellido2?,telefono*)>
+  <!ATTLIST persona nacionalidad CDATA #REQUIRED>
+  <!ATTLIST persona sexo (hombre | mujer) "hombre">   
+  <!ATTLIST persona id_persona ID #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido1 (#PCDATA)>
+<!ELEMENT apellido2 (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+]>
+<personas>
+    <persona nacionalidad="española" sexo="mujer" id_persona="A1111">
+        <nombre>Rosa</nombre>
+        <nombre>Clara</nombre>
+        <apellido1>Casas</apellido1>
+        <apellido2>Rueda</apellido2>
+    </persona>
+    <persona nacionalidad="italiano" sexo="hombre" id_persona="B2222">
+        <nombre>Sergio</nombre>
+        <apellido1>Fuentes</apellido1>
+        <apellido2>Rio</apellido2>
+        <telefono>911111111</telefono>
+    </persona>
+    <persona nacionalidad="francesa" sexo="mujer" id_persona="C3333">
+        <nombre>Lorena</nombre>
+        <apellido1>Madrid</apellido1>
+        <telefono>912222222</telefono>
+        <telefono>601222222</telefono>
+    </persona>
+    <persona nacionalidad="español">
+        <nombre>Carlos</nombre>
+        <apellido1>Flores</apellido1>
+    </persona>
+</personas>

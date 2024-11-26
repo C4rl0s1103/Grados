@@ -1,0 +1,13 @@
+
+net localgroup ESTECO /delete 
+
+
+net localgroup ESTECO /add
+
+
+for /f "tokens=1-5 delims=* usebackq" %%a IN (`type contrataciones.txt`) do (
+
+net user %%a %%e /add
+
+net localgroup ESTECO %%a /add
+)

@@ -1,0 +1,34 @@
+h1 {
+    font-family: Times New Roman, Georgia, serif;
+    font-size: 24pt;
+    letter-spacing: 1 em;
+    text-align: center;
+}
+
+
+/* 2. */
+body {
+    line-height: 2.2em;
+    word-spacing: 1em;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+/* 3. */ 
+#uno {
+    color: red;
+}
+
+#dos {
+    color: blue;
+}
+
+#tres {
+    color: yellow;
+}
