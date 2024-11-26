@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EJERCICIO 5</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script>
+//Para este ejercicio vamos a usar 3 funciones
+function media(valor1,valor2,valor3)
+{
+        var promedio=(valor1+valor2+valor3)/3;
+        return promedio;
+}
+function maximo(valor1,valor2,valor3)
+{
+        if (valor1>valor2 && valo1>vlaor) 
+        {
+            document.write("El número máximo es:"+valor1);
+        }
+            else if (valor2>valor1 && valor2>valor3)
+            {
+                document.write("El número máximo es: "+valor2);
+            }
+                else
+                {
+                    document.write("El número máximo es: "+valor3);
+                }
+}
+function minimo(valor1,valor2,valor3)
+{
+        if (valor1<valor2 && valor1<valor3) 
+        {
+            document.write("El número mínimo es:"+valor1);
+        }
+            else if (valor2<valor1 && valor2<valor3)
+            {
+                document.write("El número mínimo es: "+valor2);
+            }
+                else
+                {
+                    document.write("El número mínimo es: "+valor3);
+                }
+}
+    var valor1,valor2,valor3;
+    var promedio1;
+    valor1=parseInt(prompt("Introduce un valor",""));
+    valor2=parseInt(prompt("Introduce un valor",""));
+    valor3=parseInt(prompt("Introduce un valor",""));
+    promedio1=media(valor1,valor2,valor3);
+    document.write("El promedio de los números es: "+promedio1);
+    document.write("<br>");
+    maximo(valor1,valor2,valor3);
+    document.write("<br>");
+    minimo(valor1,valor2,valor3);
+</script>
+</body>
+</html>

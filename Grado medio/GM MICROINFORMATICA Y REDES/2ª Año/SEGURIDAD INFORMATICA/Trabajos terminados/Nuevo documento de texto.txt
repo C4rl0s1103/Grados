@@ -1,0 +1,28 @@
+instalar mdadm
+mkdir md
+cd /mnt
+mkdir raid1
+mkdir raid5
+fdisk -l
+mdadm--detail
+mdadm -c /dev/md/raid1 -l 1 -n 2 /dev/sdb /dev/sdc
+yes
+mdadm --detail /dev/md/raid1
+mdadm --detail --scan /dev/md/raid1 >> /etc/mdadm/mdadm.conf
+mkfs.ext4 /dev/md/raid1
+mount /dev/md/raid1 /mnt/raid1
+cat /proc/mdstat
+ca /mnt/raid1
+ls
+nano fichero1.txt
+
+mdadm /dev/md/raid1 --fail /dev/sdc
+ls
+mdadm /dev/md/raid1 --remove /dev/sdc
+mdadm /dev/md/raid1 --add /dev/sdc
+
+
+mdadm --zero-superblock /dev/sdd
+umount /dev/md/raid1
+
+

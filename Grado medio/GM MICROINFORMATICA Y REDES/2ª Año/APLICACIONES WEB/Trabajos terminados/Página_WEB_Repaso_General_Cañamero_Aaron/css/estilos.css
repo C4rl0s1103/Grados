@@ -1,0 +1,161 @@
+body{
+	background-image:url(imagenes/fondo.png);
+}
+a:link, a:visited, a:active {
+	text-decoration:none;
+}
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+li {
+	float:left;
+}
+li a {
+	font-size:100%;
+	font-family:cambria;
+	display:block;
+	color:black;
+	text-align:left;
+	padding: 10px 20px;
+}
+li:hover {
+	background-color:white;
+	opacity: 0.4;
+}
+#banner img {
+	position:absolute;
+	left:-10%;
+	top:0%;
+	height:15%;
+	width:110%; 
+}
+#menu {
+	position:absolute;
+	left:-1%;
+	top:15%;
+	height:5%;
+	width:101%; 
+	background:#53929A;
+}
+#imagen1 img {
+	position:relative;
+	height:170px;
+	width:170px;
+	left:700px;
+	top:0px;
+}
+#tabla1 {
+	position:absolute;
+	left:-1%;
+	top:95%;
+	height:5%;
+	width:101%; 
+	background:#53929A;
+}
+#imagen2 img {
+	position:absolute;
+	left:30%;
+	top:9%;
+	z-index:1;
+	width:4%;
+	height:60%;  
+}
+#imagen3 img {
+	position:absolute;
+	left:40%;
+	top:17%;
+	z-index:1;
+	width:3%;
+	height:47%;  
+}
+#imagen4 img {
+	position:absolute;
+	left:50%;
+	top:17%;
+	z-index:1;
+	width:3.5%;
+	height:43%;  
+}
+#imagen5 img {
+	position:absolute;
+	left:60%;
+	top:8%;
+	z-index:1;
+	width:3%;
+	height:84%;  
+}
+#texto1 {
+	position:absolute;
+	font-size:80%;
+	font-family:cambria;
+	z-index:1;
+	top:40%;
+	left:5%;
+}
+#texto2 {
+	position:absolute;
+	font-size:80%;
+	font-family:cambria;
+	z-index:1;
+	top:40%;
+	left:60%;
+}
+#titulo1 {
+	top:23%;
+	left:40%;
+	position:absolute;
+	font-size:250%;
+	color:red;
+    font-family: 'Before Christmas';
+    font-weight: normal;
+    font-style: normal;
+}
+#papanoel img {
+	position:absolute;
+	z-index:1;
+	top:38%;
+	left:45%;
+}
+#renos img {
+	position:absolute;
+	z-index:1;
+	top:65%;
+	left:70%;
+	width:20%;
+	height:20%;
+}
+#renos2 img {
+	position:absolute;
+	z-index:1;
+	top:65%;
+	left:10%;
+	width:20%;
+	height:20%;
+}
+#bolas {
+	position:absolute;
+	z-index:1;
+	top:55%;
+	left:32%;
+	width:10%;
+	height:10%;
+}
+#adorno1 {
+	position:absolute;
+	z-index:1;
+	top:19%;
+	left:-2%;
+	width:10%;
+	height:10%;
+}
+#adorno2 img {
+	position:absolute;
+	z-index:1;
+	top:67%;
+	left:76%;
+	width:30%;
+	height:30%;
+}

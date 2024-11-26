@@ -1,0 +1,26 @@
+cat /etc/mdadm/mdadm.conf
+mdadm -c /dev/md/raid1 -l 1 -n 2 /dev/sdb /dev/sdc
+mdadm --detail /dev/md/raid1
+mdadm --detail --scan /dev/md/raid1 >> /etc/mdadm/mdadm.conf
+mdadm --detail --scan
+mkfs.ext4 /dev/md/raid1
+mount /dev/md/raid1 /mnt/raid1
+cat /proc/mdstat
+mdadm /dev/md/raid1 --fail /dev/sdc
+mdadm /dev/md/raid1 --remove /dev/sdc
+mdadm /dev/md/raid1 --add /dev/sdc
+mdadm /dev/md/raid1 --add /dev/sdd
+unmount /dev/md/raid1
+mdadm /dev/md/raid1 --stop
+mdadm  --zero-superblock /dev/sdd
+
+
+apt install mdadm
+lsblk -fm    ///  fdisk -l
+fdisk /dev/sdb       ------- n,p  t,fd,w
+mdadm -C /dev/md0 -l raid5 -n 6 /dev/sd[b-g]
+mdadm --detail /dev/md0
+mkfs.ext4 /dev/md0
+cd mnt
+mkdir raid5
+mount /dev/md0 /mnt/raid5

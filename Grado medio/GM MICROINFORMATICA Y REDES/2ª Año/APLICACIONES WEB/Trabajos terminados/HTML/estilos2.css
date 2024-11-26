@@ -1,0 +1,75 @@
+#menuhorizontal{
+	margin:0;
+	padding:0;
+	list-style-type:none
+}
+
+#menuhorizontal li{
+	float:left
+}
+
+#menuhorizontal a{
+	width:100px;
+	text-align:center;
+	text-decoration:none;
+	color:#red;
+	padding:3px 5px;
+	border-right:5px solid blue;
+	display:block
+}
+
+
+#menuhorizontal a:visited{
+	background-color:yellow
+}
+
+.claselista li:nth-child(2){ 
+color:green
+}
+ol li:nth-child(2){ 
+color:brown
+}
+
+ol li:last-child{
+	color:red
+}
+
+table{
+		border-collapse:collapse;
+		width:80%;
+		margin;0 auto
+}
+
+tr:nth-child(odd){
+		background-color:red
+}
+tr:nth-child(even){
+		background-color:green
+}
+
+td{
+	border:1px solid #000;
+	text-align:center;
+	padding:0.5rem
+}
+
+#pseudoclasesdistintas p:nth-child(3){
+	background-color:grey
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

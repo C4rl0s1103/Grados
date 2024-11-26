@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script>
+function retornarPerimetro(lado)
+  {
+     var perimetro;
+     perimetro=lado*4;
+     return perimetro;
+  }  
+  var lado;
+  lado=prompt('Ingrese la medida del lado de un cuadrado:','');
+  lado=parseInt(lado);
+  document.write('El perímetro del cuadrado es:'+retornarPerimetro(lado));
+</script>
+</body>
+</html>

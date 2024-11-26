@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<script language="JavaScript">
+    function voltear(texto){
+      var caracter = "";
+      var salida = "";
+      for(var i=0; i < texto.length; i++){
+        caracter = texto.charAt(i);
+        salida = caracter + salida;
+      }
+      return salida;
+    }
+   
+    var texto = prompt("Introduce un texto");
+    var reves = voltear(texto);
+    document.write("Texto original: " + texto);
+    document.write("Texto al revés: " + reves);
+  </script>
+</HEAD>
+<body>
+  
+</body>

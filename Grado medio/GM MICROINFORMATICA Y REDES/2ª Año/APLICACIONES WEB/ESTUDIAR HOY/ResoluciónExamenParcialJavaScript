@@ -1,0 +1,246 @@
+//Ejercicios Examen Parcial JavaScript
+
+
+//Ejercicio1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de Temperatura</title>
+</head>
+<body>
+<script>
+  <strong>Conversor de Temperatura</strong><br>
+
+//Celsius a Fahrenheit  F = C*9/5+32
+      function Celsius_Fahrenheit(grados) 
+	  {
+
+        var F=0;
+		parseInt(F)=grados*1.8+32;
+        document.write("Los grados Fahrenheit correspondientes son"+F)
+	  }
+	  
+	 	var grados=0;
+		grados=parseInt(promtp(" introduce los grados  a convertir"));
+		Celsius_Fahrenheit(grados);
+	
+ </script>
+
+</body>
+</html>
+
+
+
+
+//Ejercicios Examen Parcial JavaScript
+
+
+//Ejercicio1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparación de Cadenas</title>
+</head>
+<body>
+<script>
+  <strong>Mayúsculas o Minúsculas</strong><br>
+
+function comparar(cadena1)
+{
+
+  // Comprobar mayúsculas y minúsculas
+  if( cadena1.toUpperCase() == cadena1) 
+  {
+    document.write(" la cadena está formada sólo por mayúsculas y en minúsculas es");
+	document.write(cadena1.toLowerCase());
+  }
+  else if(cadena1 == cadena1.toLowerCase()) 
+  {
+     document.write(" la cadena está formada sólo por minúsculas y en mayúsculas es ");
+	document.write(cadena1.toUpperCase());
+  }
+  else 
+  {
+    document.write("la cadena es una mezcla de mayúsculas y minúsculas");
+  }
+}
+
+var cadena1;
+cadena1 = prompt("introduzca la  cadena");
+comparar(cadena1);
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+//Ejercicios Examen Parcial JavaScript
+
+
+//Ejercicio3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparar Cadenas</title>
+</head>
+<body>
+<strong>Cual es más larga</strong><br>
+<script>
+  
+
+	function comparar(cadena1, cadena2) 
+	{
+
+			
+		if(cadena1.length() == cadena2.length()) 	
+		{
+			document.write(" las cadenas tienen la misma longitud");
+		}
+		else if(cadena1.length() > cadena2.length()) 
+			{
+				document.write(" las cadena1"+cadena1+ "es más larga que la cadena 2"+cadena2);
+			}
+			else 
+			{
+				document.write(" las cadena2"+cadena2+ "es más larga que la cadena 1"+cadena1);
+			}
+	}
+
+var cadena1;
+var cadena2;
+cadena1 = prompt("introduzca la primera cadena");
+cadena2 = prompt("introduzca la segunda cadena");
+comparar(cadena1, cadena2);
+
+</script>
+
+
+<body>
+
+</body>
+</html>
+
+
+
+
+
+//Ejercicios Examen Parcial JavaScript
+
+
+//Ejercicio4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Factorial</title>
+</head>
+<body>
+<strong>Factorial</strong><br>
+<script>
+  
+
+function factorial(n) 
+{
+	var total = 1; 
+	for (i=1; i<=n; i++) {
+		total = total * i; 
+	}
+	return total; 
+}
+
+var x=0;
+while (n<1 || n>25 || x>=3)
+{
+	n = parseInt(prompt("introduzca el número del que desea hallar el factorial, tiene que estar entre 1 y 25");)
+	x++;
+}
+ factorial(n);
+
+</script>
+</body>
+</html>
+
+
+
+//Ejercicios Examen Parcial JavaScript
+
+
+//Ejercicio3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Par o Impar</title>
+</head>
+<body>
+<strong>Par o Impar</strong><br>
+<script>
+  
+
+	function parimpar(numero) 
+	{
+
+		if(numero % 2 == 0) //if (numero==%2)
+		{
+			return "par";
+		}
+		else 
+		{
+			return "impar";
+		}
+	}
+	
+
+var numero = parseInt(prompt("Introduce un número entero"));
+var resultado=parimpar(numero);
+document.write("el número introducido es: "+resultado);
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Palindromo</title>
+</head>
+<body>
+<strong>Palindromo</strong><br>
+
+<script>
+//Ejercicios Examen Parcial JavaScript
+//Ejercicio6
+		function vuelta(palabra){
+		
+			var delreves;
+			for(largo=palabra.length;largo>=0;largo--){
+				delreves=delreves+palabra.charAt(largo);
+			}
+			document.write(delreves);
+			return delreves;
+		}
+		
+		var palabra;
+		palabra=prompt("Introduce una cadena");
+		var resultado=vuelta(palabra);
+		
+		if (palabra==delreves)
+		{
+		document.write("son iguales");
+		}
+
+
+</script>
+
+</body>
+</html>

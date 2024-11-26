@@ -1,0 +1,35 @@
+table {
+  border: 1px solid black;
+}
+td {
+width:100px;
+height:100px;
+align-content:center;
+border: 1px solid black;
+}
+#imagen1 img{
+	align-content:center;
+	width:100px;
+	height:100px;  
+}
+#imagen2 img {
+	align-content:center;
+	width:100px;
+	height:100px;  
+}
+#blanco {
+  align-content:center;
+  width:100px;
+  height:100px;  
+}
+#imagen1:hover {
+  background-color:orange;
+  transform:scale(2);
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#imagen2:hover {
+  background-color:blue;
+  transform:scale(2);
+}

@@ -1,0 +1,173 @@
+body{
+	background-image:url(imagenes/cuaderno.jpg);
+}
+p {
+font-family:verdana;
+}
+#mafaldadibujo img { 
+	position:absolute;
+	left:100px;
+	top:50px;
+	height:200px;
+	width:200px; 
+}
+#mafalda_titulo h2 {
+	font-family:Cooper;
+	font-size:50px;
+	color:#CC6E04;
+	position:relative;
+	left:450px;
+	top:15px;
+}
+#mafalda_texto {
+	font-family:Arial;
+	font-size:18px;
+	position:relative;
+	left:400px;
+	bottom:30px;
+}	
+#le_gusta {
+	position:absolute;
+	font-size:30px;
+	font-family:arial-black;
+	left:120px;
+	top:250px;
+}
+#the_beatles img {
+	float:both;
+	height:100px;
+	width:100px;
+}
+#the_beatles p {
+	float:both;
+	font-size:12px;
+}
+#pajaro_loco img {
+	position:absolute;
+	height:150px;
+	width:150px;
+	left:250px;
+	top:250px;
+}
+#pajaro_loco p {
+	position:absolute;
+	left:280px;
+	top:390px;
+	font-size:12px;
+}
+#bola_del_mundo img {
+	position:absolute;
+	height:130px;
+	width:130px;
+	left:250px;
+	top:430px;
+}
+#bola_del_mundo p {
+	position:relative;
+	left:200px;
+	top:180px;
+	font-size:12px;
+}
+#le_disgusta {
+	position:relative;
+	font-size:30px;
+	font-family:arial-black;
+	left:100px;
+	top:150px;
+}
+#la_sopa img {
+	position:absolute;
+	height:130px;
+	width:130px;
+	left:0px;
+	top:15px;
+}
+#la_sopa p {
+	position:absolute;
+	left:40px;
+	top:130px;
+	font-size:12px;
+}
+#arma_nuclear img {
+	position:absolute;
+	height:130px;
+	width:130px;
+	left:130px;
+	top:30px;
+}
+#arma_nuclear p {
+	position:relative;
+	left:140px;
+	top:90px;
+	font-size:12px;
+}
+#agenda img {
+	position:absolute;
+	left:380px;
+	top:320px;
+	height:420px;
+	width:420px; 
+}
+#quino {
+	position:relative;
+	font-size:30px;
+	font-family:arial-black;
+	left:450px;
+	bottom:180px;
+}
+#quino p {
+	text-align:center;
+	position:absolute;
+	left:0px;
+	top:49px;
+	font-size:14px;
+}
+#bombilla img {
+	position:absolute;
+	left:580px;
+	top:380px;
+	height:50px;
+	width:50px; 
+}
+#libro img {
+	position:absolute;
+	left:630px;
+	top:380px;
+	height:50px;
+	width:50px; 
+}
+#señor img {
+	position:absolute;
+	left:600px;
+	top:470px;
+	height:110px;
+	width:110px; 
+}
+#familia {
+	position:relative;
+	font-size:30px;
+	font-family:arial-black;
+	left:100px;
+	top:125px;
+}
+#familia1 p {
+	text-align:center;
+	position:absolute;
+	left:0px;
+	top:49px;
+	font-size:12px;
+}
+#familia img {
+	position:relative;
+	left:90px;
+	bottom:190px;
+	height:150px;
+	width:150px; 
+}
+#familia2 p {
+	text-align:center;
+	position:absolute;
+	left:350px;
+	top:49px;
+	font-size:12px;
+}

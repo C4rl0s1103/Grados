@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script>
+  var total1=0;
+  var x=0;
+  var nry;
+  while(x<3)
+  {
+    nry=prompt('Ingrese valor de la primer lista:','');
+    nry=parseInt(nry);
+    total1=total1+nry;
+    x=x+1;
+  }
+  var total2=0;
+  x=0;
+  while(x<3)
+  {
+    nry=prompt('Ingrese valor de la segunda lista:','');
+    nry=parseInt(nry);
+    total2=total2+nry;
+    x=x+1;
+  }
+  if (total1>total1)
+  {
+    document.write('Tiene mayor valor la lista1');
+  }
+  else
+  {
+    if (total1<total2)
+    {
+      document.write('Tiene mayor valor la lista2');
+    }
+    else
+    {
+      document.write('Tienen el mismo valor acumulado las dos listas');
+    }
+  }
+</script>
+</body>
+</html>

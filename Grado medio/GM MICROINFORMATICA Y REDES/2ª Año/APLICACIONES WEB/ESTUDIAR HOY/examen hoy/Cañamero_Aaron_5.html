@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EJERCICIO 5</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function calificaciones ()
+	{
+		var nota1 = prompt('INGRESA LA PRIMERA NOTA DEL MODULO');
+		var nota2 = prompt('INGRESA LA SEGUNDA NOTA DEL MODULO');
+		var nota3 = prompt('INGRESA LA TERCERA NOTA DEL MODULO');
+		if (nota1 == nota2 && nota1 == nota3)
+		{
+			document.write('TODAS LAS NOTAS SON IGUALES');
+		}
+		else if (nota1 == nota2 && nota1 != nota3 || nota1 != nota2 && nota1 == nota2 || nota1 == nota3 && nota1 != nota2 || nota2 == nota3 && nota2 != nota1) 
+		{
+			document.write('HAY DOS REPETIDAS Y UNA DISTINTA');
+		}
+		else if (nota1 != nota2 && nota1 != nota3)
+		{
+			document.write('TODAS LAS NOTAS SON DIFERENTES');
+		}
+	}
+calificaciones()
+</script>
+</body>
+</html>

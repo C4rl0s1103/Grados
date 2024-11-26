@@ -1,0 +1,48 @@
+thunderbird
+roundcube
+portfix
+dovecot
+------------------------------------------
+HELO root
+MAIL FROM root
+RCPT TO: usuario
+DATA
+SUBJECT: más correos
+.
+quit
+cd /var/spool/mail
+nano main.cf
+service postfix restart
+------------------
+home_mailbox =Maildir/
+-------------------
+apt-get install dovecot-core
+apt get install dovecot-pop3d
+apt get install devecot-imapd
+cd /etc/devecot/
+nano devecot.conf
+listen
+cd conf.d
+nano 10-auth.conf
+disable_plaintext_auth = no
+auth_mechanisms = plain login
+nano 10-mail.conf
+mail_location =maildir:ª/Maildir
+nano 10-master.conf
+linia de abajo de postfix
+añadimos tambien
+user = postfix
+group = postfix
+service dovecor restart
+-------------
+CLIENTE::::
+INSTALAR EN WINDOWS THERDERBIRD
+-----------------------
+APT-GET INSTALL ROUNDCUBE-CORE ROUNDCUBE-SQLIT
+nano config.inc.php
+smtp_sever: ponemos ip
+
+
+
+
+

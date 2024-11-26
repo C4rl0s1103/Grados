@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EJERCICIO DNI</title>
+</head>
+<body>
+<script type="text/javascript">
+	var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+	var numero = prompt("Introduce tu numero de DNI ( sin la letra )");
+	var letra = prompt("Introduce la letra de tu DNI ( en mayúsculas )");
+	letra = letra.toUpperCase();
+		if(numero < 0 || numero > 99999999) 
+		{
+  			alert("El número proporcionado no es válido");
+		}
+		else 
+		{
+  			var letracauladas = letras[numero % 23];
+  		if (letracauladas != letra) 
+  		{
+    		alert("La letra o el número proporcionados no son super correctos");
+  		}
+  		else 
+  		{
+    		alert("El número de DNI y su letra son super correctos");
+  		}
+}
+</script>
+</body>
+</html>
+
+
+function vuelta1()
+		{
+			var palabras=document.getElementById("palabra1").value;
+			var delreves=("");
+			for(largo=palabras.length;largo>=0;largo--)
+			{
+				delreves=delreves+palabras.charAt(largo);
+			}
+			document.getElementById("resultado").value=delreves;
+		}
+
+function parimpar()
+		{
+			var numero=document.getElementById("numeros1").value;
+			if(numero%2==0)
+			{
+				document.getElementById("resultado1").value="par";
+			}
+			else 
+			{
+				document.getElementById("resultado1").value="impar";
+			}
+
+		}
+
+
+function factorial() 
+{
+	var total=1;
+	var x=document.getElementById("factorial1").value; 
+	for (i=1; i<=x; i++) 
+	{
+		total = total * i; 
+	}
+	if (x<1 || x>25) 
+		{
+			alert("El número no está entre 1 y 25");
+			total=0;
+		}
+		document.getElementById("resultado1").value=total;
+	}
+
+function comparar()
+{
+  var cadena1=document.getElementById('texto').value;
+  if ( cadena1.toUpperCase() == cadena1) 
+  {
+      alert(" La cadena está formada sólo por mayúsculas y en minúsculas es ");
+	    document.getElementById('final2').value=cadena1.toLowerCase();
+  }
+  else if(cadena1 == cadena1.toLowerCase()) 
+  {
+      alert(" La cadena está formada sólo por minúsculas y en mayúsculas es ");
+	    document.getElementById("final2").value=cadena1.toUpperCase();
+  }
+  else 
+  {
+      document.getElementById("fianl1").value="la cadena es una mezcla de mayúsculas y minúsculas ";
+  }
+}
+
+
+  function grado()
+        {
+            var grados=document.getElementById("grados").value;
+            var num=grados*1.8+32;
+            document.getElementById('resultado').value = num;
+        }
+
+

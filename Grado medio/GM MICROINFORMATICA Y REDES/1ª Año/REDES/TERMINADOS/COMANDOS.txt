@@ -1,0 +1,6 @@
+ip domain-name xxxx.es
+crypto key generate rsa
+line vty 0 4
+transport input ssh
+login local
+username aaron privelege 15 pasword Naves

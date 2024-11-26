@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EJERCICIO 1</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+    function ContarElMenor(i1,i2,i3)
+{
+    if (i1<i2 && i1<i3) 
+    {
+        document.write('El numero menor es:' +i1);
+    }
+    else if (i2<i1 && i2<i3)
+    {
+        document.write('El numero menor es:' +i2);
+    }
+    else if (i3<i1 && i3<i2)
+    {
+        document.write('El numero menor es:' +i3);
+    }
+}
+    var valor1;
+    var valor2;
+    var valor3;
+    valor1=parseInt(prompt('Ingresa el primer numero entero',''));
+    valor2=parseInt(prompt('Ingresa el segundo numero entero',''));
+    valor3=parseInt(prompt('Ingresa el tercer numero entero',''));
+    ContarElMenor(valor1,valor2,valor3);
+</script>
+</body>
+</html>

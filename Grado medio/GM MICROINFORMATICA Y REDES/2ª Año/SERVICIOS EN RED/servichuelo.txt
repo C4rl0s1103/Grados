@@ -1,0 +1,156 @@
+DNS:
+apt-get install bind9
+cd /etc/bind
+nano named.conf.local
+	zone "x.com" {
+		type master;
+		file "/etc/bind/db.x";
+};
+	zone "x.x.in-addr.arpa" {
+		type master;
+		file "/etc/bind/db.x";
+};
+cp db.local db.aarom
+cp db.127 db.175
+nano db.aaron
+sustituir localhost - servidor por el nombre de la maquina.
+nombre IN A X.X.X.X------- IP DE LAS MAQUINAS
+nano db.175
+5 IN PTR NOMBRE DEL EQUIPO.
+nano /resolv.conf - todas
+domain x.com
+search x.com
+nameserver IP
+chattr +i resolv.conf
+service bind9 restart
+
+APACHE:
+apt-get install apache2
+cd /var/www
+mkdir pagina1
+nano index.html
+cd /etc/apache2/sites-available
+cp 000-default.conf pagina1.conf
+nano pagina1.conf
+<VirualHost *:81> ----- PUERTO
+<VirualHost 192.168.1.1> ----- IP
+<VirualHost aaron.com> ----- dominio
+DocumentRoot /var/www/pagina1
+nano ports.conf ----- Habilitamos puertos
+Listen 81
+a2ensite pagina1.conf --- habilitamos pagina
+a2dissite pagina1.conf --- deshabilitamos
+cd mods-available
+nano dir.conf --- para cambiar el nombre del fichero de pagina.
+
+BASIC EN APACHE2:
+a2enmod auth_basic
+htpasswd -c /etc/apache2/informacion.basic aaron
+nano pagina1.conf
+<Directory "/var/www/sitio2">
+	AuthType Basic
+	AuthName "Introducir un usuario"
+	AuthUserFile "/etc/apache2/informacion.basic"
+	Requiere valid-user
+</Directory>
+
+SSL APACHE2:
+cp default-ssl.conf pagina1.conf
+a2enmod ssl
+netstat -nl | grep 443 ---- vemos si esta en escucha
+nano pagina1.conf
+<VirtualHost 192.168.1.1:443>
+
+SSL DIGEST APACHE2:
+a2enmod auth_digest
+htdigest -c /etc/apache/informacion.digest restringido aaron
+nano pagina1.conf
+<VirtualHost 192.168.1.1:443>
+<Directory "/var/www/sitio4">
+	AuthType Digest
+	AuthName "Restringido"
+	AuthUserFile "/etc/apache2/informacion.digest"
+	Requiere user aaron
+</Directory>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FTP:
+apt-get install vsftpd
+netstat -tlpn | grep ftp
+netstat -an | grep :
+nano /etc/vsftpd.conf
+anonymous_enable =YES
+write_enable=YES
+anon_upload_enable=YES
+local_enable=YES
+ftpd_banner= x
+- usuario invitado
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd.chroot_list
+vsftpd_chroot_list
+nano /etc/shells
+/bin/false
+raiz - /srv
+get x
+put x
+FTP CLIENTE:
+apt-get install ftp

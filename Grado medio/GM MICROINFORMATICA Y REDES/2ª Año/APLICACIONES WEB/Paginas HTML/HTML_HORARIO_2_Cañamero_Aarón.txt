@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title> Pagina 2 </title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+<h3> <center> Horario 2 </h3>
+<center> <table border="2">
+		<tr> 
+			<th> Horas </th> <th> Lunes </th> <th> Martes </th> <th> Miercoles </th> <th> Jueves </th> <th> Viernes </th> 
+		</tr>
+		
+</body>
+
+</html>

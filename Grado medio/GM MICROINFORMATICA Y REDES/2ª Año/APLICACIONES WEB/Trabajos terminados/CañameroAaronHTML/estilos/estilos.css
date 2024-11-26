@@ -1,0 +1,137 @@
+body {
+	background-image:url(coronaVirus_ME.jpg);
+}
+#caja1 {
+	font-size:sans-serif;
+	border:solid:3px;
+	position:absolute;
+	z-index:1;
+	background-color:green;
+	top:10px;
+	left:100px;
+	width:600px;
+	height:200px;
+}
+#cajita1 {
+	z-index:2;
+	background-color:blue;
+	position:relative;
+	top:10px;
+	left:90px;
+	width:200px;
+	height:40px;
+}
+#cajita2{
+	z-index:2;
+	background-color:blue;
+	position:absolute;
+	top:120px;
+	left:350px;
+	width:200px;
+	height:40px;
+}
+#cajita3{
+	z-index:2;
+	background-color:blue;
+	position:relative;
+	top:10px;
+	left:90px;
+	width:200px;
+	height:40px;
+}
+#caja2 {
+	background-color:blue;
+	position:relative;
+	top:10px;
+	left:800px;
+	width:600px;
+	height:200px;
+}
+#cajita4{
+	z-index:2;
+	background-color:grey;
+	position:relative;
+	top:10px;
+	left:90px;
+	width:200px;
+	height:40px;
+}
+#cajita5{
+	z-index:2;
+	background-color:grey;
+	position:absolute;
+	top:70px;
+	left:350px;
+	width:200px;
+	height:60px;
+}
+#caja3 {
+	background-color:pink;
+	position:relative;
+	top:10px;
+	left:100px;
+	width:600px;
+	height:200px;
+}
+#cajita6{
+	z-index:2;
+	background-color:grey;
+	position:relative;
+	bottom:10px;
+	left:350px;
+	width:200px;
+	height:60px;
+}
+#cajita7{
+	z-index:2;
+	background-color:grey;
+	position:absolute;
+	top:60px;
+	left:100px;
+	width:200px;
+	height:60px;
+}
+#cajita8{
+	z-index:2;
+	background-color:grey;
+	position:absolute;
+	top:120px;
+	left:350px;
+	width:200px;
+	height:60px;
+}
+#cajita9{
+	z-index:2;
+	background-color:grey;
+	position:absolute;
+	top:130px;
+	left:100px;
+	width:200px;
+	height:60px;
+}
+#caja4 {
+	background-color:yellow;
+	position:relative;
+	top:10px;
+	left:800px;
+	width:600px;
+	height:200px;
+}
+#cajita10{
+	z-index:2;
+	background-color:grey;
+	position:absolute;
+	top:70px;
+	left:100px;
+	width:200px;
+	height:60px;
+}
+#cajita11 {
+	z-index:2;
+	background-color:grey;
+	position:absolute;
+	top:90px;
+	left:350px;
+	width:200px;
+	height:60px;
+}

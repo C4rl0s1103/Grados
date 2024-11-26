@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	switch (dias semana) {
+    case 0:
+        day = "Lunes";
+        break;
+    case 1:
+        day = "Martes";
+        break;
+    case 2:
+        day = "Miercoles";
+        break;
+    case 3:
+        day = "Jueves";
+        break;
+    case 4:
+        day = "Viernes";
+        break;
+    case 5:
+        day = "Sabado";
+        break;
+    case 6:
+        day = "Domingo";
+        break;
+}
+	</script>
+</body>
+</html>

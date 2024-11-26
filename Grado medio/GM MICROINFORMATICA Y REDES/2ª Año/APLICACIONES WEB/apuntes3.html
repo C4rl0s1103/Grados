@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var i;
+		var x;
+		for (i=1; i<=10; i++) {
+			for(x=1; x<=10; x++) {
+				document.writeln(i+"x"+x+"="+i*x);
+	}
+}
+	</script>
+</body>
+</html>
+var f;
+  var base;
+  var altura;
+  var superficie;
+  var conta1=0;
+  for(f=1;f<=3;f++)
+  {
+    base=prompt('Ingrese la base:','');
+    base=parseInt(base);
+    altura=prompt('Ingrese la altura:','');
+    altura=parseInt(altura);
+    superficie=base*altura/2;
+    if (superficie>12)
+    {
+      conta1++;
+    }
+    document.write('Triángulo nro:'+f+'<br>');
+    document.write('Base:'+base+'<br>');
+    document.write('Altura:'+altura+'<br>');
+    document.write('Superficie:'+superficie+'<br>');    
+  }
+  document.write('Cantidad de triángulos con superficie mayor a 12:'+conta1);

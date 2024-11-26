@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var valor;
+		var suma=0;
+		var i;
+		for (i=1; i<=10; i++) 
+		{
+			valor=prompt("Introfuzca un numero");
+			parseInt(valor)
+			if (i=5)
+			{
+				suma=suma+valor;
+				document.write("Mi numero secreto es"+suma);
+			}
+		}
+	</script>
+</body>
+</html>

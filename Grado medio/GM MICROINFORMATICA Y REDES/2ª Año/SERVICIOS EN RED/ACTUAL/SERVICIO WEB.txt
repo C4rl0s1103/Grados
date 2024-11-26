@@ -1,0 +1,33 @@
+live http
+apt-get install apache2
+cd /etc/apache2
+ls
+a2ensite - hablilita sitios web
+a2dissite - desahabilita
+cd /var/www
+cd /etc/apache2
+cd sites-avalaiblo
+nano 000-default.conf
+* donde el puerto
+cd var/www
+mkdir paco
+cd paco
+nano a.html - configurar la pagina
+cd sites-availablo
+cp 000-de----- paco.conf
+nano paco.conf
+habilitar el nuevo puerto
+a2 ensite paco
+a2enmod -- para habilitar 
+-------
+enp0s3:0
+host por ip
+-------
+apt-get install bind9
+nano /000-defa--etc
+ServerName "debian-9.naves.com"
+--------
+paswordd
+ahtpasw2
+
+

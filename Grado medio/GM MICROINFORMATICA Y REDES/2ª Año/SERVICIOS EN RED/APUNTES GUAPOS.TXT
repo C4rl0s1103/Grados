@@ -1,0 +1,74 @@
+BASICOS:
+nano /etc/network/interfaces
+adduser x
+apt-get install dnsutils
+
+DHCP:
+apt-get install isc-dhcp-server
+nano /etc/dhcp/dhcpd.conf
+subnet x.x.x.x netmask x.x.x.x {
+range x.x.x.x  x.x.x.x;
+option domain-name-servers x.x.x.x;
+option routers x.x.x.x;
+option broadcast-address x.x.x.x;
+host x {
+	hardware ethernet x:x:x:x:x:
+	fixed-address x.x.x.x
+}
+nano /etc/default/isc-dhcp-server
+enp0s3
+/etc/init.d/isc-dhcp-server restart
+netstat -punta | grep dhcp
+
+FTP:
+apt-get install vsftpd
+netstat -tlpn | grep ftp
+netstat -an | grep :
+nano /etc/vsftpd.conf
+anonymous_enable =YES
+write_enable=YES
+anon_upload_enable=YES
+local_enable=YES
+ftpd_banner= x
+- usuario invitado
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd.chroot_list
+vsftpd_chroot_list
+nano /etc/shells
+/bin/false
+raiz - /srv
+get x
+put x
+
+
+FTP CLIENTE:
+apt-get install ftp
+
+DNS:
+apt-get install bind9
+cd /etc/bind
+nano named.conf.local
+	zone "x.com" {
+		type master;
+		file "/etc/bind/db.x";
+};
+	zone "x.x.in-addr.arpa" {
+		type master;
+		file "/etc/bind/db.x";
+};
+cp db.local db.aarom
+cp db.127 db.175
+nano db.aaron
+sustituir localhost por la direccion.com
+nombre IN A X.X.X.X
+nano db.175
+5 IN PTR NOMBRE.
+nano /resolv.conf - todas
+domain x.com
+search x.com
+chattr +i resolv.conf
+service bind9 restart
+para conectar ping nombredemaquina.x.com
+conectar ftp
+ftp nombredemaquina.x.com
+nslookup -type=any nombredemaquina.x.com

@@ -1,0 +1,16 @@
+1.d
+2.a
+3.b
+4.c
+5.e
+
+hotspot
+DSL
+ISP
+Upgrade
+Antivirus Software
+Wireless router
+T-3
+F
+T
+F

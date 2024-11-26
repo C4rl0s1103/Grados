@@ -1,0 +1,22 @@
+APUNTES
+var color = prompt ("cuale es etu calor favo");
+swtich(color) {
+	case 'rojo':
+	alert("Has escogido rojo");
+	document.write('Estoy en el rojo');
+	break;
+	
+}
+while (x<=100)
+{
+	document.write(x);
+	document.write('<br>');
+	x=x+1;
+
+}
+for (i=0; i<10; i++) {
+	document.write(i+"<br/>");
+	for(x=0; x<10; x++) {
+	document.write()
+	}
+}

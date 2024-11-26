@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EJERCICIO 6</title>
+	<meta charset="utf-8">
+</head>
+<body> 
+<script>
+  function CargaDeValores()
+  {
+  	var suma=0;
+  	var valor1;
+  	var i;
+    for(i=1;i<=5;i++)
+    {
+      valor1=parseInt(prompt('Ingresa un valor:',''));
+      suma=suma+valor1;
+    }
+    return suma;
+  }
+  var sumita=CargaDeValores();
+  document.write('La suma de los 5 valores es: '+ sumita);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EJERCICIO 8</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script>
+	function cadena(reemplaza)
+	{
+		for (i=0; i<1000;i++)
+		{
+			reemplaza=reemplaza.replace(' ','/');
+		}
+		alert(reemplaza);
+	}
+var reemplaza;
+reemplaza=prompt('introduce un texto de x caracteres');
+cadena(reemplaza);
+</script>
+</body>
+</html>

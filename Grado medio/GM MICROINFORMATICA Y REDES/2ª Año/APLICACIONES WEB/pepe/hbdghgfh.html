@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	function uno(palabra)
+	{
+	var delreves='';
+	document.write('impriomo despues del for' +delreves);
+		for(largo=palabra.length;largo>=0;largo--)
+		{
+			delreves=delreves+palabra.charAt(largo);
+		}
+		document.write('impriomo despues del for' +delreves);
+		return delreves;
+	}
+	var palabra;
+	palabra=prompt('Introduce una cadena');
+	var resultado=uno(palabra);
+	if (palabra==delreves)
+	{
+		document.write('Son iguales');
+	}
+	else 
+	{
+		document.write('no son iguales')
+	}
+</script>
+</body>
+</html>

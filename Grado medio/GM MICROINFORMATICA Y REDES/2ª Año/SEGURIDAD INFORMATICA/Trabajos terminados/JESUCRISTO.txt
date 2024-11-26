@@ -1,0 +1,39 @@
+apt install mdadm
+lsblk -fm 
+fdisk /dev/(disco)
+n
+p
+t
+fd
+w
+mdadm -C /dev/md0 -l raid5 -n 6 /dev/sd[b-g]  
+mdadm --detail /dev/md0
+mkfs.ext4 /dev/md0
+(en /mnt) mkdir raid5
+mount /dev/md0 /mnt/raid5
+(en /mnt/raid5) mkdir hola
+mdadm /dev/md0 --fail /dev/sdb 
+mdadm /dev/md0 --remove /dev/sdb 
+mdadm /dev/md0 --add /dev/sdb 
+cat /proc/mdstat 
+-----------------------------
+winpcap - wireshark 
+SCP /ETC/APT/SOURCES.LIST ROOT@192.168.2.6:/HOME.
+Linux:
+adduser
+netstat -lpd
+apt-install net-tools
+SU -
+netstat -nt
+COMANDO TELNET:
+	APT-GET INSTALL TELNETD - INSTALAR TELNET
+	NANO /ETC/INETD.CONF - COMPROBAR QUE FUNCIONA TELNET
+	NETSTAT -LTP - COMPROBAR QUE SERVICIOS ESTAN EN ESCUCHA
+	APT-GET INSTALL TELNET - INSTALAR CLIENTE
+	TELNET 192.168.1.1 - CONECTARSE A TELNET CON UNA IP 
+CAMANDO SSH:
+	APT-GET INSTALL SSHD O APT-GET INSTALL OPENSSH-SERVER - INSTALAR SSH SV
+	NANO /ETC/SSH/SSHD_CONFIG - ENTRAR EN LA CONFIGURACION
+	SERVICE SSH RESTART - RESFRESCAR 
+	APT-GET INSTALL OPENSSH-CLIENT - INSTALAR CLIENTE SSH
+	SSH USER@192.168.1.1 - CONECTARSE MEDIANTE SSH

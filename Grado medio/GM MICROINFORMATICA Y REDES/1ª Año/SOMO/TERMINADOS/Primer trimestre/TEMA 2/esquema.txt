@@ -1,0 +1,41 @@
+monopuesto: no funciona na mas que en un puesto de usuario.
+multiusuario:un sistema operativo que se para mas que un usuario.
+En red: puedes tener tu usuario en diferenes ordenadores.
+
+
+El sistema operativo esta entre el hardware y las aplicaciones.
+los servicios tienen estados.
+Los parametros modifican el funcionamiento del comando.
+Un proceso es un programe en ejecucion.
+Moniorizacion, es poner la lupa donde esta pasando algo y avisame de x forma.
+sistem care advance
+
+iobit
+
+gestion de memoria, lo que gestiona es la memoria ram.
+
+datos asociados a un proceso y cada proceso lo tiene almacenados , a un bloque de control de procesos.
+pueden comunicarse, pero no ocupar parte de memoria de cada uno.
+
+
+un h es un clico por segundo.
+
+los ciclos que pueden hacer por segundo.
+
+
+
+
+
+
+
+
+el tiempo real es cuando el procesador hace  en el instante el proceso que tu le digas y el compartido divide el tiempo en varios procesos.
+
+
+
+
+
+
+
+
+

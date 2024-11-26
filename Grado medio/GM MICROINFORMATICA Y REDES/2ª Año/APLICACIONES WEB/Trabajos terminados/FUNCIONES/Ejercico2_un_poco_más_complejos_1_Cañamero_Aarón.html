@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EJERCICIO 2</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+//Este ejercicio me ha costado muchito, no se si de la manera que lo he echo es la correcta, pero funciona, un así he tenido que buscar ayuda en internet, poque no conseguia terminarlo.
+  function NumerosOrdenados(i1,i2,i3)
+  {
+    if (i1<i2 && i1<i3)
+    {
+      document.write(i1+' ');
+      if (i2<i3)
+      {
+        document.write(i2+' '+i3);
+      }
+      else
+      {
+        document.write(i3+' '+i2);
+      }
+    }
+    else
+    {
+      if (i2<i3)
+      {
+        document.write(i2+' ');
+        if (i1<i3)
+        {
+          document.write(i1+' '+i3);
+        }
+        else
+        {
+          document.write(i3+' '+i1);
+        }
+      }
+      else
+      {
+        document.write(i3+' ');
+        if (i1<i2)
+        {
+          document.write(i1+' '+i2);
+        }
+        else
+        {
+          document.write(i2+' '+i1);
+        }
+      }
+    } 
+  }
+  var valor1;
+  var valor2;
+  var valor3;
+  valor1=parseInt(prompt('Ingrese primer valor:',''));
+  valor2=parseInt(prompt('Ingrese segundo valor:',''));
+  valor3=parseInt(prompt('Ingrese tercer valor:',''));
+  document.write('Los tres valores ingresados son '+valor1+' '+valor2+' '+valor3+'<br>'); 
+  document.write('Los valores ordenados de menor a mayor son: ');
+  NumerosOrdenados(valor1,valor2,valor3);
+</script>
+</body>
+</html>

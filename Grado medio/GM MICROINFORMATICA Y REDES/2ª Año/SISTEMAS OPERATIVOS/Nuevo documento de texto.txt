@@ -1,0 +1,20 @@
+
+Buscar un controlador de dominio - 
+Crear una nueva unidad organizativa - dsadd ou "ou=empleados, dc=dominio, dc=com"
+CREAR UNA NUEVA CUENTA DE USUARIO - dsadd user "cn=Empleado, ou=empleados, dc=dominio, dc=com" -samid empleado -upn empleado@dominio.com -pwd 1234
+Creación de un grupo nuevo - dsadd group "cn=emplados, ou=empleados, dc=dominio, dc=com" -members "cn=empleado, ou=empleados, dc=dominio, dc=com"
+RESTABLECER UNA CONTRASEÑA DE USUARIO - dsmod user "cn=empleado, ou=empleados, dc=felipe, dc=com" -pwd User@124
+Deshabilitar o habilitar una cuenta de usuario - dsmod user "cn=empleado, ou=empleados, dc=felipe, dc=com" -disabled yes
+Eliminar una cuenta de usuario - dsrm "cn=eliminado, ou=empleados, dc=felipe, dc=com" (ELIMINADO ES OTRO USUARIO Y ELIMINARLO)
+Convertir un grupo en otro tipo de grupo - dsmod group "cn=empleados, ou=empleados, dc=felipe, dc=com" -secgrp no (NO DISTRIBUIDO Y YES SEGURIDAD)
+
+Cambiar el ámbito de grupo - dsmod group "cn=empleados, ou=empleados, dc=felipe, dc=com" -scope u (U UNIVERSAL, G GLOBAL, L LOCAL)
+Eliminar un grupo - dsrm "cn=empleados, ou=empleados, dc=felipe, dc=com"
+Buscar grupos en los que un usuario es miembro - dsget user "cn=empleado, ou=empleados, dc=felipe, dc=com" -memberof
+Eliminar una unidad organizativa - dsrm "ou=empleados, dc=felipe, dc=com"
+Buscar una cuenta de usuario - dsquery user "ou=empleados, dc=felipe, dc=com"
+Buscar un grupo - dsquery group "ou=empleados, dc=felipe, dc=com"
+Buscar una unidad organizativa - dsquery ou "dc=felipe, dc=com"
+Buscar un controlador de dominio - dsquery (NOMBRE DE EQUIPO)
+
+

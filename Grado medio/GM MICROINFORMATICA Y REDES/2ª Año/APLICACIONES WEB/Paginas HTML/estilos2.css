@@ -1,0 +1,26 @@
+.clase1{
+		list-style-type:circle
+}
+.clase2{
+		list-style-type:square;
+		list-style-position:outside;
+}
+.clase3{
+		list-style-type:lower-alpha;
+		list-style-position:outside;
+}
+.clase4{
+		list-style-type:upper-alpha;
+		list-style-position:inside;
+}
+.clase5{
+		list-style-type:upper-alpha;
+		list-style-position:inside;
+		list-style-image:none
+}
+.clase6{
+		list-style-type:upper-alpha;
+		list-style-position:inside;
+		list-style-image:none
+}
+

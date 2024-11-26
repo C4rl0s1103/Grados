@@ -1,0 +1,81 @@
+<!-- 1 - Este documento te puede servir de ayuda para la prueba de hoy -->
+<!-- 2 - Sólo puedes tener dos abiertos simultáneamente: -->
+<!--     el archivo en el que trabajas y este documento de ayuda -->
+<!-- 3 - No se puede modificar el contenido de este documento -->
+
+<script type="text/javascript">
+	for(i=0;i<10;i=i+1) {
+		document.write(i+"<br/>");
+	}
+</script>
+
+<script>
+	for(i=1; i<=50; i++) {
+		if (i%3==0 && i%5==0) {
+			document.write("PIPO"+"<br/>");
+		} else if (i%5==0) {
+			document.write("PO"+"<br/>");
+		} else if (i%3==0) {
+			document.write("PI"+"<br/>");
+		} else {
+			document.write(i+"<br/>");
+		}
+	}
+</script>
+
+<script type="text/javascript">
+	var nombre = prompt("Escribe el nombre con el que quieres trabajar:");
+	var letra = prompt("Indica la letra a buscar:")
+	document.write("El nombre "+nombre+" tiene "+nombre.length+" letras.<br/>");
+	document.write("Pasándolo a mayúsculas: "+nombre.toUpperCase()+"<br/>");
+	document.write("Pasándolo a minúsculas: "+nombre.toLowerCase()+"<br/>");
+	document.write("Los tres primeros caracteres: "+nombre.substring(0,3)+"<br/>");
+	var posicion = nombre.lastIndexOf(letra)+1;
+	document.write("La última "+letra+" aparece en la posición: "+posicion+"<br/>");
+	document.write("Escribe a partir de la posición '2': "+nombre.substring(2));
+</script>
+
+<script type="text/javascript">
+	function calcular() {
+		var cantidad=document.getElementById("cantidad").value;
+		cantidad=parseInt(cantidad);
+		var resultado=0;
+		var producto=document.getElementById("producto").value;
+		var bolsa=document.formulario.bolsa.value;
+		if (producto == "pipas") {
+			resultado=cantidad*0.30;
+		} else if (producto == "chocolate") {
+			resultado=cantidad*1.15;
+		} else if (producto == "algodon") {
+			resultado=cantidad*0.25;
+		} else if (producto == "regaliz") {
+			resultado=cantidad*0.05;
+		} else {
+			resultado=0;
+		}
+		if (bolsa == "si") {
+			resultado += 0.05;
+		}
+		resultado=resultado.toFixed(2);
+		document.getElementById("compra").value=resultado;
+	}
+</script>
+
+<form action="#" name="formulario">
+	<label for="cantidad">Cantidad:</label>
+	<input type="text" id="cantidad" size="4">
+	<select id="producto">
+		<option value="pipas">Pipas</option>
+		<option value="chocolate">Chocolate</option>
+		<option value="algodon">Algodón</option>
+		<option value="regaliz">Regaliz</option>
+	</select>
+	<br/><br/>
+	<label>¿Quieres bolsa?</label>
+	<label for="si">Sí</label>
+	<input type="radio" name="bolsa" id="si" value="si" checked>
+	<label for="no">No</label>
+	<input type="radio" name="bolsa" id="no" value="no">
+	<input type="button" value="Total" onclick="calcular()">
+	<input type="text" id="compra" size="4" disabled>
+</form>

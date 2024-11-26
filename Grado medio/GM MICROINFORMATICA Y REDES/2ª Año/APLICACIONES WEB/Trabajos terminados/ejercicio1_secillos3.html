@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EJERCICIO 1</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var x;
+		var y;
+		x=prompt('Ingresa la cordenada x','');
+		x=parseInt(x);
+		y=prompt('Ingresa la cordenada y','');
+		y=parseInt(y);
+			if (x>0 && y>0)
+			{
+				document.write('Usted esta ahora mismo en el primer cuadrante');
+			}
+			else if (x<0 && y>0)
+			{
+				document.write('Usted esta ahora mismo en el segundo cuadrante');
+			}
+			else if (x<0 && y<0)
+			{
+				document.write('Usted esta ahora mismo en el tercer cuadrante');
+			}
+			else if (x>0 && y<0)
+			{
+				document.write('Usted esta ahora mismo en el cuarto cuadrante');
+			}
+			else
+			{
+				document.write('Usted se encuentra sobre un eje');
+			}
+	</script>
+</body>
+</html>

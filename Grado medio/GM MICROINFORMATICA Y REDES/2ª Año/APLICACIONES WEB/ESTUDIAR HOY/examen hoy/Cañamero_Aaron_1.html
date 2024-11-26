@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EJERCICIO1</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function funcion()
+	{
+		var cadena1 = prompt('Ingresa una frase en mayusculas o minusculsa o las dos cosas');
+		if (cadena1.toUpperCase()==cadena1)
+		{
+			document.write('La cadena esta en mayusculas y las vamos a pasar a minusculas');
+			document.write('  En minusculas es: '+cadena1.toLowerCase());
+		}
+		else if (cadena1 == cadena1.toLowerCase())
+		{
+			document.write('La cadena esta en minusculas y las vamos a pasar a mayusculas');
+			document.write('  En mayusculas es: '+cadena1.toUpperCase());
+		}
+		else 
+		{
+			document.write('La frase tiene tanto minusculas como mayusculas ');
+			document.write(cadena1);	
+		}
+	}
+funcion()
+</script>
+</body>
+</html>

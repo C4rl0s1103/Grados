@@ -1,0 +1,100 @@
+﻿FTP COMANDOS.
+
+Instalar el servidor 
+apt-get install vsftpd
+
+Instalar el cliente
+apt-get install ftp
+
+Para comprobar puertos
+netstat -tlpn | grep ftp o pones ":"
+
+Fichero de configuracion de ftp
+/etc/vsftpd.conf
+
+listen=YES (quitar lo de ipv6)
+
+anonymous_enable =YES
+write_enable=YES
+anon_upload_enable=YES
+
+Ficheoro en el que se encuentra la raiz de ftp 
+/srv
+Comando importante para las carpetas de ftp 
+chmod xxx
+chown x
+
+Para descargar y subir archivos de ftp
+get x (esto se guardara en el directorio raiz)
+put x (sube los archivos del directorio raiz)
+
+Crear carpetas de anonimo y borrar.
+anon_mkdir_write_enable=YES
+anon_other_write_enable=YES
+
+Cambiar el banner
+ftpd_banner= lo que quieras
+
+Añadir usuarios.
+adduser x
+
+Activar usuarios localces de la maquina
+local_enable=YES
+
+Para activar el usuario invitado
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd.chroot_list
+
+Activar credenciales false para el invitado.
+
+ir a vsftpd_chroot_list y añadir el nombre de los usuarios.
+
+En el fichero shells hay que añadir el /bin/false
+
+Comandos DNS
+
+apt-get install netutils para usar nslookup
+
+instalar DNS
+apt-get install bind9 
+cp para copiar los archivos
+copiar db.local para la directa y db.127 para la inversa
+
+Configurar named.conf.local
+zona directa
+zone "x.com" {
+type master;
+file "/etc/bind/db.x.com";
+};
+
+zona inversa
+zone "ip al reves.in-addr.arpa" {
+type master;
+file "/etc/bind/db.x";
+};
+
+Configurar la zona directa
+db.x.com
+ sustituir localhost por la direccion.com
+nombre IN A IP
+
+Configurar zona inversa
+sustituir localhost por direccion.com
+
+@ IN NS nombre
+configurar todas las ip dentro de la red 
+4 IN PTR nombre
+
+usar resolv.conf para poner la configuracion del dns
+domain x.com
+search x.com
+nameserver 192.168.1.4
+nameserver 8.8.8.8
+para conectar ping nombredemaquina.x.com
+conectar ftp
+ftp nombredemaquina.x.com
+
+comandos DHCP
+isc-dhcp server
+/etc/default/isc-dhcp-server
+INTERFACE=emp0s3

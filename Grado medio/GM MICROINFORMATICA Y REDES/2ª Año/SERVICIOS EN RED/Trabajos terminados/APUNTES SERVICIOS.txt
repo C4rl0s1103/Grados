@@ -1,0 +1,6 @@
+LLOW_WRITEABLE_CHROOT=YES
+
+DNS:
+apt-get install bind9
+cd bind
+chattr +i /etc/resolv.conf

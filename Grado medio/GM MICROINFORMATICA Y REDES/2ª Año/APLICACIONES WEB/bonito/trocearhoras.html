@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function trocear_tiempo()
+	{
+		var time = document.getElementById("tiempo").value;
+		var horas_t = time.substring(0,time.lastIndexOf(":"));
+		var minutos_t = time.substring(time.lastIndexOf(":")+1,time.lenght);
+		document.getElementById("horas").value = horas_t;
+		document.getElementById("minutos").value = minutos_t;
+	}
+</script>
+<form action="#">
+	
+</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparación de Cadenas</title>
+</head>
+<body>
+<script>
+
+
+function comparar(cadena1)
+{
+
+  // Comprobar mayúsculas y minúsculas
+  if( cadena1.toUpperCase() == cadena1) 
+  {
+    document.write(" la cadena está formada sólo por mayúsculas y en minúsculas es");
+	document.write(cadena1.toLowerCase());
+  }
+  else if(cadena1 == cadena1.toLowerCase()) 
+  {
+     document.write(" la cadena está formada sólo por minúsculas y en mayúsculas es ");
+	document.write(cadena1.toUpperCase());
+  }
+  else 
+  {
+    document.write("la cadena es una mezcla de mayúsculas y minúsculas");
+  }
+}
+
+var cadena1;
+cadena1 = prompt("introduzca la  cadena");
+comparar(cadena1);
+
+</script>
+
+
+</body>
+</html>

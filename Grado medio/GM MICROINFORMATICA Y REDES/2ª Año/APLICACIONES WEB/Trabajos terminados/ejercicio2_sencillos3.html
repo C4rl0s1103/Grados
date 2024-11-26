@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EJERCICIO 2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var sueldo;
+		var años;
+		sueldo=prompt('Ingresa el suedo del empleado','');
+		sueldo=parseInt(sueldo);
+		años=prompt('Ingrese los años de antiguedad del empleado','');
+		años=parseInt(años);
+			if (sueldo <500 && años>=10)
+			{
+				var sueldototal=sueldo+sueldo*0.20;
+				document.write('Tiene un aumento del 20%');
+				document.write('<br>');
+				document.write('El sueldo total es:'+sueldototal);
+			}
+			else
+			{
+			if (sueldo<500 && años<10)
+			{
+				var sueldototal=sueldo+sueldo*0.05;
+				document.write('Tiene un aumento del 5%');
+				document.write('<br>');
+				document.write('El sueldo total es:'+sueldototal);
+			}
+			else
+			{
+				document.write('Tiene el mismo sueldo:'+sueldo);
+			}
+		}
+	</script>
+</body>
+</html>
