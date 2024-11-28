@@ -1,0 +1,21 @@
+echo creamos las unidades organizativas
+dsadd ou "ou=profes,dc=prueba,dc=local"
+dsadd ou "ou=alumnos,dc=prueba,dc=local"
+dsadd ou "ou=alumnosAsir,ou=alumnos,dc=prueba,dc=local"
+dsadd ou "ou=alumnosDam,ou=alumnos,dc=prueba,dc=local"
+dsadd ou "ou=grupos,dc=prueba,dc=local"
+
+echo creamos los grupos
+dsadd group "cn=grupoAsir,ou=grupos,dc=prueba,dc=local"
+dsadd group "cn=grupoDam,ou=grupos,dc=prueba,dc=local"
+dsadd group "cn=grupoProfes,ou=grupos,dc=prueba,dc=local"
+
+
+for /l %%a IN (1,1,15) DO ( 
+  dsadd user "cn=AlumnoAsir%%a,ou=alumnosAsir,ou=alumnos,dc=prueba,dc=local" -pwd P@ssw0rd -memberof "cn=grupoAsir,ou=grupos,dc=prueba,dc=local"
+  dsadd user "cn=AlumnoDam%%a,ou=alumnosDam,ou=alumnos,dc=prueba,dc=local" -pwd P@ssw0rd -memberof "cn=grupoDam,ou=grupos,dc=prueba,dc=local"
+)	
+
+for /f "tokens=1-5 delims=," %%i IN (listaProfes.txt) DO (
+  dsadd user "cn=%%i,ou=%%k,dc=prueba,dc=local" -pwd %%m -canchpwd no -memberof "cn=grupoProfes,ou=grupos,dc=prueba,dc=local"
+)

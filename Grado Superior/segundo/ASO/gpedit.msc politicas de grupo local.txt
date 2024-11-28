@@ -1,0 +1,5 @@
+gpedit.msc: politicas de grupo locales
+fsmgmt.msc: carpetas compartidas 
+secpol.msc: politicas de seguridad locales 
+gpmc.msc: politas de grupo de dominio
+
