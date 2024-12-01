@@ -1255,7 +1255,7 @@ Gestión de Bases de Datos (GBD). Para poder tratar esta información obligatori
 --------------------------------------------------------------------------------------------------
 1. Programar un script en PHP que permita contar y mostrar el número de alumnos repetidores
 aprobados de 1º ASIR en GBD. Debes hacerlo de dos formas: con el bucle for y con el bucle
-foreach.
+foreach.    
 --------------------------------------------------------------------------------------------------
 SOLUCION:
 
