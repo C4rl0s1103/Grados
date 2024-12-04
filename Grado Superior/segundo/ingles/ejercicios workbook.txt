@@ -147,10 +147,10 @@ technician
 4. display 
 
 7) page 45
-1. layout
+1. layout /* ENTRA */
 2. event
-3. reminder
-4. clipboard
+3. reminder /* ENTRA */
+4. clipboard /* ENTRA */
 5. personal preference
 
 
