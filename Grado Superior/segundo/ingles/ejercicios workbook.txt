@@ -134,10 +134,46 @@ technician
 
 5) page 45
 1. a) very important for today´s businesses
-2. a) write a message 
-3. b) save documents
-4. 
-5. 
-6. 
+2. b) compare two devices
+3. a) do calculators
+4. b) advertise products
+5. b) diagram
+6. a) for entering and storing data 
 
+6) page 45
+1. configured
+2. sort 
+3. customised
+4. display 
+
+7) page 45
+1. layout /* ENTRA */
+2. event
+3. reminder /* ENTRA */
+4. clipboard /* ENTRA */
+5. personal preference
+
+
+
+5) page 47
+1. efficiency 
+2. fee  /* ENTRA --> TARIFA */
+3. encode
+4. subscription 
+5. licence
+6. existing 
+
+6) page 47 
+1. database
+2. shareware /* ENTRA */
+3. licensee
+4. a module 
+
+7) page 47
+1. d) analyse, monitor or help maintain the computer 
+2. f) to try something for free before buying it 
+3. c) that isn´t included in the original software program /* ENTRA --> THIRD-PARTY */
+4. a) that allows users to watch films 
+5. B) into and out of a business /* ENTRA --> CASH FLOW */
+6. e) instead of on your computer´s hard drive 
 
