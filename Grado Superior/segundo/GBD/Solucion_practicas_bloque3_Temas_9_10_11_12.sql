@@ -1655,7 +1655,8 @@ almacenamiento interno de los datos:
 con el que has entrado al servidor.
 */
 
-
+mysql -u root 
+    select USER();
 
 
 
@@ -1669,6 +1670,9 @@ con el que has entrado al servidor.
     b) ¿A qué base de datos pertenece esa tabla?
 */
 
+mysql.user
+
+/* a la base de datos donde se almacena los usuarios del sistema */
 
 
 
