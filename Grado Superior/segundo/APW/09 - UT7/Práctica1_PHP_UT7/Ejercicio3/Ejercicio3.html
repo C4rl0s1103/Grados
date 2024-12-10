@@ -1,0 +1,63 @@
+
+<html>
+	<head>
+		<title>Formulario</title>
+		<meta http-equiv='Content-type' content='text/html' charset='ISO-8859-1'/> 
+	
+	<style>
+		table, th, td { border: 1px solid black;}
+		th, td {padding: 10px;}
+		
+	</style>
+	</head>
+	
+<body>
+
+<?php	
+		
+// 1. Conectar con el servidor de base de datos
+$conexion = mysqli_connect ('localhost', 'root', '')
+or die ("No se puede conectar con el servidor");
+// 2. Seleccionar una base de datos
+mysqli_select_db ($conexion,'biblioteca')
+or die ("No se puede seleccionar la base de datos");
+// 3. Enviar la instrucción SQL a la base de datos
+$consulta = "SELECT * FROM libros";   
+$resultado = mysqli_query ($conexion,$consulta)
+or die ("Fallo en la consulta");
+// 4. Obtener y procesar los resultados
+$nfilas = mysqli_num_rows ($resultado);	
+if ($nfilas > 0):
+	echo '
+	<h2>Consulta de libros</h2>
+		<table>
+		<tr>
+			<th> Id</th>
+			<th> Titulo</th>
+			<th> Autor</th>
+			<th> Editorial</th>
+			<th> Categoria</th>
+		</tr>';
+			
+	for ($i=0; $i<$nfilas;$i++):
+		$fila = mysqli_fetch_array ($resultado, MYSQLI_ASSOC);
+			echo '<tr>';
+			echo '<td>'.$fila['id'].'</td>';
+			echo '<td>'.$fila['titulo'].'</td>';
+			echo '<td>'.$fila['autor'].'</td>';
+			echo '<td>'.$fila['editorial'].'</td>';
+			echo '<td>'.$fila['categoria'].'</td>';
+			echo '</tr>';  
+	endfor;
+	
+	echo '</table>';
+	echo "Numero de filas mostradas = $nfilas";
+else:
+	echo "No hay ningún libro";
+endif;
+// 5. Cerrar la conexión con el servidor de bases de datos
+mysqli_close ($conexion);
+	
+?>
+</body>
+</html>

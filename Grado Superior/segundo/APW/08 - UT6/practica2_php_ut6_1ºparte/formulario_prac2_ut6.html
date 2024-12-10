@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head> <title> Sumar y restar </title> </head>
+	<body>
+		<form action="sumar_restar.php" method="get">
+			<label for="numero1">N&uacute;mero 1</label>
+			<input type="text" name="numero1" id="numero1" size="3" maxlength="3"/>
+				(Positivo entre 1 y 100)<br/>
+			<label for="numero2">N&uacute;mero 2</label>
+			<input type="text" name="numero2" id="numero2" size="3" maxlength="3"/>
+				(Positivo entre 1 y 100)<br/>
+			Operaci&oacute;n:<br/>
+			<input type="radio" name="operacion" value="sumar" id="sumar" />
+			<label for="sumar">Sumar</label><br/>
+			<input type="radio" name="operacion" value="restar" id="restar" />
+			<label for="restar">Restar</label><br/>
+			<input type="submit" value="Enviar" />
+		</form>
+	</body>
+</html>
