@@ -1,0 +1,159 @@
+1) page 56
+1. backup system
+2. employees 
+3. fibre optic
+4. faster 
+5. far from 
+
+vocabulary 
+backup system --> copia de seguridad 
+digital subscriber line (DSL) --> 
+ethernet --> ethernet 
+fibre optics --> fibra optica 
+high-speed --> alta velocidad 
+internal --> interno 
+internet service provider (ISP) --> proveedor de servicios de internet (ISP)
+investment --> inversion 
+local area network (LAN) --> red de area local
+locate --> localizar, ubicar, situar 
+packet --> paquete de datos 
+range --> rango, capacidad 
+remote access --> acceso remoto
+router --> router 
+set up --> configurar 
+stream media --> retransmision 
+topology --> topologia 
+transmission --> transmision 
+workstation --> estacion de trabajo 
+adaptors --> adaptadores
+authorised --> autorizado
+broadband --> banda ancha 
+business grade --> nivel empresarial 
+firewall --> cortafuego
+gateway --> puerta de enlace 
+hub --> hub USB
+incoming --> entrante 
+internet protocol (IP) address --> direccion IP
+outgoing --> saliente 
+reboot --> reiniciar 
+shared resource --> recurso compartido 
+subnetwork --> subred 
+switch --> cambiar 
+traffic --> trafico 
+transmision control protocol (TCP) --> protocolo de control de transmisión
+unathorised --> no autoricado 
+wide area network --> red de area amplia
+wireless access point --> punto de acceso inalambrico 
+
+
+2) page 56
+A. 2.
+B. 3.
+C. 1.
+
+
+4) page 57
+1. GMD-14C ethernet 
+2. control panel 
+3. cable 
+4. windows installation CD or from the internet 
+5. drivers 
+
+5) page 57 
+1. e. very fast 
+2. c. something you put money or effort into for the future
+3. d. deliver audio and video content over the internet in a continuous fashion
+4. b. the ability to log onto a network into for the future
+5. a. located inside something
+
+6) page 57
+1. set up
+2. topology
+3. digital subscriber line (DSL)
+4. local area network (LAN)
+
+7) page 57
+1. TRUE
+2. TRUE
+3. FALSE
+4. TRUE
+5. FALSE
+6. TRUE
+
+8) page 57
+1. workstation / remote access 
+2. locate / range 
+3. set up / topology / backup system
+
+YOUR TURN PAGE 57
+1. TRUE
+2. FALSE
+3. TRUE
+4. DOESN´T SAY
+5. FALSE
+6. DOESN´T SAY
+
+
+1) page 58
+1. b. use a topology diagram
+2. b. buy business grade equipment
+3. a. move pieces of data across the network
+4. a. can be linked by a router 
+5. a. limited
+6. b. doesn´t require cables
+
+
+2) page 58
+1. D
+2. F
+3. A
+4. B
+5. E
+6. C
+
+
+
+
+5) page 59
+1. firewall
+2. unauthorised
+3. internet protocol (IP) address
+4. traffic
+5. incoming
+6. wide area network (WAN)
+7. hub
+
+
+
+6) page 59
+1. c.
+2. e.
+3. a.
+4. d.
+5. b.
+
+
+
+7) page 59
+1. switch
+2. outgoing
+3. shared recourses
+4. TCP
+5. authorised
+6. gateway
+7. adaptors
+
+
+8) page 59
+1. broadband
+2. WAN
+3. firewall
+4. shared resources
+5. business grade
+
+
+
+
+1) page 118
+
+
