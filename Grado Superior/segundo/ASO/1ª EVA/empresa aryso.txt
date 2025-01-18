@@ -1,0 +1,38 @@
+empresa aryso
+3 usuarios (per1, per2, per3), los usuarios ya estan creados en su UO llamada UOARYSO
+control de la carpeta documentos (GPO de redireccion de carpeta documentos???)
+los usuarios ya estan creados
+DC llamado CD116AHF y la carpeta compartida DOCUARYSO 
+
+si queremos crear grupos mediante CMD dentro de UO=UOARYSO 
+la GPO se llamara GPO.ARYSO 
+
+-----------------------------------------------------------------------------------------------
+
+/* IMPORTANTEEEEE!!!!!! */
+TIENE QUE ESTAR LOS USUARIOS EN LA CARPETA COMPARTIDA QUE SUPUESTAMENTE ESTA CREADA (SI LA MUERTA NO TE DICE QUE TIENES QUE CREARLO)
+
+/* Si por que la ha salido del higo que tenemos que crear la carpeta seria de la siguiente manera */
+1. creamos la carpeta podemos hacerlo mediante modo grafico o comandos mediante mkdir
+2. la compartimos en propiedades --> compartir --> uso compartido avanzado
+3. en el apartado seguridad lo dejamos en todos, luego añadiremos el grupo DOCU
+
+/* creamos la OU, los grupos y lo agregamos */
+dsadd ou "cn=documentacion,dc=cd116AHF,ou=aryso,ou=local" /add
+dsadd group "cn=docu,ou=documentacion,dc=cd116AHF,ou=aryso,ou=local" /add
+dsadd user "cn=docu,ou=documentacion,dc=cd116AHF,ou=aryso,ou=local" -addmember "cn=per1,dc=cd116AHF,ou=aryso,ou=local"
+dsadd user "cn=docu,ou=documentacion,dc=cd116AHF,ou=aryso,ou=local" -addmember "cn=per2,dc=cd116AHF,ou=aryso,ou=local"
+dsadd user "cn=docu,ou=documentacion,dc=cd116AHF,ou=aryso,ou=local" -addmember "cn=per3,dc=cd116AHF,ou=aryso,ou=local"
+
+/* una vez que hemos añadido los usuarios al grupo añadimos el grupo a la carpeta compartida */
+en el apartado seguridad de la carpeta compartida, añadiremos el grupo docu
+
+
+/* GPOS */
+nos iremos a administracion de directivas de grupo 
+creamos una GPO llamada GPO.ARYSO y la añadimos a la UO documentacion
+nos iremos a carpeta
+luego a redireccion de carpetas
+luego a redireccion de carpeta mis documentos, donde le pondremos de destinatario la carpeta que hemos creado/compartido antes
+haremos un gpoupdate /force
+
