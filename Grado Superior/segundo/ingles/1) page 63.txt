@@ -1,0 +1,29 @@
+1) page 63
+1. with an operating system, users don´t need to enter programming language code
+2. the operating system uses Grafical user interface (GUI) to show things visually  
+3. an operating system enables many programs to work at the same time
+4. open source operating systems are available on the internet. 
+5. propietary software cannot be changed.
+
+
+
+vocabulary 
+budget / presupuesto
+bundled software / paquete de software
+commmand line / terminal de comandos 
+commercially owner / software comercial 
+coordinate / coordinar 
+developer / programador/a 
+development / desarrollo 
+entire / completo 
+freely available / disponible de forma gratuira 
+GUI GRAPHICAL USER INTERFACE / interfaz grafica de usuario (GUI)
+issue / problema
+modify / modificar
+multi-task / multitarea 
+open source / codigo abierto 
+Programming language code / codigo de lenguaje de programacion 
+propietary / propietario
+release / liberar
+stable / estable 
+storage / almacenamiento 
