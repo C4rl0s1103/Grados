@@ -1,0 +1,2 @@
+create user 'joomla2101'@'localhost' identified by 'joomla2101'; 
+GRANT ALL PRIVILEGES ON *.* TO 'joomla2101'@'localhost';
