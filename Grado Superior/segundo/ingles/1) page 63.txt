@@ -27,3 +27,74 @@ propietary / propietario
 release / liberar
 stable / estable 
 storage / almacenamiento 
+
+
+5) page 61
+1. b) stable
+2. b) propietary
+3. a) freely available
+4. a) release
+5. b)bundled software
+
+6) page 61
+1. budget
+2. storage
+3. developers
+4. multi-task
+
+7) page 61
+1. Graphical User Interface (GUI)
+2. coordinate
+3. development
+4. progamming language
+5. command line
+
+8) page 61
+1. b) windows is too expensive, so I´m using the open source system linux
+2. e) no, it´s commercially owned
+3. d) No, it´s free for an entire year
+4. f) yes, and i need to download a specific program to solve the issue 
+5. c) yes, we´ve received a budget to make all the necesary improvements
+6. a) I can modify it to my needs
+
+your turn 
+1. Linux
+2. windows
+3. windows
+4. both 
+5. linux
+6. linux
+
+
+5) page 63
+1. partition - e. separate
+2. requirements - c. needs
+3. component - f. a part of something
+4. step by step - b. one stage at a time 
+5. allocate - a. assign different parts of something for a particular purpose 
+6. run - d. function, operate
+
+6) page 63
+1. pre-installed
+2. crash 
+3. BIOS
+4. bit
+5. perequisite
+
+7) page 63
+1. patch 
+2. screen resolution 
+3. distro
+4. kernel 
+5. environment
+6. infrastructure
+7. segment
+
+8) page 63
+1. b) can have a value of 0 or 1
+2. c) to fix a software problem 
+3. d) if you want to run multiple systems on your computer 
+4. e) if the picture on the monitor isn´t clear
+5. f) many basic functions on the operating system
+6. a) if you want to install something corretly 
+
