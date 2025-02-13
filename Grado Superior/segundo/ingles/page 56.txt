@@ -7,7 +7,7 @@
 
 vocabulary 
 backup system --> copia de seguridad 
-digital subscriber line (DSL) --> 
+digital subscriber line (DSL) --> linea de subscriptor digital
 ethernet --> ethernet 
 fibre optics --> fibra optica 
 high-speed --> alta velocidad 
