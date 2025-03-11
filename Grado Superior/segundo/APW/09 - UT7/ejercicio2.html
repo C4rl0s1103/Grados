@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>ejercicio2</title>
+        <meta http-equiv='Content-type' content='text/html' charset='ISO-8859-1'/> 
+        <style>
+            table, th, td {border: 1px solid black;}
+            th, td { padding: 15px;}
+        </style>
+    </head>
+    <body>
+
+        <?php
+            if (empty($_GET['numalumno' ])) {
+                    echo "ERROR: Obligatorio introducir numero de lista";
+            } else {
+                $numlista = $_GET['numalumno'];
+                conexion = mysqli_connect('localhost','root','') or die ("no se puede conectar con el servidor");
+                mysqli_select_db($conexion,'ciclos') or die ("no se puede conectar con la base de datos");
+                mysqli_set_charset('utf8',$conexion);
+                $consulta ="select * from asir2 where nlista = $numlista;";
+                $resultado = mysqli_query($conexion,$consulta) or die ("fallo en la consulta");
+                $nfiles= mysqli_num_rows($resultado);
+                if ($nfilas > 0){
+                    echo '<h1>Alumno que has dado de baja</h1>
+                    <table>
+                        <tr>
+                            <th>Numero</th>
+                           <th>Nombre</th>
+                           <th>Nota ASO</th>
+                           <th>Nota SAD</th>
+                        </tr>';
+                            for ($i=0; $i<$nfilas;$i++){
+                            $fila=mysqli_getch_array($resultado,MYSQLI_ASSOC);
+                            echo '<tr>';
+                            echo '<td>' .$fila['num'] '</td>';
+                            echo '<td>' .$fila['dnombre'] '</td>';
+                            echo '<td>' .$fila['notaASO'] '</td>';
+                            echo '<td>' .$fila['notaSAD'] '</td>';
+                            echo '</tr>';
+                            }
+                    echo '</table>';
+                }else
+                echo "no hay ningun alumno"
+                }
+            $consulta = "delete from asir2 where nlista = $numlista";
+            $resultado = mysqli_query($conexion,$consulta) or die (error en la sentencia);
+            mysqli_close($conexion);
+            }
+        ?>
+    </body>
+</html>
+
